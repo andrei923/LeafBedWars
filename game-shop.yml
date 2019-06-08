@@ -17,7 +17,7 @@ Shop:
             Contains:
                 Category Mark:
                     type: border
-                    display: green glass
+                    display: green glass pane
                     name: '&e'
                     slots:
                     - 9
@@ -25,7 +25,7 @@ Shop:
                     - ''
                 Black Border:
                     type: border
-                    display: black glass
+                    display: black glass pane
                     name: '&e'
                     slots:
                     - 9
@@ -342,7 +342,7 @@ Shop:
                     - water bucket
                 some border:
                     type: border
-                    display: black glass
+                    display: black glass pane
                     name: '&e'
                     slots:
                     - 9
@@ -371,7 +371,7 @@ Shop:
             Contains:
                 Black Border:
                     type: border
-                    display: black glass
+                    display: black glass pane
                     name: '&e'
                     slots:
                     - 9
@@ -390,7 +390,7 @@ Shop:
                     - ''
                 category mark:
                     type: border
-                    display: green glass
+                    display: green glass pane
                     name: '&e'
                     slots:
                     - 10
@@ -594,7 +594,7 @@ Shop:
             Contains:
                 Black Border:
                     type: border
-                    display: black glass
+                    display: black glass pane
                     name: '&e'
                     slots:
                     - 9
@@ -613,7 +613,7 @@ Shop:
                     - ''
                 category mark:
                     type: border
-                    display: green glass
+                    display: green glass pane
                     name: '&e'
                     slots:
                     - 11
@@ -775,7 +775,7 @@ Shop:
             Contains:
                 Black Border:
                     type: border
-                    display: black glass
+                    display: black glass pane
                     name: '&e'
                     slots:
                     - 9
@@ -794,7 +794,7 @@ Shop:
                     - ''
                 category mark:
                     type: border
-                    display: green glass
+                    display: green glass pane
                     name: '&e'
                     slots:
                     - 13
@@ -1125,7 +1125,7 @@ Shop:
             Contains:
                 Black Border:
                     type: border
-                    display: black glass
+                    display: black glass pane
                     name: '&e'
                     slots:
                     - 9
@@ -1144,7 +1144,7 @@ Shop:
                     - ''
                 category mark:
                     type: border
-                    display: green glass
+                    display: green glass pane
                     name: '&e'
                     slots:
                     - 12
@@ -1280,7 +1280,7 @@ Shop:
             Contains:
                 Black Border:
                     type: border
-                    display: black glass
+                    display: black glass pane
                     name: '&e'
                     slots:
                     - 9
@@ -1299,7 +1299,7 @@ Shop:
                     - ''
                 category mark:
                     type: border
-                    display: green glass
+                    display: green glass pane
                     name: '&e'
                     slots:
                     - 14
@@ -1441,7 +1441,7 @@ Shop:
             Contains:
                 Black Border:
                     type: border
-                    display: black glass
+                    display: black glass pane
                     name: '&e'
                     slots:
                     - 9
@@ -1460,7 +1460,7 @@ Shop:
                     - ''
                 category mark:
                     type: border
-                    display: green glass
+                    display: green glass pane
                     name: '&e'
                     slots:
                     - 15
@@ -1599,7 +1599,7 @@ Shop:
             Contains:
                 Black Border:
                     type: border
-                    display: black glass
+                    display: black glass pane
                     name: '&e'
                     slots:
                     - 9
@@ -1618,7 +1618,7 @@ Shop:
                     - ''
                 category mark:
                     type: border
-                    display: green glass
+                    display: green glass pane
                     name: '&e'
                     slots:
                     - 16
@@ -1786,7 +1786,7 @@ Shop:
                         gui: '&8&l» {check} EnderPearl'
                         msg: '&aEnderPearl'
                     slot: 24
-                    display: ender_pearl
+                    display: ender pearl
                     lore:
                     - ''
                     - '&7COST: &2{cost} EMERALD'
@@ -1797,7 +1797,7 @@ Shop:
                     currency: emerald
                     cost: 4
                     items:
-                    - ender_pearl
+                    - ender pearl
                 Sponge:
                     type: item
                     name:
