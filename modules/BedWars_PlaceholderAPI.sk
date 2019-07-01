@@ -1,0 +1,22 @@
+on join:
+	if yaml value "MYSQL.enabled" from "bw.config" is true:
+		bw_stats("check", player, "null", 0)	
+
+on placeholder request with prefix "LeafBedWars":
+	bw_stats("check", player, "null", 0)
+	yaml "bw.player.data.%uuid of player%" is not loaded:
+		load yaml "plugins/LeafBedWars/playerdata/%uuid of player%.yml" as "bw.player.data.%uuid of player%"
+	loop "SOLO", "DOUBLES", "TRIPLES", "QUADRUPLES", "MEGA" and "TOTAL":	
+		loop "kills", "deaths", "broken-beds", "wins" and "final-kills":	
+			identifier is "%loop-value-1%_%loop-value-2%"
+			set {_stats} to yaml value "STATS.%loop-value-1%.%loop-value-2%" from "bw.player.data.%uuid of player%"
+			set the result to "%{_stats}%"
+			stop
+	loop "coins", "level" and "xp":	
+		identifier is "%loop-value%"
+		set {_stats} to yaml value "STATS.%loop-value%" from "bw.player.data.%uuid of player%"
+		set the result to "%{_stats}%"				
+	
+on quit:
+	yaml "bw.player.data.%uuid of player%" is loaded
+	unload yaml "bw.player.data.%uuid of player%"
