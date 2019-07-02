@@ -1,0 +1,92 @@
+function bw_mysql(t: text, p: player):
+	set {_uuid} to uuid of {_p}
+	yaml "bw.player.data.%{_uuid}%" is not loaded:
+		load yaml "plugins/LeafBedWars/playerdata/%{_uuid}%.yml" as "bw.player.data.%{_uuid}%"	
+	loop "coins", "level", "xp" and "xp-need":
+		set {_stats.%loop-value-1%} to yaml value "STATS.%loop-value-1%" from "bw.player.data.%{_uuid}%"
+	loop "SOLO", "DOUBLES", "TRIPLES", "QUADRUPLES", "MEGA" and "TOTAL":
+		loop "kills", "deaths", "wins", "final-kills" and "broken-beds":
+			set {_stats.%loop-value-1%_%loop-value-2%} to yaml value "STATS.%loop-value-1%.%loop-value-2%" from "bw.player.data.%{_uuid}%"		
+	if {_t} is "sync":
+		execute unsafe "select * from %yaml value ""MySQL.tablename"" from ""bw.config""% WHERE uuid = '%{_uuid}%'" in {BEDWARS-DB} and store the result in {_output::*}
+		if {_output::uuid::1} is not set:
+			execute unsafe "INSERT INTO `%yaml value ""MySQL.tablename"" from ""bw.config""%` (`username`, `uuid`, `Spectator.Night-Vision`) VALUES ('%{_p}%', '%{_uuid}%', '0')" in {BEDWARS-DB}
+			loop "SOLO", "DOUBLES", "TRIPLES", "QUADRUPLES", "MEGA" and "TOTAL":
+				loop "kills", "deaths", "wins", "final-kills" and "broken-beds":		
+					execute unsafe "INSERT INTO `%yaml value ""MySQL.tablename"" from ""bw.config""%` (`%loop-value-1%_%loop-value-2%`) VALUES ('0')" in {BEDWARS-DB}
+		else:	
+			loop "coins", "level", "xp" and "xp-need":
+				set yaml value "STATS.%loop-value-1%" from "bw.player.data.%{_uuid}%" to {_output::%loop-value-1%::1}
+			loop "SOLO", "DOUBLES", "TRIPLES", "QUADRUPLES", "MEGA" and "TOTAL":
+				loop "kills", "deaths", "wins", "final-kills" and "broken-beds":	
+					set yaml value "STATS.%loop-value-1%.%loop-value-2%" from "bw.player.data.%{_uuid}%" to {_output::%loop-value-1%_%loop-value-2%::1}
+			save yaml "bw.player.data.%{_uuid}%"
+	if {_t} is "update":	
+		#Main stats		
+		loop "coins", "level", "xp" and "xp-need":	
+			execute unsafe "UPDATE `%yaml value ""MySQL.tablename"" from ""bw.config""%` SET `coins`='%{_stats.coins}%', `level`='%{_stats.broken-beds}%', `xp`='%{_stats.xp}%', `xp-need`='%{_stats.xp-need}%' WHERE `uuid` = '%{_uuid}%'" in {BEDWARS-DB}	
+		#Game Stats
+		loop "SOLO", "DOUBLES", "TRIPLES", "QUADRUPLES", "MEGA" and "TOTAL":
+			execute unsafe "UPDATE `%yaml value ""MySQL.tablename"" from ""bw.config""%` SET `%loop-value-1%_kills`='%{_stats.%loop-value-1%_kills}%', `%loop-value-1%_deaths`='%{_stats.%loop-value-1%_deaths}%', `%loop-value-1%_wins`='%{_stats.%loop-value-1%_wins}%', `%loop-value-1%_final-kills`='%{_stats.%loop-value-1%_final-kills}%', `%loop-value-1%_broken-beds`='%{_stats.%loop-value-1%_broken-beds}%' WHERE `uuid` = '%{_uuid}%'" in {BEDWARS-DB}
+	
+function bw_stats(t: text, p: player, section: text, amount: number):
+	set {_uuid} to uuid of {_p}
+	yaml "bw.player.data.%{_uuid}%" is not loaded:
+		load yaml "plugins/LeafBedWars/playerdata/%{_uuid}%.yml" as "bw.player.data.%{_uuid}%"	
+	if {_section} is "kills" or "deaths" or  "broken-beds" or "wins" or "final-kills":
+		if yaml value "TYPE" from "bw.arena.%{bw::player::%{_uuid}%.arena}%" is set:
+			set {_mode} to yaml value "TYPE" from "bw.arena.%{bw::player::%{_uuid}%.arena}%"
+			set {_section} to "%{_mode}%.%{_section}%"
+		else:
+			set {_section} to "SOLO.%{_section}%"
+	if {_t} is "add":
+		if {_section} is "xp":
+			set yaml value "STATS.xp" from "bw.player.data.%{_uuid}%" to yaml value "STATS.xp" from  "bw.player.data.%{_uuid}%" + {_amount}
+			if yaml value "STATS.xp" from "bw.player.data.%{_uuid}%" >= 1000 * yaml value "STATS.level" from  "bw.player.data.%{_uuid}%":
+				set yaml value "STATS.xp" from "bw.player.data.%{_uuid}%" to yaml value "STATS.xp" from  "bw.player.data.%{_uuid}%" - 1000 * yaml value "STATS.level" from  "bw.player.data.%{_uuid}%"
+				set yaml value "STATS.level" from "bw.player.data.%{_uuid}%" to yaml value "STATS.level" from  "bw.player.data.%{_uuid}%" + 1
+				set yaml value "STATS.xp-need" from "bw.player.data.%{_uuid}%" to 1000 * yaml value "STATS.level" from  "bw.player.data.%{_uuid}%"
+		else:
+			set {_temp} to yaml value "STATS.%{_section}%" from "bw.player.data.%{_uuid}%" + {_amount}
+			set yaml value "STATS.%{_section}%" from "bw.player.data.%{_uuid}%" to {_temp}	
+	if {_t} is "set":
+		set yaml value "STATS.%{_section}%" from "bw.player.data.%{_uuid}%" to {_amount}
+	if {_t} is "remove":		
+		set {_temp} to yaml value "STATS.%{_section}%" from "bw.player.data.%{_uuid}%" - {_amount}
+		set yaml value "STATS.%{_section}%" from  "bw.player.data.%{_uuid}%" to {_temp}	
+	if {_t} is "reset":	
+		delete yaml "bw.player.data.%{_uuid}%"
+		unload yaml "bw.player.data.%{_uuid}%"	
+		bw_stats("check", {_p}, "null", 0)
+		stop
+	if {_t} is "check":	
+		loop "coins" and "xp":
+			if yaml value "STATS.%loop-value-1%" from  "bw.player.data.%{_uuid}%" is not set:
+				set yaml value "STATS.%loop-value-1%" from  "bw.player.data.%{_uuid}%" to 0	
+		if yaml value "STATS.level" from "bw.player.data.%{_uuid}%" is not set:
+			set yaml value "STATS.level" from "bw.player.data.%{_uuid}%" to 1	
+		set yaml value "STATS.xp-need" from "bw.player.data.%{_uuid}%" to 1000 * yaml value "STATS.level" from "bw.player.data.%{_uuid}%"	
+		set yaml value "DATA.username" from "bw.player.data.%{_uuid}%" to "%{_p}%"		
+		loop "SOLO", "DOUBLES", "TRIPLES", "QUADRUPLES", "MEGA" and "TOTAL":
+			if yaml value "STATS.%loop-value-1%" from "bw.player.data.%{_uuid}%" is not set:
+				loop "kills", "deaths", "broken-beds", "wins" and "final-kills":
+					set yaml value "STATS.%loop-value-1%.%loop-value-2%" from "bw.player.data.%{_uuid}%" to {_amount}
+		yaml value "SPECTATOR-SETTINGS.NIGHT-VISION" from "bw.player.data.%{_uuid}%" is not set:	
+			set yaml value "SPECTATOR-SETTINGS.NIGHT-VISION" from "bw.player.data.%{_uuid}%" to true
+		bw_mysql("sync", {_p})												
+	if {_t} is "set" or "add" or "remove" or "reset":
+		loop "kills", "deaths", "broken-beds", "wins" and "final-kills":
+			set yaml value "STATS.TOTAL.%loop-value-1%" from "bw.player.data.%{_uuid}%" to yaml value "STATS.SOLO.%loop-value-1%" from "bw.player.data.%{_uuid}%" + yaml value "STATS.DOUBLES.%loop-value-1%" from "bw.player.data.%{_uuid}%" + yaml value "STATS.TRIPLES.%loop-value-1%" from "bw.player.data.%{_uuid}%" + yaml value "STATS.QUADRUPLES.%loop-value-1%" from "bw.player.data.%{_uuid}%" + yaml value "STATS.MEGA.%loop-value-1%" from "bw.player.data.%{_uuid}%"
+		bw_mysql("update", {_p})
+	save yaml "bw.player.data.%{_uuid}%"
+
+on load:
+	set {BEDWARS-DB} to the database "mysql://%yaml value ""MySQL.host"" from ""bw.config""%:%yaml value ""MySQL.port"" from ""bw.config""%/%yaml value ""MySQL.database"" from ""bw.config""%?user=%yaml value ""MySQL.username"" from ""bw.config""%&password=%yaml value ""MySQL.password"" from ""bw.config""%&useSSL=%yaml value ""MySQL.use_ssl"" from ""bw.config""%"
+	execute unsafe "CREATE TABLE IF NOT EXISTS `%yaml value ""MySQL.tablename"" from ""bw.config""%` (`ID` int(11) NOT NULL AUTO_INCREMENT,primary key (id))" in {BEDWARS-DB}
+	loop "username", "uuid" and "Spectator.Night-Vision":	
+		execute unsafe "ALTER TABLE %yaml value ""MySQL.tablename"" from ""bw.config""% ADD COLUMN `%loop-value%` varchar( 255 ) DEFAULT 0" in {BEDWARS-DB}
+	loop "coins", "level", "xp" and "xp-need":
+		execute unsafe "ALTER TABLE %yaml value ""MySQL.tablename"" from ""bw.config""% ADD COLUMN `%loop-value-2%` int( 255 ) DEFAULT 0" in {BEDWARS-DB}
+	loop "SOLO", "DOUBLES", "TRIPLES", "QUADRUPLES", "MEGA" and "TOTAL":
+		loop "kills", "deaths", "wins", "final-kills" and "broken-beds":					
+			execute unsafe "ALTER TABLE %yaml value ""MySQL.tablename"" from ""bw.config""% ADD COLUMN `%loop-value-1%_%loop-value-2%` int( 255 ) DEFAULT 0" in {BEDWARS-DB}
