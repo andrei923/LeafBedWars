@@ -1729,8 +1729,9 @@ Shop:
                     name:
                         gui: '&8&l» {check} Dream Defender'
                         msg: '&aDream Defender'
+                        item: '&aDream Defender'
                     slot: 21
-                    display: spawn egg
+                    display: iron chestplate
                     lore:
                     - ''
                     - '&7COST: &f{cost} IRON'
@@ -1741,7 +1742,7 @@ Shop:
                     currency: iron ingot
                     cost: 120
                     items:
-                    - Dream Defender
+                    - iron chestplate
                 FireBall:
                     type: item
                     name:
