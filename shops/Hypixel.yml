@@ -112,7 +112,7 @@ Shop:
                         gui: '&8&l» {check} WOOL'
                         msg: '&aWool'
                     slot: 19
-                    display: 16 white wool block
+                    display: 16 {team} wool block
                     lore:
                     - ''
                     - '&7COST: &f{cost} IRON'
@@ -466,7 +466,7 @@ Shop:
                         gui: '&8&l» {check} WOOL'
                         msg: '&aWool'
                     slot: 19
-                    display: 16 white wool block
+                    display: 16 {team} wool block
                     lore:
                     - ''
                     - '&7COST: &f{cost} IRON'
@@ -501,7 +501,7 @@ Shop:
                         gui: '&8&l» {check} Blast-Proof Glass'
                         msg: '&aBlast-Proof Glass'
                     slot: 21
-                    display: 4 plain glass block
+                    display: 4 {team} glass block
                     lore:
                     - ''
                     - '&7COST: &f{cost} IRON'
@@ -511,7 +511,7 @@ Shop:
                     currency: iron ingot
                     cost: 12
                     items:
-                    - 4 plain glass block
+                    - 4 {team} glass block
                 End Stone:
                     type: item
                     name:
