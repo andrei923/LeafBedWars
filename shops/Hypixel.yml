@@ -276,6 +276,7 @@ Shop:
                     name:
                         gui: '&8&l» {check} Permanent Shears'
                         msg: '&aPermanent Shears'
+                    permanent: true
                     slot: 31
                     display: shears
                     lore:
@@ -288,7 +289,7 @@ Shop:
                     currency: iron ingot
                     cost: 40
                     items:
-                    - Permanent Shears
+                    - shears
                 Arrow:
                     type: item
                     name:
@@ -869,6 +870,7 @@ Shop:
                     name:
                         gui: '&8&l» {check} Permanent Shears'
                         msg: '&aPermanent Shears'
+                    permanent: true
                     slot: 19
                     display: shears
                     lore:
@@ -881,238 +883,282 @@ Shop:
                     currency: iron ingot
                     cost: 40
                     items:
-                    - Permanent Shears
-                Tier I Pickaxe:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Wooden Pickaxe (Efficiency I)'
-                        msg: '&aWooden Pickaxe (Efficiency I)'
-                    slot: 20
-                    display: wood pickaxe
-                    lore:
-                    - ''
-                    - '&7COST: &f{cost} IRON'
-                    - ''
-                    - '&7Tier: &e&lI'
-                    - ''
-                    - '&7This is an upgradable item.'
-                    - '&7It will lose 1 tier upon death!'
-                    - ''
-                    - '&7You will permanently'
-                    - '&7respawn with at least lowest tier'
-                    - ''
-                    currency: iron ingot
-                    cost: 10
-                    items:
-                    - Upgradable Pickaxe
-                Tier II Pickaxe:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Iron Pickaxe (Efficiency II)'
-                        msg: '&aIron Pickaxe (Efficiency II)'
-                    slot: 20
-                    display: iron pickaxe
-                    lore:
-                    - ''
-                    - '&7COST: &f{cost} IRON'
-                    - ''
-                    - '&7Tier: &e&lII'
-                    - ''
-                    - '&7This is an upgradable item.'
-                    - '&7It will lose 1 tier upon death!'
-                    - ''
-                    - '&7You will permanently'
-                    - '&7respawn with at least lowest tier'
-                    - ''
-                    currency: iron ingot
-                    cost: 12
-                    items:
-                    - Upgradable Pickaxe
-                Tier III Pickaxe:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Gold Pickaxe (Efficiency III, Sharpness
-                            II)'
-                        msg: '&aGold Pickaxe (Efficiency III, Sharpness II)'
-                    slot: 20
-                    display: gold pickaxe
-                    lore:
-                    - ''
-                    - '&7COST: &6{cost} GOLD'
-                    - ''
-                    - '&7Tier: &e&lIII'
-                    - ''
-                    - '&7This is an upgradable item.'
-                    - '&7It will lose 1 tier upon death!'
-                    - ''
-                    - '&7You will permanently'
-                    - '&7respawn with at least lowest tier'
-                    - ''
-                    currency: gold ingot
-                    cost: 3
-                    items:
-                    - Upgradable Pickaxe
-                Tier IV Pickaxe:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Diamond Pickaxe (Efficiency IV)'
-                        msg: '&aDiamond Pickaxe (Efficiency IV)'
-                    slot: 20
-                    display: diamond pickaxe
-                    lore:
-                    - ''
-                    - '&7COST: &6{cost} GOLD'
-                    - ''
-                    - '&7Tier: &e&lIV'
-                    - ''
-                    - '&7This is an upgradable item.'
-                    - '&7It will lose 1 tier upon death!'
-                    - ''
-                    - '&7You will permanently'
-                    - '&7respawn with at least lowest tier'
-                    - ''
-                    currency: gold ingot
-                    cost: 6
-                    items:
-                    - Upgradable Pickaxe
-                Tier V Pickaxe:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Diamond Pickaxe &a(MAXED)'
-                        msg: '&aDiamond Pickaxe &a(MAXED)'
-                    slot: 20
-                    display: diamond pickaxe
-                    lore:
-                    - ''
-                    - '&7COST: &6{cost} GOLD'
-                    - ''
-                    - '&7Tier: &e&lV'
-                    - ''
-                    - '&7This is an upgradable item.'
-                    - '&7It will lose 1 tier upon death!'
-                    - ''
-                    - '&7You will permanently'
-                    - '&7respawn with at least lowest tier'
-                    - ''
-                    currency: gold ingot
-                    cost: 6
-                    items:
-                    - Upgradable Pickaxe
-                Tier I Axe:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Wood Axe (Efficiency I)'
-                        msg: '&aWood Axe (Efficiency I)'
-                    slot: 21
-                    display: wood axe
-                    lore:
-                    - ''
-                    - '&7COST: &f{cost} IRON'
-                    - ''
-                    - '&7Tier: &e&lI'
-                    - ''
-                    - '&7This is an upgradable item.'
-                    - '&7It will lose 1 tier upon death!'
-                    - ''
-                    - '&7You will permanently'
-                    - '&7respawn with at least lowest tier'
-                    - ''
-                    currency: iron ingot
-                    cost: 10
-                    items:
-                    - Upgradable Axe
-                Tier II Axe:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Stone Axe (Efficiency II)'
-                        msg: '&aStone Axe (Efficiency II)'
-                    slot: 21
-                    display: stone axe
-                    lore:
-                    - ''
-                    - '&7COST: &f{cost} IRON'
-                    - ''
-                    - '&7Tier: &e&lII'
-                    - ''
-                    - '&7This is an upgradable item.'
-                    - '&7It will lose 1 tier upon death!'
-                    - ''
-                    - '&7You will permanently'
-                    - '&7respawn with at least lowest tier'
-                    - ''
-                    currency: iron ingot
-                    cost: 10
-                    items:
-                    - Upgradable Axe
-                Tier III Axe:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Stone Axe (Efficiency II)'
-                        msg: '&aStone Axe (Efficiency II)'
-                    slot: 21
-                    display: iron axe
-                    lore:
-                    - ''
-                    - '&7COST: &6{cost} GOLD'
-                    - ''
-                    - '&7Tier: &e&lIII'
-                    - ''
-                    - '&7This is an upgradable item.'
-                    - '&7It will lose 1 tier upon death!'
-                    - ''
-                    - '&7You will permanently'
-                    - '&7respawn with at least lowest tier'
-                    - ''
-                    currency: gold ingot
-                    cost: 3
-                    items:
-                    - Upgradable Axe
-                Tier IV Axe:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Diamond Axe (Efficiency II)'
-                        msg: '&aDiamond Axe (Efficiency II)'
-                    slot: 21
-                    display: diamond axe
-                    lore:
-                    - ''
-                    - '&7COST: &6{cost} GOLD'
-                    - ''
-                    - '&7Tier: &e&lIV'
-                    - ''
-                    - '&7This is an upgradable item.'
-                    - '&7It will lose 1 tier upon death!'
-                    - ''
-                    - '&7You will permanently'
-                    - '&7respawn with at least lowest tier'
-                    - ''
-                    currency: gold ingot
-                    cost: 6
-                    items:
-                    - Upgradable Axe
-                Tier V Axe:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Diamond Axe (Efficiency II) &a(MAXED)'
-                        msg: '&aDiamond Axe (Efficiency II) (MAXED)'
-                    slot: 21
-                    display: diamond axe
-                    lore:
-                    - ''
-                    - '&7COST: &6{cost} GOLD'
-                    - ''
-                    - '&7Tier: &e&lV'
-                    - ''
-                    - '&7This is an upgradable item.'
-                    - '&7It will lose 1 tier upon death!'
-                    - ''
-                    - '&7You will permanently'
-                    - '&7respawn with at least lowest tier'
-                    - ''
-                    currency: gold ingot
-                    cost: 6
-                    items:
-                    - Upgradable Axe
+                    - shears
+                Upgradable Pickaxe:
+                    upgradable: true
+                    levels:
+                        '1':
+                            type: item
+                            name:
+                                gui: '&8&l» {check} Wooden Pickaxe (Efficiency I)'
+                                msg: '&aWooden Pickaxe (Efficiency I)'
+                            permanent: true
+                            slot: 20
+                            display: wood pickaxe
+                            lore:
+                            - ''
+                            - '&7COST: &f{cost} IRON'
+                            - ''
+                            - '&7Tier: &e&lI'
+                            - ''
+                            - '&7This is an upgradable item.'
+                            - '&7It will lose 1 tier upon death!'
+                            - ''
+                            - '&7You will permanently'
+                            - '&7respawn with at least lowest tier'
+                            - ''
+                            currency: iron ingot
+                            cost: 10
+                            items:
+                            - wood pickaxe of efficiency 1
+                        '2':
+                            type: item
+                            name:
+                                gui: '&8&l» {check} Iron Pickaxe (Efficiency II)'
+                                msg: '&aIron Pickaxe (Efficiency II)'
+                            permanent: true
+                            slot: 20
+                            display: iron pickaxe
+                            lore:
+                            - ''
+                            - '&7COST: &f{cost} IRON'
+                            - ''
+                            - '&7Tier: &e&lII'
+                            - ''
+                            - '&7This is an upgradable item.'
+                            - '&7It will lose 1 tier upon death!'
+                            - ''
+                            - '&7You will permanently'
+                            - '&7respawn with at least lowest tier'
+                            - ''
+                            currency: iron ingot
+                            cost: 12
+                            items:
+                            - iron pickaxe of efficiency 2
+                            remove-items:
+                            - wood pickaxe of efficiency 1
+                        '3':
+                            type: item
+                            name:
+                                gui: '&8&l» {check} Gold Pickaxe (Efficiency III,
+                                    Sharpness II)'
+                                msg: '&aGold Pickaxe (Efficiency III, Sharpness II)'
+                            permanent: true
+                            slot: 20
+                            display: gold pickaxe
+                            lore:
+                            - ''
+                            - '&7COST: &6{cost} GOLD'
+                            - ''
+                            - '&7Tier: &e&lIII'
+                            - ''
+                            - '&7This is an upgradable item.'
+                            - '&7It will lose 1 tier upon death!'
+                            - ''
+                            - '&7You will permanently'
+                            - '&7respawn with at least lowest tier'
+                            - ''
+                            currency: gold ingot
+                            cost: 3
+                            items:
+                            - gold pickaxe of efficiency 3 and sharpness 2
+                            remove-items:
+                            - wood pickaxe of efficiency 1
+                            - iron pickaxe of efficiency 2
+                        '4':
+                            type: item
+                            name:
+                                gui: '&8&l» {check} Diamond Pickaxe (Efficiency IV)'
+                                msg: '&aDiamond Pickaxe (Efficiency IV)'
+                            permanent: true
+                            slot: 20
+                            display: diamond pickaxe
+                            lore:
+                            - ''
+                            - '&7COST: &6{cost} GOLD'
+                            - ''
+                            - '&7Tier: &e&lIV'
+                            - ''
+                            - '&7This is an upgradable item.'
+                            - '&7It will lose 1 tier upon death!'
+                            - ''
+                            - '&7You will permanently'
+                            - '&7respawn with at least lowest tier'
+                            - ''
+                            currency: gold ingot
+                            cost: 6
+                            items:
+                            - diamond pickaxe of efficiency 4
+                            remove-items:
+                            - gold pickaxe of efficiency 3 and sharpness 2
+                            - wood pickaxe of efficiency 1
+                            - iron pickaxe of efficiency 2
+                        '5':
+                            type: item
+                            name:
+                                gui: '&8&l» {check} Diamond Pickaxe &a(MAXED)'
+                                msg: '&aDiamond Pickaxe &a(MAXED)'
+                            permanent: true
+                            slot: 20
+                            display: diamond pickaxe
+                            lore:
+                            - ''
+                            - '&7COST: &6{cost} GOLD'
+                            - ''
+                            - '&7Tier: &e&lV'
+                            - ''
+                            - '&7This is an upgradable item.'
+                            - '&7It will lose 1 tier upon death!'
+                            - ''
+                            - '&7You will permanently'
+                            - '&7respawn with at least lowest tier'
+                            - ''
+                            currency: gold ingot
+                            cost: 6
+                            items:
+                            - diamond pickaxe of efficiency 4 and sharpness 2
+                            remove-items:
+                            - diamond pickaxe of efficiency 4
+                            - gold pickaxe of efficiency 3 and sharpness 2
+                            - wood pickaxe of efficiency 1
+                            - iron pickaxe of efficiency 2
+                Upgradable Axe:
+                    upgradable: true
+                    levels:
+                        '1':
+                            type: item
+                            name:
+                                gui: '&8&l» {check} Wood Axe (Efficiency I)'
+                                msg: '&aWood Axe (Efficiency I)'
+                            permanent: true
+                            slot: 21
+                            display: wood axe
+                            lore:
+                            - ''
+                            - '&7COST: &f{cost} IRON'
+                            - ''
+                            - '&7Tier: &e&lI'
+                            - ''
+                            - '&7This is an upgradable item.'
+                            - '&7It will lose 1 tier upon death!'
+                            - ''
+                            - '&7You will permanently'
+                            - '&7respawn with at least lowest tier'
+                            - ''
+                            currency: iron ingot
+                            cost: 10
+                            items:
+                            - wood axe of efficiency 1
+                        '2':
+                            type: item
+                            name:
+                                gui: '&8&l» {check} Stone Axe (Efficiency II)'
+                                msg: '&aStone Axe (Efficiency II)'
+                            permanent: true
+                            slot: 21
+                            display: stone axe
+                            lore:
+                            - ''
+                            - '&7COST: &f{cost} IRON'
+                            - ''
+                            - '&7Tier: &e&lII'
+                            - ''
+                            - '&7This is an upgradable item.'
+                            - '&7It will lose 1 tier upon death!'
+                            - ''
+                            - '&7You will permanently'
+                            - '&7respawn with at least lowest tier'
+                            - ''
+                            currency: iron ingot
+                            cost: 10
+                            items:
+                            - stone axe of efficiency 1
+                            remove-items:
+                            - wood axe of efficiency 1
+                        '3':
+                            type: item
+                            name:
+                                gui: '&8&l» {check} Iron Axe (Efficiency II)'
+                                msg: '&aIron Axe (Efficiency II)'
+                            permanent: true
+                            slot: 21
+                            display: iron axe
+                            lore:
+                            - ''
+                            - '&7COST: &6{cost} GOLD'
+                            - ''
+                            - '&7Tier: &e&lIII'
+                            - ''
+                            - '&7This is an upgradable item.'
+                            - '&7It will lose 1 tier upon death!'
+                            - ''
+                            - '&7You will permanently'
+                            - '&7respawn with at least lowest tier'
+                            - ''
+                            currency: gold ingot
+                            cost: 3
+                            items:
+                            - iron axe of efficiency 2
+                            remove-items:
+                            - wood axe of efficiency 1
+                            - stone axe of efficiency 1
+                        '4':
+                            type: item
+                            name:
+                                gui: '&8&l» {check} Diamond Axe (Efficiency II)'
+                                msg: '&aDiamond Axe (Efficiency II)'
+                            permanent: true
+                            slot: 21
+                            display: diamond axe
+                            lore:
+                            - ''
+                            - '&7COST: &6{cost} GOLD'
+                            - ''
+                            - '&7Tier: &e&lIV'
+                            - ''
+                            - '&7This is an upgradable item.'
+                            - '&7It will lose 1 tier upon death!'
+                            - ''
+                            - '&7You will permanently'
+                            - '&7respawn with at least lowest tier'
+                            - ''
+                            currency: gold ingot
+                            cost: 6
+                            items:
+                            - diamond axe of efficiency 2
+                            remove-items:
+                            - wood axe of efficiency 1
+                            - stone axe of efficiency 1
+                            - iron axe of efficiency 2
+                        '5':
+                            type: item
+                            name:
+                                gui: '&8&l» {check} Diamond Axe (Efficiency II) &a(MAXED)'
+                                msg: '&aDiamond Axe (Efficiency II) (MAXED)'
+                            permanent: true
+                            slot: 21
+                            display: diamond axe
+                            lore:
+                            - ''
+                            - '&7COST: &6{cost} GOLD'
+                            - ''
+                            - '&7Tier: &e&lV'
+                            - ''
+                            - '&7This is an upgradable item.'
+                            - '&7It will lose 1 tier upon death!'
+                            - ''
+                            - '&7You will permanently'
+                            - '&7respawn with at least lowest tier'
+                            - ''
+                            currency: gold ingot
+                            cost: 6
+                            items:
+                            - diamond axe of efficiency 2
+                            remove-items:
+                            - wood axe of efficiency 1
+                            - stone axe of efficiency 1
+                            - stone axe of efficiency 2
+                            - iron axe of efficiency 2
         Armor:
             type: category
             GUI: '&8&l» &bARMOR'
