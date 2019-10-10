@@ -4,6 +4,7 @@ Shop:
         Player-have-items: '&a✔&7'
         Player-not-have-items: '&c✘&7'
         Main-Gui: '&7SHOP'
+        Remove-Glass-Bottle: true
     Categories:
         Quick-Buy:
             type: category
@@ -57,7 +58,7 @@ Shop:
                     slot: 1
                     display: hardened clay
                     lore:
-                    - ''
+                    - '' 
                 Meele:
                     type: category
                     category: Meele
