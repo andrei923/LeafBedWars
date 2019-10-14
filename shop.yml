@@ -12,66 +12,126 @@ Trails:
     - ''
     - '&8➥ &7Cost: &e{price}'
     List:
-        Red glass:
+        Tnt:
             Price: 3000
             Display:
-                Name: '&aRed Glass &7Trail'
-                Item: Red glass block
-            Particle: Red glass block
-        Blue glass:
-            Price: 1290
-            Display:
-                Name: '&aBlue Glass &7Trail'
-                Item: Blue glass block
-            Particle: Blue glass block
-        Green glass:
-            Price: 1216
-            Display:
-                Name: '&aGreen Glass &7Trail'
-                Item: Green glass block
-            Particle: Green glass block
-        Orange glass:
-            Price: 1428
-            Display:
-                Name: '&aOrange Glass &7Trail'
-                Item: Orange glass block
-            Particle: Orange glass block
-        Purple glass:
-            Price: 1142
-            Display:
-                Name: '&aPurple Glass &7Trail'
-                Item: Purple glass block
-            Particle: Purple glass block
-        Yellow glass:
-            Price: 1390
-            Display:
-                Name: '&aYellow Glass &7Trail'
-                Item: Yellow glass block
-            Particle: Yellow glass block
-        Brown glass:
-            Price: 1448
-            Display:
-                Name: '&aBrown Glass &7Trail'
-                Item: Brown glass block
-            Particle: Brown glass block
-        Cyan glass:
-            Price: 1033
-            Display:
-                Name: '&aCyan Glass &7Trail'
-                Item: Cyan glass block
-            Particle: Cyan glass block
-        Gray glass:
-            Price: 1243
-            Display:
-                Name: '&aGray Glass &7Trail'
-                Item: Gray glass block
-            Particle: Gray glass block
-        Magenta glass:
+                Name: '&aTNT &7Trail'
+                Item: tnt
+            Amount: 1
+            Type: BLOCK_CRACK
+            Particle: TNT
+        Ice:
             Price: 1498
             Display:
-                Name: '&aMagenta Glass &7Trail'
-                Item: Magenta glass block
-            Particle: Magenta glass block
+                Name: '&aIce &7Trail'
+                Item: Ice block
+            Amount: 1
+            Type: BLOCK_CRACK
+            Particle: ICE
+        Diamond:
+            Price: 1498
+            Display:
+                Name: '&aDiamond &7Trail'
+                Item: Diamond block
+            Amount: 1
+            Type: BLOCK_CRACK
+            Particle: DIAMOND_BLOCK
+        Explosion Normal:
+            Price: 1498
+            Display:
+                Name: '&aExplosion Normal &7Trail'
+                Item: pufferfish
+            Amount: 1
+            Type: EFFECT
+            Particle: EXPLOSION_NORMAL
+        Firework Spark:
+            Price: 1498
+            Display:
+                Name: '&aFirework Spark &7Trail'
+                Item: firework rocket
+            Amount: 1
+            Type: EFFECT
+            Particle: FIREWORKS_SPARK
+        Water Bubble:
+            Price: 1498
+            Display:
+                Name: '&aWater Bubble &7Trail'
+                Item: water bucket
+            Amount: 1
+            Type: EFFECT
+            Particle: WATER_BUBBLE
+        Water Splash:
+            Price: 1498
+            Display:
+                Name: '&aWater Splash &7Trail'
+                Item: water bucket
+            Amount: 1
+            Type: EFFECT
+            Particle: WATER_SPLASH
+        Crit:
+            Price: 1498
+            Display:
+                Name: '&aCrit &7Trail'
+                Item: iron axe
+            Amount: 1
+            Type: EFFECT
+            Particle: CRIT
+        Villager Happy:
+            Price: 1498
+            Display:
+                Name: '&aVillager Happy &7Trail'
+                Item: green dye
+            Amount: 1
+            Type: EFFECT
+            Particle: VILLAGER_HAPPY
+        Note:
+            Price: 1498
+            Display:
+                Name: '&aNote &7Trail'
+                Item: note block
+            Amount: 1
+            Type: EFFECT
+            Particle: NOTE
+        Lava:
+            Price: 1498
+            Display:
+                Name: '&aLava &7Trail'
+                Item: lava bucket
+            Amount: 1
+            Type: EFFECT
+            Particle: LAVA
+        Flame:
+            Price: 1498
+            Display:
+                Name: '&aFlame &7Trail'
+                Item: flint and steel
+            Amount: 1
+            Type: EFFECT
+            Particle: FLAME
+        Cloud:
+            Price: 1498
+            Display:
+                Name: '&aFlame &7Trail'
+                Item: sugar
+            Amount: 1
+            Type: EFFECT
+            Particle: CLOUD
+        Heart:
+            Price: 1498
+            Display:
+                Name: '&aHeart &7Trail'
+                Item: red dye
+            Amount: 1
+            Type: EFFECT
+            Particle: HEART
+        Snowball:
+            Price: 1498
+            Display:
+                Name: '&aSnowBall &7Trail'
+                Item: snowball
+            Amount: 1
+            Type: EFFECT
+            Particle: SNOWBALL
 
 ShopKeepers:
     GUI: '&8&l» &7ShopKeepers'
