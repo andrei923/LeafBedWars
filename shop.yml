@@ -157,60 +157,105 @@ ShopKeepers:
                 Name: '&aZombie'
                 Id: 9959dd98-efb3-4ee9-a8fb-2fda0218cda0
                 Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTZmYzg1NGJiODRjZjRiNzY5NzI5Nzk3M2UwMmI3OWJjMTA2OTg0NjBiNTFhNjM5YzYwZTVlNDE3NzM0ZTExIn19fQ==
-            Type: Zombie
+            Type: MOB
+            Spawn: Zombie
         Skeleton:
             Price: 3000
             Display:
                 Name: '&aSkeleton'
                 Id: 99653361-7f17-4868-af3b-c95bc2743f5e
                 Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzAxMjY4ZTljNDkyZGExZjBkODgyNzFjYjQ5MmE0YjMwMjM5NWY1MTVhN2JiZjc3ZjRhMjBiOTVmYzAyZWIyIn19fQ==
-            Type: Skeleton
+            Type: MOB
+            Spawn: Skeleton
         PigMan:
             Price: 3000
             Display:
                 Name: '&aPigMan'
                 Id: 6540c046-d6ea-4aff-9766-32a54ebe6958
                 Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzRlOWM2ZTk4NTgyZmZkOGZmOGZlYjMzMjJjZDE4NDljNDNmYjE2YjE1OGFiYjExY2E3YjQyZWRhNzc0M2ViIn19fQ==
-            Type: Adult Zombie Pigman
+            Type: MOB
+            Spawn: Zombie
         Witch:
             Price: 3000
             Display:
                 Name: '&aWitch'
                 Id: 7f92b3d6-5ee0-4ab6-afae-2206b9514a63
                 Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjBlMTNkMTg0NzRmYzk0ZWQ1NWFlYjcwNjk1NjZlNDY4N2Q3NzNkYWMxNmY0YzNmODcyMmZjOTViZjlmMmRmYSJ9fX0=
-            Type: Witch
+            Type: MOB
+            Spawn: Witch
         Blaze:
             Price: 3000
             Display:
                 Name: '&aBlaze'
                 Id: 7ceb88b2-7f5f-4399-abb9-7068251baa9d
                 Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjc4ZWYyZTRjZjJjNDFhMmQxNGJmZGU5Y2FmZjEwMjE5ZjViMWJmNWIzNWE0OWViNTFjNjQ2Nzg4MmNiNWYwIn19fQ==
-            Type: Blaze
+            Type: MOB
+            Spawn: Blaze
         Zombie Villager:
             Price: 3000
             Display:
                 Name: '&aZombie Villager'
                 Id: dd1b157c-d732-4d1c-8185-da205188a8cf
                 Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTVlMDhhODc3NmMxNzY0YzNmZTZhNmRkZDQxMmRmY2I4N2Y0MTMzMWRhZDQ3OWFjOTZjMjFkZjRiZjNhYzg5YyJ9fX0=
-            Type: Zombie villager
+            Type: MOB
+            Spawn: Zombie villager
         Snow Golem:
             Price: 3000
             Display:
                 Name: '&aSnow Golem'
                 Id: 7e98f005-fd35-433b-983e-5dc2d3bab0f4
                 Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZkZmQxZjc1MzhjMDQwMjU4YmU3YTkxNDQ2ZGE4OWVkODQ1Y2M1ZWY3MjhlYjVlNjkwNTQzMzc4ZmNmNCJ9fX0=
-            Type: Snow Golem
+            Type: MOB
+            Spawn: Snow Golem
         Wither Skeleton:
             Price: 3000
             Display:
                 Name: '&aWither Skeleton'
                 Id: 9b6eb2a3-8c99-4e14-9162-58debe3f9262
                 Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzk1M2I2YzY4NDQ4ZTdlNmI2YmY4ZmIyNzNkNzIwM2FjZDhlMWJlMTllODE0ODFlYWQ1MWY0NWRlNTlhOCJ9fX0=
-            Type: Wither Skeleton
+            Type: MOB
+            Spawn: Wither Skeleton
         Creeper:
             Price: 3000
             Display:
                 Name: '&aCreeper'
                 Id: eed2d903-ca32-4cc7-b33b-ca3bdbe18da4
                 Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjQyNTQ4MzhjMzNlYTIyN2ZmY2EyMjNkZGRhYWJmZTBiMDIxNWY3MGRhNjQ5ZTk0NDQ3N2Y0NDM3MGNhNjk1MiJ9fX0=
-            Type: Creeper
+            Type: MOB
+            Spawn: Creeper
+        ColorFull:
+            Price: 5000
+            Display:
+                Name: '&aColorFull'
+                Id: 55db5d8f-6fa6-47a8-8c02-b65fe82891b3
+                Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2YyZjY1OGM4MGYwZDUzZjdjOTljZWM4NWIzMTVjYzUzMDA2YzU3ZWQ2NmM0NzMwZjVkNDlkYWVjM2U1Yzk2MSJ9fX0=
+            Type: PLAYER
+            Skin-Texture: eyJ0aW1lc3RhbXAiOjE1NzI5MDY1ODAxNjIsInByb2ZpbGVJZCI6IjYzNGI1ZGQ5MDcyODQ1OTY5NWY4MTk4YTViNmEzYzY4IiwicHJvZmlsZU5hbWUiOiI5OTk5OTk5OTk5U0xJQ0NZIiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS83ZjJmNjU4YzgwZjBkNTNmN2M5OWNlYzg1YjMxNWNjNTMwMDZjNTdlZDY2YzQ3MzBmNWQ0OWRhZWMzZTVjOTYxIn19fQ==
+            Skin-Signature: hj8gXxuA5e6YxNqzqBNIEiWG9PRS7tA/BAm9RFe28Em/5rya3eQQJOucS/SOKMsTqBSQpjZ12+OCGjMX5l4/XMVPkypyz3gVIcGcNZoq8rRjiuYhmfNkgTuHm+ReqhU5T7LZNKK7aKQ/Dp4al/qaWoVmGdY6lGbDxTx8HJDnGfX1ZTbCgYkYSPALw/SoJVfVUvUKmemhHyStcVTgx2T01nP7AVwxnT9a8Tw+ERbKcoSFqL4wuXe7AzK8GsYCfeyR1ooyOOhQwqNmP7294H6nZ67NkaKh/WhRdvAuzidfToo3zDzLu0kIn6DLM0u6uTeJnrgLDdNkfZ55FcCtpbG+1xNZjUZj+3TPJANqhknlWcocYr6OrseMl/wpDHA3efrEpDJnvy6CtcpAQAIqiyRF3pfFjvWyjGk1LDVVN3PeKn+JjmJ8TclmuVFvJyMQWdIscB6moA40ZsqHedHSLYQnk9OrC0tSHuK/QBJM4v2auPaGkpONPKZePRhkKRPzSF09mUv23545XDIscYA9g6LFPJvOvRp8IDhQsSI8R4uc98cKfBmF1wlK/6aZcUm4smSlmqy/ymn/yCRh9exSBsHbaqnw8GjKlCkLFp5ei08pr7UieY23D1MNBaSQfqCmk78GmIKqzRnkRMKcie4rBbcLLTXTqImeDI5/KTDwNEQ70fQ=
+        Pinkie:
+            Price: 5000
+            Display:
+                Name: '&aPinkie'
+                Id: de739270-4b04-4083-b35f-a0f7b093eff7
+                Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzNlY2RmNTA0OWJiOWUxMzFlYjgyMjA4MDBkYzU0YjEzMTRjYzdhNWQ1ZjYwZjdiNGM2M2FjNGFhN2MyOTQ5MSJ9fX0=
+            Type: PLAYER
+            Skin-Texture: eyJ0aW1lc3RhbXAiOjE1NzI5MDY5MzY5MjAsInByb2ZpbGVJZCI6ImY2ZDExYTg1NzFhMDQ5N2JhNTcwYTQ3NGVhNWEwYjNmIiwicHJvZmlsZU5hbWUiOiIwMTkyIiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jM2VjZGY1MDQ5YmI5ZTEzMWViODIyMDgwMGRjNTRiMTMxNGNjN2E1ZDVmNjBmN2I0YzYzYWM0YWE3YzI5NDkxIiwibWV0YWRhdGEiOnsibW9kZWwiOiJzbGltIn19fX0=
+            Skin-Signature: ASpUX85GTc7e7LVohXYQz2NSrhIKL/X42dWk1GAelQlnXJI+yOn/RXk7XqTNJMLRKtli+d2zl8Htde0nCFfFnDhqVfkQDG4xDJeKD/aOJ1vAKM8HgocDSO7LFUqNObbKjegAj2fPi9PokMTziiPuNqCeS1zASdu0gFZU3mr1sjM9iqRhUn7C2vpSgTm0MqdqPoP/sho38McF8vMeE5mw2EVBran3iMQ7HwYKRC0tbXums4pDTdHcrzbqlOxtF/cp5v0yNlafPeT4N3Usfp0lJn2vFmCZI+++Vhar8NjE21lkg0oxfP0pHqxba1mp9XoJ6xJuOT1/unLkLeXST04dHXP5fRm+nV0/IScj+2K7b9odHf9M/tyVGXfl2LswCohKEZB7lF0u1GKq5xInG8MFPiA01pKH5ht00tYnOJ8B730Tucw1CVtlwvI4DDA/8xzc0yMlfaNvDU4o5GoeNO6AQ5P09lVAnUOfyxASYFnVMNK9+2Hngyrnfh6NXwozBRfexaP16hQsZb0TX7+wd5CU2mrpIRk7HNvM2BMt1BU5hPtpN8aRVlw2q9Vc0GsB4f6jvv16w+aZ4i7qyrtiJilG9WpHtQQXlUVHNwW8mmfT1JGr5WBs3fTqWVNdciEJKQ+4WFsgC/EknYNjEkIC0gLTeOYr7HwY3hmzExhPgN4mHhs=
+        Joker:
+            Price: 5000
+            Display:
+                Name: '&aJoker'
+                Id: df4e173a-d0a8-4b2e-a87f-89ec460a7bfc
+                Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTQ5YWUxNzZiZjYxMTMxMTA0ZGI4MWRkODlhZGJkNzAxOTUwOGM0YmFmMWY0MTY5NDQ0MDgzNGJkZDdkMTM5MSJ9fX0=
+            Type: PLAYER
+            Skin-Texture: eyJ0aW1lc3RhbXAiOjE1NzI5MDY4Mjg3MTksInByb2ZpbGVJZCI6IjQ5MDhjMzdhZmI3ZjQxOTJiZGVmOWNlMTIzNDNkNWRhIiwicHJvZmlsZU5hbWUiOiIzbWkxMSIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTQ5YWUxNzZiZjYxMTMxMTA0ZGI4MWRkODlhZGJkNzAxOTUwOGM0YmFmMWY0MTY5NDQ0MDgzNGJkZDdkMTM5MSIsIm1ldGFkYXRhIjp7Im1vZGVsIjoic2xpbSJ9fX19
+            Skin-Signature: kp5i0ZENVJjwcG/lsnptZrt6ehetXtTynq8A1anTqdZLbU5bhbfGOQwUsDyx8QcMV9LQTFKuUR9QVbwT+nHoysK6010k7LLljostqElj/LkHqlDhMeDgNd3V2SX2ZTtp1ZBbGeOU2brI00QjYuNy10Y+0fe+7g7lDXZD+Szahp/kvsywx2LW1q2iB37Yi9CiZ3dOXDXUgNEynWpB0fITjKe1Xa6EkEBB0Zj/sxVrTtwdN+JL0ybv41os9TTQyJKMW9tdwXqqtnaP0Tpt2HApQDfEcMPtk7HSuzvOEexkWXScq51lNMvC2i+05tqJOJMiqVh83A8MpXoD5bOlnX6nK/iGOiiUA8yHYN4DY0ZXGeSuAVNZ55iNV2TA92+1oU9vq0fRXlUhxvjsIvQIFLMa6xEZgxlfUCDH/JxbuaMtit+kZgcjYjamYaB4mLHOfHsh6cKECZ4KtLOdbxpJU10nQ738fMT+lOniZWjUe5w5JpwIHWVNGFOrejllwFSjjPFjED0K7ASx9kaStGPjxPm6IAgM7CTYcu/RP+eYiO/CRqyaosZW6nImCT6Pv6VNZSD1HWao8lgd8ySMSM1kVcI/aX5iQAWEm18YLgrRD2Omhde57fYzUDjWnsnk0PsU7Wc1AVdYAZIXihsj0bDIrK1AFpS+uXIXAXSeKEpF1YODncc=
+        Finn:
+            Price: 5000
+            Display:
+                Name: '&aFinn'
+                Id: fbf5c4ae-0049-4268-b3dc-337988d9fa17
+                Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDFiNDA2MDU1YjA3MjE3ZmRkNTY2MTY2ZTA2OWQwNDQxNDdhY2M1ZGE0NWM4MzQ3NWIxMDZmNjdjMjhiNGU4NiJ9fX0=
+            Type: PLAYER
+            Skin-Texture: eyJ0aW1lc3RhbXAiOjE1NzI5MDczMjYwMzAsInByb2ZpbGVJZCI6ImU0OTQ0ODVhZDhjMjQyMTJhYTllZmI2ZDBlNTYxY2Y1IiwicHJvZmlsZU5hbWUiOiJ5b29uYWEiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2QxYjQwNjA1NWIwNzIxN2ZkZDU2NjE2NmUwNjlkMDQ0MTQ3YWNjNWRhNDVjODM0NzViMTA2ZjY3YzI4YjRlODYiLCJtZXRhZGF0YSI6eyJtb2RlbCI6InNsaW0ifX19fQ==
+            Skin-Signature: nn033tPumm86NOZQKuc4ydzuyaz841S/Di3A2GFB4xXfXS5qZoWklgSNMeTFb2c25HCfZi4KXjlWDsBEf/vAUr61o8XbXz1YZ1RFmNwVfr5ip+IOETwVZtT+o0xhmzVTRt1m/5n03UlQ6Fb/GNsVOZ0rZY1je9A3xy2QxQLJ5vgrYhhZc3+aE0lezb1a9xcuYa56JUOt4B0ooyAplAkCNbAA+HN7Gp7j6xRsHnx134Z2yU5lIusMt/Et48uudKLKQV/EaZBhkUawfVWHa287pyQdXEikLja87LoCz3ndYngFN8mg6TeuWrEAn3RDDTzXor0TeM4pRlUIXt/57YrAAyxpK8Tj80iiCOW27CDx+L6Vvo0CVKvVGI4kONiPwEFMDisu+OXKJPtT9R8jxYB0TaoiDHn11+k3cIQbzb+JnFdnH7tRqkfUea3mjqukyiwfUh/muW+MLli997oyjY6u0q8vQaRkQ59mmjZMKmiaKMG6XjBPzNrUY9PU4MgmJPSHBf0t2nkD3i8f6yr1kkCEkZUnnPl9fkO2zgcAgkZHY563IOtrUa2FkhJPTDnykpsolkbSo9Z4vVSryik8TxHo3XyfporWRHiznTdPbrb6dQ138+FigXKKQbuwYLlHUtrfBovYUAXhWlQbGmdpyFLI2iIR0wV3UoiGmZZulJNRW6U=
