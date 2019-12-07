@@ -18,3 +18,4 @@ on papi placeholder request with the prefix "LeafBedWars":
 	if {_loaded} is true:
 		{bw::player::%player%::state} is not set
 		unload yaml "bw.player.data.%uuid of player%"
+
