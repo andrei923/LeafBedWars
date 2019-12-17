@@ -19,3 +19,8 @@ on papi placeholder request with the prefix "LeafBedWars":
 		{bw::player::%player%::state} is not set
 		unload yaml "bw.player.data.%uuid of player%"
 
+on load:
+	broadcast "%yaml value ""Messages.Prefix"" from ""bw.language""%&aPlaceholderAPI module loaded."
+
+
+

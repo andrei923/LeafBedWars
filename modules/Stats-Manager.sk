@@ -1,0 +1,34 @@
+command bwstats [<text>] [<text>] [<text>] [<number>]:
+	trigger:
+		if executor != console:
+			if player does not have permission "leafbw.player":
+				send "&7&l➜ &cNo permission." 
+				stop
+		if arg-1 != "give" or "take" or "set":
+			send "&7&l➜ &aYou can only &egive&a, &etake &aand &eset."
+			send "&7&l➜ &bFormat: &a/bwstats &8(&e&ngive/set/take&r&8) &8(&e&ncoins/xp/level&r&8) &8(&eplayer&8) &8(&e&nnumber&r&8)"
+			stop
+		if arg-2 != "coins" or "xp" or "level":
+			send "&7&l➜ &aYou can modify only coins or xp"
+			send "&7&l➜ &bFormat: &a/bwstats &8(&e&ngive/set/take&r&8) &8(&e&ncoins/xp/level&r&8) &8(&eplayer&8) &8(&e&nnumber&r&8)"
+			stop 			
+		if arg-3 parsed as player is online:
+			bw_stats(arg-1, arg-3 parsed as player, arg-2, arg-4)
+			stop
+		load all yaml from directory "plugins/LeafBedWars/playerdata"
+		loop currently loaded yaml files:
+			loop-value-1 contains "plugins/LeafBedWars/playerdata"
+			if yaml value "Data.Username" from loop-value-1 = arg-3:
+				set {_found} to true
+				set {_uuid} to loop-value-1
+				replace all "plugins/LeafBedWars/playerdata/" with "" in {_uuid}
+				load yaml "plugins/LeafBedWars/playerdata/%{_uuid}%" as "bw.player.data.%{_uuid}%"
+				stop loop
+		if {_found} is set:				
+			wait a tick
+			bw_stats(arg-1, arg-3 parsed as player, arg-2, arg-4, {_uuid})
+			wait a second
+			bw_check_loaded_files()
+
+on load:
+	broadcast "%yaml value ""Messages.Prefix"" from ""bw.language""%&aStats-Manager module loaded."				
