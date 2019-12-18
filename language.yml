@@ -1,0 +1,500 @@
+Messages:
+    Prefix: '&6BedWars &8» &7'
+    starting-in: '&eThe game starts in &c{seconds} &eseconds!'
+    start-message:
+    - '&a&l■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■'
+    - ''
+    - '                              &8&l● &f&lBEDWARS &8&l●'
+    - ''
+    - '          &eProtect your bed and destroy the enemy beds.'
+    - '          &eUpgrade yourself and your team by collecting'
+    - '          &eIron, Gold, Emerald and Diamond from generators'
+    - '          &eto access powerful upgrades.'
+    - ''
+    - '&a&l■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■'
+    join-message: '&a&l» &7{player} &ehas joined &e(&b{playing}&e/&b{max}&e)'
+    left-message: '&c&l« &7{player} &ehas quit!'
+    searching-arenas: '&7✈ &eSearching for available arenas...'
+    no-arena-found: '&cNo arenas available.'
+    not-enough-players: '&cThere are not enough players to start!'
+    ingame-command-deny: '&7You can''t use this command in game!'
+    no-permission: '&cYou are not allowed to use this.'
+    in-game: '&cYou can''t do this while playing!'
+    not-in-game: '&cYou are not in game!'
+    specify-arena: '&cYou must specify an arena name!'
+    SUMMARY:
+        SOLO:
+        - '&a&l■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■'
+        - ''
+        - '                              &8&l● &f&lBEDWARS &8&l●'
+        - ''
+        - '                         &eWINNER {win-team} &f- &3{team-players}'
+        - ''
+        - '                         &8● &7&nTop kills&r &8●'
+        - ''
+        - '                         &e&l1 &8&l- &3{player-1} &7- {kills-1}'
+        - '                         &6&l2 &8&l- &7{player-2} &7- {kills-2}'
+        - '                         &c&l3 &8&l- &7{player-3} &7- {kills-3}'
+        - ''
+        - '&a&l■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■'
+        TEAM:
+        - '&a&l■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■'
+        - ''
+        - '                              &8&l● &f&lBEDWARS &8&l●'
+        - ''
+        - '                         &eWINNERS {win-team} &f- &3{team-players}'
+        - ''
+        - '                         &8● &7&nTop kills&r &8●'
+        - ''
+        - '                         &e&l1 &8&l- &3{player-1} &7- {kills-1}'
+        - '                         &6&l2 &8&l- &7{player-2} &7- {kills-2}'
+        - '                         &c&l3 &8&l- &7{player-3} &7- {kills-3}'
+        - ''
+        - '&a&l■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■'
+    not-enought-coins: '&7You don''t have enought coins.'
+    arena-not-exist: '&cThis arena doesn''t even exists!'
+    must-be-in-lobby: '&cYou must be in lobby do this!'
+    arena-is-full: '&cThis arena is full of players!'
+    team-is-full: '&7This team is full!'
+    own-bed-break: '&cYou cannot break your own bed.'
+    player-not-found: '&cPlayer not found.'
+    arena-restarting: '&cThis arena is currently being restarted!'
+    only-placed-by-players: '&7You can only break blocks placed by players.'
+    not-now: '&7You cannot do this right now.'
+    forced-start: '&7{player} &7FORCED ARENA TO START&c!'
+    purchased-item: '&aYou purchased &6{item}'
+    cannot-place-blocks: '&cYou cannot place blocks here.'
+    all-beds-destroyed: '&c&lAll beds have been destroyed!'
+    not-enough-resources: '&cYou don''t have enough {item} &cNeed {amount} &cmore!'
+    shout-cooldown: '&cYou have to wait {cooldown} &cseconds to use this again.'
+    break-bed-message:
+    - ''
+    - '&f&lBED DESTRUCTION > {team} Bed &7was destroyed by {team-color}{player}&7!'
+    - ''
+    team-eliminated:
+    - ''
+    - '&f&lTEAM ELIMINATED > {team} Team &chas been eliminated!'
+    - ''
+    diamond-upgrade: '&bDiamond Generators &ehave been upgraded to Tier &c{level}'
+    emerald-upgrade: '&aEmerald Generators &ehave been upgraded to Tier &c{level}'
+    teleported-to: '&7Teleported to &7{player}'
+    join-team: '&7You joined in {team} &7team.'
+    purchased-upgrade: '&aYou purchased {upgrade} &aupgrade.'
+    purchased-upgrade-msg-for-team: '&7{player} &aPurchased {upgrade} &aupgrade'
+    purchased-trap: '&aYou purchased {trap} &atrap.'
+    purchased-trap-msg-for-team: '&7{player} &aPurchased {trap} &atrap.'
+    no-data-found: '&cNo data found for &a{player}'
+    alarm-trap: '&c&lAlarm trap set off by &7{player} &c&lfrom {team} &c&lteam!'
+    afk-notify: '&cYou will be afk in &e&n{seconds}&r &cseconds!'
+    Trail:
+        Purchase: '&aPurchased &e{name} &aTrail.'
+        Select: '&aSelected &e{name} &aTrail.'
+    ShopKeepers:
+        Purchase: '&aPurchased &e{name} &aShopKeeper.'
+        Select: '&aSelected &e{name} &aShopKeeper.'
+    Kill:
+        by-player: '{victim-color}{victim} &ewas killed by {attacker-color}{attacker}.'
+        by-unknown: '{victim-color}{victim} &7died.'
+        by-void: '{victim-color}{victim} &7fell in void.'
+        by-fall: '{victim-color}{victim} &7hit the ground hard.'
+        by-player-final-kill: '{victim-color}{victim} &ewas killed by {attacker-color}{attacker}.
+            &b&lFINAL KILL.'
+        thrown-in-void: '{victim-color}{victim} &7was thrown in void by {attacker-color}{attacker}.'
+    TimePlayed:
+    - '&b+{xp} Bed Wars Experience (Time Played)'
+    - '&6+{coins} coins! (Time Played)'
+    Ores:
+        diamond: '&7&l« &bDIAMOND &7&l»'
+        emerald: '&7&l« &aEMERALD &7&l»'
+        gold: '&7&l« &6GOLD &7&l»'
+        iron: '&7&l« &fIRON &7&l»'
+    Events:
+        Diamond:
+            '1': Diamond I
+            '2': Diamond II
+            '3': Diamond III
+        Emerald:
+            '1': Emerald I
+            '2': Emerald II
+            '3': Emerald III
+        EndGame: End Game
+        BedDestruction: Bed Destruction
+
+Party-Messages:
+    Prefix: '&3Party &8» &7'
+    party-created: '&7You created the party.'
+    joined-party: '&7{player} &7joined to party'
+    left-party: '&7{player} &7left the party.'
+    party-full: '&7This Party is Full'
+    kick-player: '&7You kicked &7{player} &7from the party.'
+    kicked-from-party: '&7{leader} &7kicked you from the party.'
+    join-in-a-party: '&7You joined {leader}''&7''s party.'
+    party-disband: '&7{leader} &cabandoned &7the party.'
+    now-private: '&7The party is now &cPrivate'
+    now-public: '&7The party is now &aPublic'
+    is-private: '&7This Party is &cPrivate&7, you need to be invited to join.'
+    player-invite: '&7You invited {player} &7to your party.'
+    invited-to-party: '&7{leader} &7invited you to his party.'
+    removed-invite: '&7Removed invite for &c{player}.'
+    now-own-party: '&7You don''t have a party.'
+
+Scoreboard:
+    LOBBY:
+        Title: '&e&lBEDWARS'
+        Lines:
+        - '&7{time}'
+        - ''
+        - '&6&l➩ &7Your Level: &b{level} &7✫'
+        - ''
+        - '&6&l➩ &7Progress &b{xp}&7/&a{xp-need}'
+        - '&8&l[{progress-bar}&8&l]'
+        - ''
+        - '&6&l➩ &7COINS: &6{coins}'
+        - ''
+        - '&a&l➩ &7WINS: &a{wins}'
+        - '&a&l➩ &7KILLS: &a{kills}'
+        - ''
+        - '&6&l➩ &7ONLINE: &6{online}'
+        - ''
+        - '&b&lMC-MARKET.ORG'
+    WAITING:
+        Title: '&e&lBEDWARS'
+        MODE:
+            SOLO: SOLO
+            DOUBLES: DOUBLES
+            TRIPLES: TRIPLES
+            QUADRUPLES: QUADRUPLES
+            MEGA: MEGA
+        WAITING: '&aWaiting for players...'
+        STARTING: '&fStarting in: &a{seconds}'
+        Lines:
+        - '&7{time}'
+        - ''
+        - '&fMap: &a{map}'
+        - '&fPlayers: &a{playing}/{max}'
+        - ''
+        - '{status}'
+        - ''
+        - '&fMode: &a{mode}'
+        - '&fArena: &a{arena}'
+        - ''
+        - '&b&lMC-MARKET.ORG'
+    GAME:
+        Title: '&e&lBEDWARS'
+        You: (&7You)
+        Bed-Not-Broken-Symbol: '&a✔'
+        Team-Eliminated-Symbol: '&c✘'
+        Teams-2:
+        - '&7{time}'
+        - ''
+        - '&f{next-event}'
+        - '&a{game-time}'
+        - ''
+        - '{team-slot-1}'
+        - '{team-slot-2}'
+        - ''
+        - '&a▪ &fKills: &a{kills}'
+        - '&a▪ &fFinal Kills: &a{final-kills}'
+        - '&a▪ &fBeds Broken: &a{broken-beds}'
+        - ''
+        - '&b&lMC-MARKET.ORG'
+        Teams-3:
+        - '&7{time}'
+        - ''
+        - '&f{next-event}'
+        - '&a{game-time}'
+        - ''
+        - '{team-slot-1}'
+        - '{team-slot-2}'
+        - '{team-slot-3}'
+        - ''
+        - '&a▪ &fKills: &a{kills}'
+        - '&a▪ &fFinal Kills: &a{final-kills}'
+        - '&a▪ &fBeds Broken: &a{broken-beds}'
+        - ''
+        - '&b&lMC-MARKET.ORG'
+        Teams-4:
+        - '&7{time}'
+        - ''
+        - '&f{next-event}'
+        - '&a{game-time}'
+        - ''
+        - '{team-slot-1}'
+        - '{team-slot-2}'
+        - '{team-slot-3}'
+        - '{team-slot-4}'
+        - ''
+        - '&a▪ &fKills: &a{kills}'
+        - '&a▪ &fFinal Kills: &a{final-kills}'
+        - '&a▪ &fBeds Broken: &a{broken-beds}'
+        - ''
+        - '&b&lMC-MARKET.ORG'
+        Teams-5:
+        - '&7{time}'
+        - ''
+        - '&f{next-event}'
+        - '&a{game-time}'
+        - ''
+        - '{team-slot-1}'
+        - '{team-slot-2}'
+        - '{team-slot-3}'
+        - '{team-slot-4}'
+        - '{team-slot-5}'
+        - ''
+        - '&a▪ &fKills: &a{kills}'
+        - '&a▪ &fFinal Kills: &a{final-kills}'
+        - ''
+        - '&b&lMC-MARKET.ORG'
+        Teams-6:
+        - '&7{time}'
+        - ''
+        - '&f{next-event}'
+        - '&a{game-time}'
+        - ''
+        - '{team-slot-1}'
+        - '{team-slot-2}'
+        - '{team-slot-3}'
+        - '{team-slot-4}'
+        - '{team-slot-5}'
+        - '{team-slot-6}'
+        - ''
+        - '&a▪ &fKills: &a{kills}'
+        - ''
+        - '&b&lMC-MARKET.ORG'
+        Teams-7:
+        - '&7{time}'
+        - ''
+        - '&f{next-event}'
+        - '&a{game-time}'
+        - ''
+        - '{team-slot-1}'
+        - '{team-slot-2}'
+        - '{team-slot-3}'
+        - '{team-slot-4}'
+        - '{team-slot-5}'
+        - '{team-slot-6}'
+        - '{team-slot-7}'
+        - ''
+        - '&b&lMC-MARKET.ORG'
+        Teams-8:
+        - '&7{time}'
+        - ''
+        - '&f{next-event}'
+        - '&a{game-time}'
+        - ''
+        - '{team-slot-1}'
+        - '{team-slot-2}'
+        - '{team-slot-3}'
+        - '{team-slot-4}'
+        - '{team-slot-5}'
+        - '{team-slot-6}'
+        - '{team-slot-7}'
+        - '{team-slot-8}'
+        - ''
+        - '&b&lMC-MARKET.ORG'
+
+Titles:
+    Join-Lobby:
+        Title: '&8» &e● &6BedWars &e● &8«'
+        Subtitle: '&c'
+        Duration: 30
+        FadeIn: 10
+        FadeOut: 10
+    Invite-Player:
+        Title: '&8&l» &eINVITE A PLAYER TO YOUR PARTY &8&l«'
+        Subtitle: '&7&nTYPE THE NAME IN CHAT!'
+        Duration: 30
+        FadeIn: 10
+        FadeOut: 10
+    Respawn:
+        Title: '&a&lRESPAWNED'
+        Subtitle: '&e'
+        Duration: 30
+        FadeIn: 10
+        FadeOut: 10
+    Win:
+        Title: '{win-team} &7TEAM'
+        Subtitle: '&6&l&oWon the game!'
+        Duration: 30
+        FadeIn: 10
+        FadeOut: 10
+    Starting:
+        Title: '&6&l{seconds}'
+        Subtitle: '&e'
+        Duration: 30
+        FadeIn: 0
+        FadeOut: 0
+    Start:
+        Title: '&a&lGO'
+        Subtitle: '&e'
+        Duration: 30
+        FadeIn: 10
+        FadeOut: 10
+    Bed-Destroyed:
+        Title: '&c&lBED DESTROYED'
+        Subtitle: '&fYou will no longer respawn.'
+        Duration: 30
+        FadeIn: 10
+        FadeOut: 10
+    Death:
+        Title: '&cYOU DIED!'
+        Subtitle: '&eYou will respawn in &c{seconds} &eseconds!'
+
+Teams:
+    Name:
+        RED: '&cRED'
+        BLUE: '&1BLUE'
+        GREEN: '&aGREEN'
+        YELLOW: '&eYELLOW'
+        CYAN: '&bAQUA'
+        WHITE: '&fWHITE'
+        PINK: '&dPINK'
+        GRAY: '&8GRAY'
+    Scoreboard:
+        RED: '&cR &fRedː'
+        BLUE: '&1B &fBlueː'
+        GREEN: '&aG &fGreenː'
+        YELLOW: '&eY &fYellowː'
+        CYAN: '&bA &fAquaː'
+        WHITE: '&fW &fWhiteː'
+        PINK: '&dP &fPinkː'
+        GRAY: '&8S &fGrayː'
+    Color:
+        RED: '&c'
+        BLUE: '&1'
+        GREEN: '&a'
+        YELLOW: '&e'
+        CYAN: '&b'
+        WHITE: '&f'
+        PINK: '&d'
+        GRAY: '&8'
+
+Npcs:
+    Stats:
+    - '&6&lYour BedWars Profile'
+    - ''
+    - '&fYour Level: {level} &7✫'
+    - ''
+    - '&fProgress: &b{xp}&7/&a{xp-need}'
+    - ''
+    - '&fTotal Wins: &a{wins}'
+    - ''
+    - '&e&lCLICK FOR STATS'
+    Lobby:
+        SOLO:
+            Name:
+            - '&e&lCLICK TO PLAY'
+            - ''
+            - '&b{mode}'
+            - ''
+            - '&b{playing} &e&lPlayers'
+            Skin-Texture: eyJ0aW1lc3RhbXAiOjE1NzI2MjQxOTA1NjIsInByb2ZpbGVJZCI6IjM5MmIzZDkwMjUxNTQ2MjFiMmIxZDkzNmEyZWQwZDliIiwicHJvZmlsZU5hbWUiOiJQaW5rRnVmeVVuaWNvcm4iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzc3YTFhZTVkNmY1YjE0NWMzM2UzZjQ2Zjg2ZWI3MDM3MjNhZDFkNGVjNDgzZWFlNGU5OTJmNmI4ZWE3MGIxODgifX19
+            Skin-Signature: mqB3augJcEJlwMxHLqH7cMPJw/RSnP68Opi3OYVQ938j5/dueLb0msr4fDzj2NSHx97bhpGiLRUwWiIB2xt8886iyy9POzaXHjkm3MB6gCljPQ8OYXWWDRXmq3wl0t5qst9Zly9acdr9qfF8K5FrxsOXSzR/jOovuoJvVUsFdG9IOyJOlNoYOFSYCdiTWqM7opKQSO2WaniTygXZcH5aiKsa39aDtmc/xZf801C3yu4zOjyR58OafI2PtsBx4uZTLtJwttbYwAo19KqjAYLgW+o+hDwHJCdQjVMxzgyS3t5nIYKbHgZR/cIbbVq9itq2CZEEYDyg1FiCnKy+esApnEUuRb1ExSpEs8BgsiQu1Oir1S3XlY3Gy/WrOXQJ7m6VIt53rheZeVbKnHAxD+FFtQm7U01ciomC1MduNBruJ5sepMR+vpRhuGIcN/34PbQOfTYhEmh2DxwHYoMsWeBCxOZHksnz6riHZWdGliEZ+eOV6cE31b1cu4RvhNtsI5fIS9l81VBTAnUjy8l/YDSeRf24JryYe/RwARiWCOUNI19fFiUO/8G7HR/27ABC4YC/J3OUsEmCx6QCROfoRvuKaZrYdsrj7HOmqAs1Fz4UBShSuRl5q0EM0aDstnYnq60pCOhdQiul3w/cpyBEL6idfC6n6y8Z35pgzd31GBp1PW8=
+        DOUBLES:
+            Name:
+            - '&e&lCLICK TO PLAY'
+            - ''
+            - '&b{mode}'
+            - ''
+            - '&b{playing} &e&lPlayers'
+            Skin-Texture: eyJ0aW1lc3RhbXAiOjE1NzI2MjQ5ODM2OTksInByb2ZpbGVJZCI6ImU5ZmU1YmQ3NmJhMjRlMTFhZWVlNDFhZTJmYmIyY2ZlIiwicHJvZmlsZU5hbWUiOiJKb3JkYW5waW5vMDMiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2RhMjRlODIyNWYyN2Q0YWFlYTg5OTRiYzE2Y2M1MzYxMzI4OWVhYzMwNGE1NmI1ZjQyODFiY2UxYWRkYjM0ZjYifX19
+            Skin-Signature: RLR8lUCXYvS9qoCViySxQr5L+rQa8b8WrrfeFTNmiYta2nMaw2mZGAKAYAMiWeO2rE4uL3u16Rpx2yDdChl9thdOpGuYA8g1KaIFxhdxJTs+GeFpd2VejNzb+NDZ+2srFS++CxEH4odhDpmed6ABlI6kq/k/7p9JbQpLwM2JTOCX7q3bdt1asYDMtHsdIgV/po0k5tZr2jcWa7YfcIibOvbnJ0ObM/BjdUSbS7GfCPKdCCEQhmhW4Oq0KIBldKoLMYrTgx/0FXnPCsiIz3KRX084qE2/BKwtSleYHl5gkHA8ptXDWkHDkOepiNIQV+Sdj2h/29ebMPu2yx9hVB1cUmwIf0kvomWa5K6CtQOp/JordUI3Hh80UsbTAoiVxD/QS+hxZUGThyqlbT/91D4yA5xw2bk+j0jNkp/m3ZIWT7+d7cZFgLGqh02fjVKy15kA85JfN6rmEflaljTZ7XJ3HDrTbP5PKqdi8lHlyntGFtLpJOQnehxPH1Az8qGEE7moOkP0yJ0C5Xm72PoMhw4uKdKNc67pFM85krmoq/hPAP19Is/FKEHeiv8jftef+fA8LBeKeuaWA2vP4XEm8NVJw0ZIzRQqAYAMO9zc7nKIU02yi0y9U3+PFA370yc/UF8jyS0IjatDAA/gnL8SyUUN7HuHaVlEResZbEd+jSixExk=
+        TRIPLES:
+            Name:
+            - '&e&lCLICK TO PLAY'
+            - ''
+            - '&b{mode}'
+            - ''
+            - '&b{playing} &e&lPlayers'
+            Skin-Texture: eyJ0aW1lc3RhbXAiOjE1NzI3NzE4NzkyNDIsInByb2ZpbGVJZCI6ImY4ZmZhYjkxNDU5ODQxYWQ5YTE2MDg0ZTEwNzVmYmM4IiwicHJvZmlsZU5hbWUiOiJLdXJpc3V0aW5hNCIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGEyMjZlN2M4N2I1ZjA3MjA1Y2RiMzZkM2Q1NThjY2E0NTBjYzFkMzg2YmQyZGRiNDY3Y2I5ZWU0ZTVkZTNkMyJ9fX0=
+            Skin-Signature: r/+IARF7CpRPloSDaZKaGQsiyJtPrTUIR2UW07tos/3O37bgp/YiSfRG3kD+sjqsADqUWAyyB1H0KsAFLWPrpWBsdwKXE79rPlVBlpJb5ctQo7wyXVRIAxfcttArTO15HRy1lx7ZZ3A1T6Q6756BQePUV1yPrLq8/2sV5u5+Tu4LVguixH6T0nKWluhOQlA/WrSJvAYiELmqS39v30ViUaepZy3/FpWt+5w77vi3gBA8DiQ0Nony03E6DpbiYGIH/vJnDMxFGCAcbGvp1yytsvepDzlxGGC7N2f2MYz6CRiOJpbWNYsZWkoWtX/5uDYSiFu/bGbVPR2F7i4uDB6tqtr+yZc4H76n/Aqz34ntmdE3a1WIInMsg46Ff7aq1qGeHTIvsc0zAcnq3mPdmzdWSiDgQ62M6RnHaVZIfFi2bK2D2ioXFfKIJHzoeoK1dnGZtBJH+zK738NUWEO2wUdKTM+NdbQ93O4cGPN5ozdJH8SJ4ALFqW9gYTS1kOWdT5f8v2uz34gaASYR4zKfMb6SBEm2TnOmUZj6OESsIQP0OplLsyDP3wvnAciOthU6bvv18NZqJMsgEb1pXlTuxC5aekkzPG4FHkCqT6lHjoJWoNvdvbSe6QtHBkya1tzcSlemITLIGiKXsXeOJ/Y+5rGRexqkuxxEwn2Wo8IPdBJn/6k=
+        QUADRUPLES:
+            Name:
+            - '&e&lCLICK TO PLAY'
+            - ''
+            - '&b{mode}'
+            - ''
+            - '&b{playing} &e&lPlayers'
+            Skin-Texture: eyJ0aW1lc3RhbXAiOjE1NzI2MjQ2NjI0OTQsInByb2ZpbGVJZCI6ImY4ZmZhYjkxNDU5ODQxYWQ5YTE2MDg0ZTEwNzVmYmM4IiwicHJvZmlsZU5hbWUiOiJLdXJpc3V0aW5hNCIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q5ZTRmZGJlMjY1OTVlNmJkY2QxZWYzNDkzZTk3NjZlODA5M2YzMDJhNWNhNDE3ZTNlNGEwYWU4NmUwODBlNiJ9fX0=
+            Skin-Signature: DNbGuQyclsErzhxOaOoXEIdYZdkimZGiEHQPQqSkimobtEIMHvRBHIuuj4TkOjnUoNetp/jCEh3uG7RMrztoXAK8Ox/qyCg+DJzouKwDy46RDzMDfO+9oGXOl8T0cd8k2krQ8vQChbsfQ9kuUUzIxRxn/Mt2Rsiz/ZpK3hBwbfVUI9FQOcd0MOAROe194MYNRj3FvEUfwRHKxE1rmuBroNlqxK1DbEFNUVLkvOXjoLZtv1CP31IWEipyy6kYs1Kvz7aQeQwI6ZEE6Lj1vLFRyXsQMaS7FBqA3Or0YxqQve5/3CHcKFylV6EPS3GdJRZgR7+y8jJ2Q0CfBYAeJHFfLaT6A/SV83vWpNYJBsOgPPv9YOwJGUn+tmf+2rdJY5z8VCs8HPCkEEIVTiVmCBPfFOxlyDz7IvDEYNRvWivQJyST5JyYLCJlTqO6ivAdqW9D9kWM/UgO9WKXe4N/BHHROVYD12H/ZnNXrYArP0yaENm2dKs3R3KPAfnVcNE5khlGQflorjhyZqACi4LYjaMr3ALV+0gN9S7xU81KpGiaRqAkTTIzog4aZ9e26oVeoqRWpJtAYXbLK9++vCIP0qrjghfqSKx7HnFZrvYe9uVQpEbyiuD5eshxHxW1fjQ0LN0yv163eaWHfe7qY9oWf33zIA06kE+lCtOW2ecg24MJZIM=
+        MEGA:
+            Name:
+            - '&e&lCLICK TO PLAY'
+            - ''
+            - '&b{mode}'
+            - ''
+            - '&b{playing} &e&lPlayers'
+            Skin-Texture: eyJ0aW1lc3RhbXAiOjE1NzI2MjQxOTA1NjIsInByb2ZpbGVJZCI6IjM5MmIzZDkwMjUxNTQ2MjFiMmIxZDkzNmEyZWQwZDliIiwicHJvZmlsZU5hbWUiOiJQaW5rRnVmeVVuaWNvcm4iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzc3YTFhZTVkNmY1YjE0NWMzM2UzZjQ2Zjg2ZWI3MDM3MjNhZDFkNGVjNDgzZWFlNGU5OTJmNmI4ZWE3MGIxODgifX19
+            Skin-Signature: mqB3augJcEJlwMxHLqH7cMPJw/RSnP68Opi3OYVQ938j5/dueLb0msr4fDzj2NSHx97bhpGiLRUwWiIB2xt8886iyy9POzaXHjkm3MB6gCljPQ8OYXWWDRXmq3wl0t5qst9Zly9acdr9qfF8K5FrxsOXSzR/jOovuoJvVUsFdG9IOyJOlNoYOFSYCdiTWqM7opKQSO2WaniTygXZcH5aiKsa39aDtmc/xZf801C3yu4zOjyR58OafI2PtsBx4uZTLtJwttbYwAo19KqjAYLgW+o+hDwHJCdQjVMxzgyS3t5nIYKbHgZR/cIbbVq9itq2CZEEYDyg1FiCnKy+esApnEUuRb1ExSpEs8BgsiQu1Oir1S3XlY3Gy/WrOXQJ7m6VIt53rheZeVbKnHAxD+FFtQm7U01ciomC1MduNBruJ5sepMR+vpRhuGIcN/34PbQOfTYhEmh2DxwHYoMsWeBCxOZHksnz6riHZWdGliEZ+eOV6cE31b1cu4RvhNtsI5fIS9l81VBTAnUjy8l/YDSeRf24JryYe/RwARiWCOUNI19fFiUO/8G7HR/27ABC4YC/J3OUsEmCx6QCROfoRvuKaZrYdsrj7HOmqAs1Fz4UBShSuRl5q0EM0aDstnYnq60pCOhdQiul3w/cpyBEL6idfC6n6y8Z35pgzd31GBp1PW8=
+        SHOP:
+            Name:
+            - '&e&lCLICK TO OPEN'
+            - ''
+            - '&e&lSHOP'
+            Skin-Texture: eyJ0aW1lc3RhbXAiOjE1NzI3ODI0MDUzMjAsInByb2ZpbGVJZCI6IjEzOTQxYmE2YzRlNTQ0N2VhNmIzOTJiOTU0YzgxNzVlIiwicHJvZmlsZU5hbWUiOiJEdXJuaWs3MCIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWMxMmMwMWZkMjFjNTRhZTEzMjIzNWU4NGQ4Nzc5ZjlmMjg5OGI3OGYyN2RmYTEzNjMyMmRhOWQ3NjBjNjUyZiJ9fX0=
+            Skin-Signature: ReD9ZjaX9XQ8EYuTmfUNmC0rgNYrjNFuLM32aDQIDy+IjPh5RL1LW97nwt4P87NT6P++YgyN3eaNcsoua4RjwsEeLiSuhp6uhHOYgO9fSjGbXFI8mCeH0AIJLjQ8l1J+1AWnrXlPGhsV3ZBVLlgKSqmDYOhk34xP7Z1cRVhS9mYQqfYrrDISISjP3FGitUY+CwxsFXNIoMZnbZVqlvmDl61V0G3dGnQOGBves+lfLCY3VHZbwLm+9QNsNFMR9vPINBOpA7t6AmwT0DAzCQSGoSaOu3AhObpHCVmT+fEp0pYptbFKVObBvRZBEdjV5v1NDrXyV/opDqjP/sS3bCBzBmMf9PfRYY9ILdigBdDTZZRFJJVqt120UM7t8ebZkMi/WpXh5kg5a1ZjQN5ZcdcRVLPeshqVHzEcDhjK4QXW5/l/QTBQrc7NO4jx1J4KVGU/Jzr1wcrQbiM/b0fOfM5+H23aPMlyibKwAgS4B/fCDQRp2Ca9BCIBqUoIn9Gid+LcVu898Zj39toefuXZyfwXfKTL7iVHGfssFQUdZsFJtgwbyq6NsNw1Z7J43W/BTDg2lZEdDzT72KxeFFZBwCVWMdSa/p1neO+YSFwx4HVmxShZDGFHXi2n8hQEHKfMLCfhnaoy7ANYVV+j1QqLYcO3jR2mKYdAyvqAJNW2JzIGfiY=
+        TRAILS:
+            Name:
+            - '&e&lCLICK TO OPEN'
+            - ''
+            - '&e&lTRAILS'
+            Skin-Texture: eyJ0aW1lc3RhbXAiOjE1NzI3ODI0MDUzMjAsInByb2ZpbGVJZCI6IjEzOTQxYmE2YzRlNTQ0N2VhNmIzOTJiOTU0YzgxNzVlIiwicHJvZmlsZU5hbWUiOiJEdXJuaWs3MCIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWMxMmMwMWZkMjFjNTRhZTEzMjIzNWU4NGQ4Nzc5ZjlmMjg5OGI3OGYyN2RmYTEzNjMyMmRhOWQ3NjBjNjUyZiJ9fX0=
+            Skin-Signature: ReD9ZjaX9XQ8EYuTmfUNmC0rgNYrjNFuLM32aDQIDy+IjPh5RL1LW97nwt4P87NT6P++YgyN3eaNcsoua4RjwsEeLiSuhp6uhHOYgO9fSjGbXFI8mCeH0AIJLjQ8l1J+1AWnrXlPGhsV3ZBVLlgKSqmDYOhk34xP7Z1cRVhS9mYQqfYrrDISISjP3FGitUY+CwxsFXNIoMZnbZVqlvmDl61V0G3dGnQOGBves+lfLCY3VHZbwLm+9QNsNFMR9vPINBOpA7t6AmwT0DAzCQSGoSaOu3AhObpHCVmT+fEp0pYptbFKVObBvRZBEdjV5v1NDrXyV/opDqjP/sS3bCBzBmMf9PfRYY9ILdigBdDTZZRFJJVqt120UM7t8ebZkMi/WpXh5kg5a1ZjQN5ZcdcRVLPeshqVHzEcDhjK4QXW5/l/QTBQrc7NO4jx1J4KVGU/Jzr1wcrQbiM/b0fOfM5+H23aPMlyibKwAgS4B/fCDQRp2Ca9BCIBqUoIn9Gid+LcVu898Zj39toefuXZyfwXfKTL7iVHGfssFQUdZsFJtgwbyq6NsNw1Z7J43W/BTDg2lZEdDzT72KxeFFZBwCVWMdSa/p1neO+YSFwx4HVmxShZDGFHXi2n8hQEHKfMLCfhnaoy7ANYVV+j1QqLYcO3jR2mKYdAyvqAJNW2JzIGfiY=
+        SHOPKEEPER:
+            Name:
+            - '&e&lCLICK TO OPEN'
+            - ''
+            - '&e&lSHOPKEEPER'
+            Skin-Texture: eyJ0aW1lc3RhbXAiOjE1NzI3ODI0MDUzMjAsInByb2ZpbGVJZCI6IjEzOTQxYmE2YzRlNTQ0N2VhNmIzOTJiOTU0YzgxNzVlIiwicHJvZmlsZU5hbWUiOiJEdXJuaWs3MCIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWMxMmMwMWZkMjFjNTRhZTEzMjIzNWU4NGQ4Nzc5ZjlmMjg5OGI3OGYyN2RmYTEzNjMyMmRhOWQ3NjBjNjUyZiJ9fX0=
+            Skin-Signature: ReD9ZjaX9XQ8EYuTmfUNmC0rgNYrjNFuLM32aDQIDy+IjPh5RL1LW97nwt4P87NT6P++YgyN3eaNcsoua4RjwsEeLiSuhp6uhHOYgO9fSjGbXFI8mCeH0AIJLjQ8l1J+1AWnrXlPGhsV3ZBVLlgKSqmDYOhk34xP7Z1cRVhS9mYQqfYrrDISISjP3FGitUY+CwxsFXNIoMZnbZVqlvmDl61V0G3dGnQOGBves+lfLCY3VHZbwLm+9QNsNFMR9vPINBOpA7t6AmwT0DAzCQSGoSaOu3AhObpHCVmT+fEp0pYptbFKVObBvRZBEdjV5v1NDrXyV/opDqjP/sS3bCBzBmMf9PfRYY9ILdigBdDTZZRFJJVqt120UM7t8ebZkMi/WpXh5kg5a1ZjQN5ZcdcRVLPeshqVHzEcDhjK4QXW5/l/QTBQrc7NO4jx1J4KVGU/Jzr1wcrQbiM/b0fOfM5+H23aPMlyibKwAgS4B/fCDQRp2Ca9BCIBqUoIn9Gid+LcVu898Zj39toefuXZyfwXfKTL7iVHGfssFQUdZsFJtgwbyq6NsNw1Z7J43W/BTDg2lZEdDzT72KxeFFZBwCVWMdSa/p1neO+YSFwx4HVmxShZDGFHXi2n8hQEHKfMLCfhnaoy7ANYVV+j1QqLYcO3jR2mKYdAyvqAJNW2JzIGfiY=
+
+Holograms:
+    BED-BREAK: '&b&l« &cBed &7destroyed by {team} {player} &b&l»'
+    GENERATOR:
+        DIAMOND:
+        - '&b« &eTIER &c{level} &b»'
+        - '&bDIAMOND'
+        - '&7« &eSpawns in &c{seconds} &eseconds &7»'
+        EMERALD:
+        - '&b« &eTIER &c{level} &b»'
+        - '&aEMERALD'
+        - '&7« &eSpawns in &c{seconds} &eseconds &7»'
+    Shop:
+    - '&7« &e&nRight Click &7»'
+    - '&7« &b&nITEM SHOP&r &7»'
+    Upgrade:
+    - '&7« &e&nRight Click &7»'
+    - '&7« &b&nUPGRADES &7»'
+    - '&7« &a{mode} &7»'
+    Leaderboards:
+    - '&7« &b&n#3&r &a{3-player} &e{3-value} &7»'
+    - ''
+    - '&7« &b&n#2&r &a{2-player} &e{2-value} &7»'
+    - ''
+    - '&7« &b&n#1&r &a{1-player} &e{1-value} &7»'
+    - ''
+    - ''
+    - '&3» &e&nTop&r &a{type} &3«'
+
+Game-Status:
+    WAITING: '&aWaiting...'
+    IN-GAME: '&a&nIN-GAME'
+    STARTING: '&aStarting...'
+    RESTARTING: '&cEnding...'
+
+Signs:
+    Arenas:
+        Sign-Line-1: '&8[&6BEDWARS&8]'
+        Sign-Line-2: '{status}'
+        Sign-Line-3: '{arena}'
+        Sign-Line-4: '&8({playing}/{max})'
+    Auto-Join:
+        Line-2: '&c&lPlay'
+        SOLO: '&a&lSOLO'
+        TEAM: '&a&lTEAM'
+        RANDOM: '&a&lRANDOM'
+    TOP:
+        SIGN-LINE-1: '&7&l➜ &a&lTOP'
+        SIGN-LINE-2: '&7« &b{TOP} &8#{place} &7»'
+        SIGN-LINE-3: '&e{player}'
+        SIGN-LINE-4: '&aScore: &3{value}'

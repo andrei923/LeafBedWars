@@ -1,0 +1,307 @@
+Bungeecord:
+    Enabled: false
+    Fallback-server: lobby
+
+GAME-SHOP: Hypixel
+
+MySQL:
+    enabled: false
+    host: localhost
+    port: 3306
+    Username: root
+    password: test
+    database: mysql
+    tablename: bedwars_stats
+    use_ssl: false
+
+Chat:
+    main-lobby: '&7[&e{level}&7✫] &7{player} &8&l» &7{message}'
+    waiting-lobby: '&7{player} &8&l» &7{message}'
+    in-game: '&7[&e{level}&7✫] &8&l[{team}&8&l] &7{player} &8&l» &7{message}'
+    comunication: '&a&lTEAM &8&l» &7{player} &8&l» &7{message}'
+    spectator: '&cSpectator &9» &7{player} &8» &7{message}'
+    party-format: '&3Party &8» &7{player} &8» &7{message}'
+    party-symbol: '@'
+    shout-format: '&6&lSHOUT &8&l✈ &7{player} &8&l» &7{message}'
+    shout-symbol: '!'
+
+Commands:
+    block-commands: true
+    allowed-commands:
+    - bw
+    - hub
+    - lobby
+    - msg
+    - tell
+    - w
+    - tp
+    - list
+    - stafflist
+    - report
+    kill-command:
+    - mysterydust add {killer} 3 msg=false
+    win-command:
+    - mysterydust add {player} 50 msg=false
+
+Name-Tags:
+    lobby:
+        main:
+            enabled: true
+            prefix: '&7[&e{level}&7] &7'
+            suffix: '&7'
+        waiting:
+            enabled: true
+            prefix: '&7'
+            suffix: '&7'
+    game:
+        enabled: true
+        RED:
+            prefix: '&cR &7'
+        BLUE:
+            prefix: '&1B &7'
+        GREEN:
+            prefix: '&aG &7'
+        YELLOW:
+            prefix: '&eY &7'
+        CYAN:
+            prefix: '&bA &7'
+        WHITE:
+            prefix: '&fW &7'
+        PINK:
+            prefix: '&dP &7'
+        GRAY:
+            prefix: '&8S &7'
+
+Items:
+    JOIN-ARENAS:
+        name: '&3Play &7(Right Click)'
+        item: diamond axe
+        slot: 0
+        lore:
+        - ''
+    REJOIN:
+        name: '&8» &aRejoin &7(Right Click)'
+        item: barrier
+        slot: 1
+        lore:
+        - ''
+    PARTY:
+        name: '&aParty &7(Right Click)'
+        item: crafting table
+        slot: 4
+        lore:
+        - ''
+    STATS:
+        name: '&3Stats &7(Right Click)'
+        item: book
+        slot: 2
+        lore:
+        - ''
+    SHOP:
+        name: '&3Shop &7(Right Click)'
+        item: anvil
+        slot: 6
+        lore:
+        - ''
+    LOBBY-LEAVE:
+        name: '&6Leave lobby &7(Right Click)'
+        item: bed item
+        slot: 8
+        lore:
+        - ''
+    TELEPORTER:
+        name: '&aPlayer Teleporter &7(Right Click)'
+        item: compass
+        slot: 0
+        lore:
+        - ''
+    PLAY-AGAIN:
+        name: '&aPlay Again &7(Right Click)'
+        item: paper
+        slot: 7
+        lore:
+        - ''
+    LEAVE:
+        name: '&6Leave the game &7(Right Click)'
+        item: bed item
+        slot: 8
+        lore:
+        - ''
+    TEAM-SELECTOR:
+        name: '&6Team Selector &7(Right Click)'
+        item: chest
+        slot: 0
+        lore:
+        - ''
+    GAME-MENU:
+        name: '&8&l» &aCompass &7(Right Click)'
+        item: compass
+        slot: 8
+        lore:
+        - ''
+    SPECTATOR-SETTINGS:
+        name: '&8&l» &bSpectator Settings &7(Right Click)'
+        item: redstone comparator item
+        slot: 4
+        lore:
+        - ''
+    CUSTOM-ITEM:
+        name: '&8&l» &7EXAMPLE ITEM, MAIN LOBBY'
+        item: air
+        slot: 9
+        lore:
+        - ''
+        command: example command
+
+Timers:
+    Waiting: 25
+
+Rewards:
+    kill:
+        xp: 25
+        coins: 5
+    final-kill:
+        xp: 30
+        coins: 10
+    win:
+        xp: 100
+        coins: 50
+    break-bed:
+        xp: 25
+        coins: 10
+
+Misc:
+    no-place-radius: 5
+    shout-cooldown-time: 60
+    max-party-size: 28
+    solo-team-selector: false
+    tracking-action-bar: '{team} {target} &7{distance}&7m'
+    game-block: bed
+    heal-pool-particles: true
+    Fireball:
+        Speed: 1
+        Damage: 4
+        Radius: 8.5
+        KnockBack: 3
+        Small: false
+    TnT:
+        Power: 1
+    update-Leaderboards-interval: 10 minutes
+    send-reset-arena-msg-to-console: true
+
+Sounds:
+    KILL:
+        Sound: ORB_PICKUP
+        Pitch: 1.0
+        Volume: 1.0
+    FINAL-KILL:
+        Sound: LEVEL_UP
+        Pitch: 1.0
+        Volume: 1.0
+    JOIN-ARENA:
+        Sound: NOTE_STICKS
+        Pitch: 1.0
+        Volume: 1.0
+    START-GAME:
+        Sound: LEVEL_UP
+        Pitch: 1.0
+        Volume: 1.0
+    STARTING-ARENA:
+        Sound: LEVEL_UP
+        Pitch: 1.0
+        Volume: 1.0
+    NOT-ENOUGHT-PLAYERS:
+        Sound: ANVIL_BREAK
+        Pitch: 1.0
+        Volume: 1.0
+    AFK-WARNING:
+        Sound: ANVIL_BREAK
+        Pitch: 1.0
+        Volume: 1.0
+    GENERATOR-UPGRADE:
+        Sound: LEVEL_UP
+        Pitch: 1.0
+        Volume: 1.0
+    BED-DESTROY:
+        Sound: ENDERDRAGON_GROWL
+        Pitch: 1.0
+        Volume: 1.0
+    ITEM-PICKUP:
+        Sound: CHICKEN_EGG_POP
+        Pitch: 1.0
+        Volume: 1.0
+    PURCHASE-ITEM:
+        Sound: NOTE_STICKS
+        Pitch: 1.0
+        Volume: 1.0
+    PURCHASE-UPGRADE:
+        Sound: LEVEL_UP
+        Pitch: 1.0
+        Volume: 1.0
+    OPEN-MENU:
+        Sound: ORB_PICKUP
+        Pitch: 1.0
+        Volume: 1.0
+    ALARM-TRAP:
+        Sound: ENDERDRAGON_GROWL
+        Pitch: 1.0
+        Volume: 1.0
+    BED-DESTRUCTION-EVENT:
+        Sound: ENDERDRAGON_GROWL
+        Pitch: 1.0
+        Volume: 1.0
+
+Afk:
+    Enabled: false
+    Time: 45
+    Notify: true
+    Punishments:
+        No-Pickup: true
+        Send-To-Lobby: false
+        Command: ''
+
+PlayTime:
+    time: 45
+    xp: 25
+    coins: 9
+
+Leaderboards:
+    EMPTY-PLACE-REPLACE: Loading...
+    TYPE: SKULLS
+    SMALL-ARMOR-STAND: true
+
+Generator-Settings:
+    EMERALD:
+        TIME:
+            TIER-I: 30
+            TIER-II: 23
+            TIER-III: 13
+        AMOUNT:
+            TIER-I: 1
+            TIER-II: 1
+            TIER-III: 1
+    DIAMOND:
+        TIME:
+            TIER-I: 30
+            TIER-II: 23
+            TIER-III: 13
+        AMOUNT:
+            TIER-I: 1
+            TIER-II: 1
+            TIER-III: 1
+    ISLAND:
+        TIME:
+            DEFAULT: 2
+            TIER-1: 1.5
+            TIER-2: 1.1
+            TIER-3: 0.8
+            TIER-4: 0.7
+        MAX-ITEMS:
+            EMERALD: 10
+            GOLD: 30
+            IRON: 50
+        SHORT-TIME-WITH-FOR-EVERY-TEAM-MEMBER: 0.1
+        AMOUNT:
+            GOLD: 1
+            EMERALD: 1
+            IRON: 1

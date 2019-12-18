@@ -1,0 +1,503 @@
+GENERAL:
+    MAIN-PAGE:
+        name: '&8&l» &7Main Page &8&l«'
+        item: book
+        lore:
+        - ''
+    NEXT-PAGE:
+        name: '&8&l» &7Next Page'
+        item: custom player head
+        Id: d513d666-0992-42c7-9aa6-e518a83e0b38
+        Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTliZjMyOTJlMTI2YTEwNWI1NGViYTcxM2FhMWIxNTJkNTQxYTFkODkzODgyOWM1NjM2NGQxNzhlZDIyYmYifX19
+        lore:
+        - ''
+    PREVIOUS-PAGE:
+        name: '&8&l« &7Previous Page'
+        item: custom player head
+        Id: 2391d533-ab09-434d-9980-adafde4057a3
+        Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ2OWUwNmU1ZGFkZmQ4NGU1ZjNkMWMyMTA2M2YyNTUzYjJmYTk0NWVlMWQ0ZDcxNTJmZGM1NDI1YmMxMmE5In19fQ==
+        lore:
+        - ''
+    BACK:
+        name: '&8&l» &7Back'
+        item: custom player head
+        Id: 5ca62fac-d094-4346-8361-e1dfdd970607
+        Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzQzNzM0NmQ4YmRhNzhkNTI1ZDE5ZjU0MGE5NWU0ZTc5ZGFlZGE3OTVjYmM1YTEzMjU2MjM2MzEyY2YifX19
+        lore:
+        - ''
+
+ARENA-LIST:
+    GUI: '&8&l» &7BedWars Arenas'
+    Background: air
+    lore:
+    - '&8&l«&7&l&m--------------------&r&8&l»'
+    - ''
+    - '&8&l» &7MAP &8➥ &e{map}'
+    - '&8&l» &7ARENA &8➥ &e{arena}'
+    - ''
+    - '&8&l» &7MODE &8➥ &e{type}'
+    - '&8&l» &7TEAM SIZE &8➥ &e{team-size}'
+    - ''
+    - '&8&l» &7STATUS &8➥ &e{status}'
+    - ''
+    - '&8&l» &7PLAYERS &8➥ &8(&b{playing}&7/&b{max}&8)'
+    - ''
+    - '&8&l» &7&lCLICK TO JOIN'
+    - ''
+    - '&8&l«&7&l&m--------------------&r&8&l»'
+
+PARTY-GUI:
+    GUI:
+        MAIN: '&8&l» &7&nParty&r'
+        INVITE-A-PLAYER: '&8&l» &7Invite a player'
+        Background-1: black glass
+        Background-2: air
+    CREATE-PARTY:
+        name: '&8&l» &7&nCreate Party&r'
+        item: TNT
+    PARTY-LIST:
+        name: '&8&l» &7&nParty List&r'
+        item: ender chest
+    PARTY-MEMBERS:
+        name: '&8&l» &7Party Members'
+        item: TNT
+    PARTY-LEADER:
+        name: '&8&l» &7LEADER: {leader}'
+    INVITE-PLAYERS:
+        name: '&8&l» &7Invite Players'
+        item: bowl
+    PARTY-PUBLIC:
+        name: '&8&l» &7&nParty &8- &aPUBLIC'
+        item: green dye
+    PARTY-PRIVATE:
+        name: '&8&l» &7&nParty &8- &cPRIVATE'
+        item: gray dye
+    PARTY-LEAVE:
+        name: '&8&l» &7&nLeave'
+        item: red dye
+    PARTY-INVITED:
+        name: '&8&l» &7Invite list'
+        item: green dye
+    PARTY-INVITE-PLAYER:
+        name: '&8&l» &7Invite player'
+        item: paper
+    MOUSE-HOVER:
+        PARTY-NAME: '&3&l» &7{player}&7''s party.'
+        KICK-PLAYER: '&7&n{player}&r &8» &7Click to kick this player from party.'
+        INVITE-PLAYER: '&7&n{player}&r &8» &7Click to invite this player.'
+        REMOVE-INVITE: '&7&n{player}&r &8» &7Click to remove this invite.'
+        PARTY-MEMBER: '&8» &7&n{player}&r &8«'
+
+SHOP-GUI:
+    GUI: '&8&l» &7Shop'
+    Trails:
+        name: '&3&l» &7Projectile Trails'
+        item: bow
+        slot: 21
+        lore:
+        - ''
+        - '&8&l» &7Change you projectile'
+        - '&7particle trail effect.'
+        - ''
+        - '&8&l» &7Unlocked &a{bought-Trails}&7/&a{total-Trails}'
+        - ''
+        - '&a&l» &eClick to open.'
+    ShopKeepers:
+        name: '&3&l» &7ShopKeepers'
+        item: zombie head
+        slot: 23
+        lore:
+        - ''
+        - '&8&l» &7Select from various'
+        - '&7ShopKeepers skins, wich'
+        - '&7will replace how the'
+        - '&7ShopKeepers look in-game'
+        - '&7In Team Modes a random'
+        - '&7player''s choice from '
+        - '&7each team is chosen.'
+        - ''
+        - '&8&l» &7Unlocked &a{bought-ShopKeepers}&7/&a{total-ShopKeepers}'
+        - ''
+        - '&a&l» &eClick to open.'
+    Confirm:
+        DENY: '&c&nDeny'
+        ACCEPT: '&a&nAccept'
+        GUI: '&8» &7Confirm Purchase'
+
+STATS:
+    GUI: '&8» &7Stats'
+    Background: black glass pane
+    TOTAL:
+        name: '&aOverall Statistics'
+        item: eye of ender
+        slot: 4
+        lore:
+        - ''
+        - '&7Wins: &a{wins}'
+        - '&7Kills: &a{kills}'
+        - '&7Final Kills &a{final-kills}'
+        - '&7Deaths: &a{deaths}'
+        - ''
+        - '&7Broken Beds: &a{broken-beds}'
+    SOLO:
+        name: '&aSolo Statistics'
+        item: paper
+        slot: 20
+        lore:
+        - ''
+        - '&7Wins: &a{wins}'
+        - '&7Kills: &a{kills}'
+        - '&7Final Kills &a{final-kills}'
+        - '&7Deaths: &a{deaths}'
+        - ''
+        - '&7Broken Beds: &a{broken-beds}'
+    DOUBLES:
+        name: '&aDoubles Statistics'
+        item: paper
+        slot: 22
+        lore:
+        - ''
+        - '&7Wins: &a{wins}'
+        - '&7Kills: &a{kills}'
+        - '&7Final Kills &a{final-kills}'
+        - '&7Deaths: &a{deaths}'
+        - ''
+        - '&7Broken Beds: &a{broken-beds}'
+    TRIPLES:
+        name: '&aTriples Statistics'
+        item: paper
+        slot: 24
+        lore:
+        - ''
+        - '&7Wins: &a{wins}'
+        - '&7Kills: &a{kills}'
+        - '&7Final Kills &a{final-kills}'
+        - '&7Deaths: &a{deaths}'
+        - ''
+        - '&7Broken Beds: &a{broken-beds}'
+    QUADRUPLES:
+        name: '&aQuadruples Statistics'
+        item: paper
+        slot: 30
+        lore:
+        - ''
+        - '&7Wins: &a{wins}'
+        - '&7Kills: &a{kills}'
+        - '&7Final Kills &a{final-kills}'
+        - '&7Deaths: &a{deaths}'
+        - ''
+        - '&7Broken Beds: &a{broken-beds}'
+    MEGA:
+        name: '&aMega Statistics'
+        item: paper
+        slot: 32
+        lore:
+        - ''
+        - '&7Wins: &a{wins}'
+        - '&7Kills: &a{kills}'
+        - '&7Final Kills &a{final-kills}'
+        - '&7Deaths: &a{deaths}'
+        - ''
+        - '&7Broken Beds: &a{broken-beds}'
+
+SPEC-GUI:
+    name: '&8&l» &7Teleport to'
+    PLAYER-FORMAT: '&3&l» &8[{team}&8] &7{player}'
+    lore:
+    - '&3&l» &7&nClick To Teleport'
+
+PLAY:
+    GUI: '&8&l» &7PLAY BEDWARS'
+    MODES:
+        SOLO:
+            name: '&7&l➜ &aPLAY SOLO'
+            item: bed item
+            slot: 20
+            lore:
+            - ''
+            - '&8&l» &7Curently playing &a{playing}'
+            - ''
+            - '&8&l» &eClick to play in solo mode.'
+            type: PLAY
+            mode: SOLO
+        SOLO-MAP-SELECTOR:
+            name: '&7&l➜ &aMAP SELECTOR (SOLO)'
+            item: sign item
+            slot: 21
+            lore:
+            - ''
+            type: MAP-SELECTOR
+            mode: SOLO
+        TEAM:
+            name: '&7&l➜ &aPLAY TEAM'
+            item: bed item
+            slot: 24
+            lore:
+            - ''
+            - '&8&l» &7Curently playing &a{playing}'
+            - ''
+            - '&8&l» &eClick to play in team mode.'
+            type: PLAY
+            mode: TEAM
+        TEAM-MAP-SELECTOR:
+            name: '&7&l➜ &aMAP SELECTOR (TEAM)'
+            item: sign item
+            slot: 25
+            lore:
+            - ''
+            type: MAP-SELECTOR
+            mode: TEAM
+        RANDOM:
+            name: '&7&l➜ &aPLAY ANY MODE'
+            item: gray dye
+            slot: 40
+            lore:
+            - ''
+            - '&8&l» &7Curently playing &a{playing}'
+            - ''
+            - '&8&l» &eClick to play in a random mode.'
+            type: PLAY
+            mode: RANDOM
+    ARENA-SELECTOR:
+        name: '&7&l➜ &aARENA SELECTOR'
+        item: chest
+        slot: 44
+        lore:
+        - ''
+        - '&8&l» &eClick to open'
+    CLOSE:
+        name: '&7&l➜ &cClose'
+        item: barrier
+        slot: 36
+        lore:
+        - ''
+    SPECIFIED-MODE:
+        GUI: '&8&l» &7BEDWARS'
+        name: '&aBed Wars ({mode})'
+        item: bed item
+        slot: 20
+        lore:
+        - '&aPlay Bed Wars {mode}'
+    SPECIFIED-MODE-MAP-SELECTOR:
+        name: '&7&l➜ &aMAP SELECTOR ({mode})'
+        item: sign item
+        slot: 24
+        lore:
+        - '&a'
+
+TEAM-SELECTOR:
+    GUI: '&8&l» &7TEAM SELECTOR'
+    Background: light green glass
+    name: '&3&l» &7{team} &7TEAM &8(&e{team-size}&7/&e{max-team-size}&8)'
+    PLAYER-SLOT: '&e» &3{player}'
+    EMPTY-SLOT: '&8» &8[EMPTY SLOT]'
+    JOIN-TEAM: '&c&l» &7Click to join in this team.'
+
+GAME-COMPASS:
+    GUI:
+        SOLO: '&8&l» &7TRACKER'
+        TEAM: '&8&l» &7TRACKER AND COMUNICATION'
+    SELECT-OPTION: '&8&l» &7SELECT OPTION'
+    Comunications:
+        name: '&8Quick Comunications'
+        item: emerald
+        lore:
+        - ''
+        - '&7Send Hightlighted chat'
+        - '&7messages to your teammates!'
+        - ''
+        - '&eClick to open'
+    TRACKER:
+        name: '&8Purchase Enemy Tracker'
+        item: compass
+        lore:
+        - ''
+        - '&7Purchase tracking upgrade'
+        - '&7for your compass wich will'
+        - '&7track each player on a '
+        - '&7specific team until you'
+        - '&7die'
+        - ''
+        - '&eClick to open'
+
+Comunications:
+    hello:
+        name: '&aHello (｡◕‿◕｡)/'
+        item: book
+        slot: 11
+        lore:
+        - ''
+        - '&eClick to send!'
+        msg: '&aHello (｡◕‿◕｡)/'
+        type: Comunications
+    back-to-base:
+        name: '&aI''m coming back to base!'
+        item: book
+        slot: 12
+        lore:
+        - ''
+        - '&eClick to send!'
+        msg: '&aI''m coming back to base!'
+        type: Comunications
+    im-defending:
+        name: '&aI''m defending'
+        item: iron bars
+        slot: 13
+        lore:
+        - ''
+        - '&eClick to send!'
+        msg: '&aI''m defending'
+        type: Comunications
+    thanks:
+        name: '&aThank You!'
+        item: book
+        slot: 20
+        lore:
+        - ''
+        - '&eClick to send!'
+        msg: '&aThank You!'
+        type: Comunications
+    get-back-to-base:
+        name: '&aGet back to base!'
+        item: book
+        slot: 21
+        lore:
+        - ''
+        - '&eClick to send!'
+        msg: '&aGet back to base!'
+        type: Comunications
+    defend:
+        name: '&aPlease defend!'
+        item: iron bars
+        slot: 22
+        lore:
+        - ''
+        - '&eClick to send!'
+        msg: '&aPlease defend!'
+        type: Comunications
+    im-attacking:
+        name: '&aI''m attacking'
+        item: iron sword
+        slot: 14
+        lore:
+        - '&7You will be able to select'
+        - '&7the Team'
+        - '&eClick to send!'
+        msg: '&aI''m attacking {team}'
+        type: team
+    lets-attack:
+        name: '&aLet''s attack!'
+        item: iron sword
+        slot: 23
+        lore:
+        - '&7You will be able to select'
+        - '&7the Team'
+        - '&eClick to send!'
+        msg: '&aLet''s attack {team}'
+        type: team
+    collecting-resources:
+        name: '&aI''m collecting resources!'
+        item: diamond
+        slot: 15
+        lore:
+        - '&7You will be able to select'
+        - '&7the Resource'
+        - '&eClick to send!'
+        msg: '&aI''m collecting {resource}'
+        type: resources
+    have-resources:
+        name: '&aI have resources!'
+        item: chest
+        slot: 16
+        lore:
+        - '&7You will be able to select'
+        - '&7the Resource'
+        - '&eClick to send!'
+        msg: '&aI have {resource}'
+        type: resources
+    need-resources:
+        name: '&aWe need resources!'
+        item: diamond
+        slot: 24
+        lore:
+        - '&7You will be able to select'
+        - '&7the Resource'
+        - '&eClick to send!'
+        msg: '&aWe need {resource}'
+        type: resources
+    Track-team:
+        name: '&cTrack Team {team}'
+        lore:
+        - '&7Purchase tracking upgrade'
+        - '&7for your compass which will'
+        - '&7track each player on a'
+        - '&7specific team until you'
+        - '&7die'
+        - ''
+        - '&7Cost: &22 Emeralds'
+    Back:
+        name: '&aGo back'
+        lore:
+        - '&7To Tracker & Comunication'
+
+Spectator-Settings:
+    GUI: '&8&l» &7&lSpectator Settings'
+    Speed:
+        '0':
+            name: '&a&nNo Speed'
+            item: leather boots
+            slot: 11
+            lore:
+            - ''
+        '1':
+            name: '&a&nSpeed I'
+            item: chain boots
+            slot: 12
+            lore:
+            - ''
+        '2':
+            name: '&a&nSpeed II'
+            item: iron boots
+            slot: 13
+            lore:
+            - ''
+        '3':
+            name: '&a&nSpeed III'
+            item: gold boots
+            slot: 14
+            lore:
+            - ''
+        '4':
+            name: '&a&nSpeed IV'
+            item: diamond boots
+            slot: 15
+            lore:
+            - ''
+    Night-Vision:
+        'ON':
+            name: '&a&nEnable Night Vision'
+            item: eye of ender
+            slot: 22
+            lore:
+            - '&7Click to enable night vision!'
+        'OFF':
+            name: '&c&nDisable Night Vision'
+            item: ender pearl
+            slot: 22
+            lore:
+            - '&7Click to disable night vision!'
+
+CONFIRM-LEAVE:
+    GUI: '&8&l» &7&nCONFIRM LEAVE'
+    ACCEPT:
+        name: '&8➥ &a&nAccept'
+        item: green clay
+        slot: 3
+        lore:
+        - ''
+    DENY:
+        name: '&8➥ &c&nCancel'
+        item: red clay
+        slot: 5
+        lore:
+        - ''
