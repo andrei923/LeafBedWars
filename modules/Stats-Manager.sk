@@ -9,7 +9,7 @@ command bwstats [<text>] [<text>] [<text>] [<number>]:
 			send "&7&l➜ &bFormat: &a/bwstats &8(&e&ngive/set/take&r&8) &8(&e&ncoins/xp/level&r&8) &8(&eplayer&8) &8(&e&nnumber&r&8)"
 			stop
 		if arg-2 != "coins" or "xp" or "level":
-			send "&7&l➜ &aYou can modify only coins or xp"
+			send "&7&l➜ &aYou can modify only coins, xp or level."
 			send "&7&l➜ &bFormat: &a/bwstats &8(&e&ngive/set/take&r&8) &8(&e&ncoins/xp/level&r&8) &8(&eplayer&8) &8(&e&nnumber&r&8)"
 			stop 			
 		if arg-3 parsed as player is online:
