@@ -24,11 +24,13 @@ command bwstats [<text>] [<text>] [<text>] [<number>]:
 				replace all "plugins/LeafBedWars/playerdata/" with "" in {_uuid}
 				load yaml "plugins/LeafBedWars/playerdata/%{_uuid}%" as "bw.player.data.%{_uuid}%"
 				stop loop
-		if {_found} is set:				
+		if {_found} is set:
 			wait a tick
 			bw_stats(arg-1, arg-3 parsed as player, arg-2, arg-4, {_uuid})
 			wait a second
-			bw_check_loaded_files()
+		else:	
+			send "&7&l➜ &aPlayer not found, did he ever played bedwars?."
+		bw_check_loaded_files()
 
 on load:
-	broadcast "%yaml value ""Messages.Prefix"" from ""bw.language""%&aStats-Manager module loaded."				
+	broadcast "%yaml value ""Messages.Prefix"" from ""bw.language""%&aStats-Manager module loaded."	
