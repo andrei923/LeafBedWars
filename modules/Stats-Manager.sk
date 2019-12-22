@@ -11,7 +11,11 @@ command bwstats [<text>] [<text>] [<text>] [<number>]:
 		if arg-2 != "coins" or "xp" or "level":
 			send "&7&l➜ &aYou can modify only coins, xp or level."
 			send "&7&l➜ &bFormat: &a/bwstats &8(&e&ngive/set/take&r&8) &8(&e&ncoins/xp/level&r&8) &8(&eplayer&8) &8(&e&nnumber&r&8)"
-			stop 			
+			stop 	
+		if arg-1 != "take":	
+			if arg-2 = "xp" or "level":		
+				send "&7&l➜ &aYou cannot remove level or xp."
+				stop
 		if arg-3 parsed as player is online:
 			bw_stats(arg-1, arg-3 parsed as player, arg-2, arg-4)
 			stop
@@ -26,7 +30,7 @@ command bwstats [<text>] [<text>] [<text>] [<number>]:
 				load yaml "plugins/LeafBedWars/playerdata/%{_uuid}%" as "bw.player.data.%{_uuid}%"
 				send "&7&l➜ &aPlayer found, %arg-3%, uuid %{_uuid}%."
 				stop loop
-			wait a tick
+	#		wait a tick
 		if {_found} is set:
 			wait a tick
 			bw_stats(arg-1, arg-3 parsed as player, arg-2, arg-4, {_uuid})
