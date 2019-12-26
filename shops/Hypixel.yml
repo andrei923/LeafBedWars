@@ -284,7 +284,7 @@ Shop:
                     - ''
                     - '&7COST: &f{cost} IRON'
                     - ''
-                    - '&7Great to get rid of wool.&7You'
+                    - '&7Great to get rid of wool.'
                     - '&7will always spawn with these shears.'
                     - ''
                     currency: iron ingot
@@ -878,7 +878,7 @@ Shop:
                     - ''
                     - '&7COST: &f{cost} IRON'
                     - ''
-                    - '&7Great to get rid of wool.&7You'
+                    - '&7Great to get rid of wool.'
                     - '&7will always spawn with these shears.'
                     - ''
                     currency: iron ingot
