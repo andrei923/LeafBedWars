@@ -883,6 +883,8 @@ Shop:
                     - ''
                     currency: iron ingot
                     cost: 40
+                    prevent-buy-if-player-has:   
+                    - shears                                   
                     items:
                     - shears
                 Upgradable Pickaxe:
@@ -912,6 +914,8 @@ Shop:
                             cost: 10
                             items:
                             - wood pickaxe of efficiency 1
+                            prevent-buy-if-player-has:
+                            - wood pickaxe of efficiency 1
                         '2':
                             type: item
                             name:
@@ -938,6 +942,8 @@ Shop:
                             - iron pickaxe of efficiency 2
                             remove-items:
                             - wood pickaxe of efficiency 1
+                            prevent-buy-if-player-has:           
+                            - iron pickaxe of efficiency 2                                             
                         '3':
                             type: item
                             name:
@@ -966,6 +972,8 @@ Shop:
                             remove-items:
                             - wood pickaxe of efficiency 1
                             - iron pickaxe of efficiency 2
+                            prevent-buy-if-player-has:  
+                            - gold pickaxe of efficiency 3 and sharpness 2                         
                         '4':
                             type: item
                             name:
@@ -994,6 +1002,8 @@ Shop:
                             - gold pickaxe of efficiency 3 and sharpness 2
                             - wood pickaxe of efficiency 1
                             - iron pickaxe of efficiency 2
+                            prevent-buy-if-player-has:    
+                            - diamond pickaxe of efficiency 4                                                   
                         '5':
                             type: item
                             name:
@@ -1023,6 +1033,8 @@ Shop:
                             - gold pickaxe of efficiency 3 and sharpness 2
                             - wood pickaxe of efficiency 1
                             - iron pickaxe of efficiency 2
+                            prevent-buy-if-player-has:     
+                            - diamond pickaxe of efficiency 4 and sharpness 2                                                   
                 Upgradable Axe:
                     upgradable: true
                     levels:
@@ -1050,6 +1062,8 @@ Shop:
                             cost: 10
                             items:
                             - wood axe of efficiency 1
+                            prevent-buy-if-player-has:    
+                            - wood axe of efficiency 1                                                    
                         '2':
                             type: item
                             name:
@@ -1076,6 +1090,8 @@ Shop:
                             - stone axe of efficiency 1
                             remove-items:
                             - wood axe of efficiency 1
+                            prevent-buy-if-player-has: 
+                            - stone axe of efficiency 1                                                      
                         '3':
                             type: item
                             name:
@@ -1103,6 +1119,8 @@ Shop:
                             remove-items:
                             - wood axe of efficiency 1
                             - stone axe of efficiency 1
+                            prevent-buy-if-player-has:  
+                            - iron axe of efficiency 2                                                      
                         '4':
                             type: item
                             name:
@@ -1131,6 +1149,8 @@ Shop:
                             - wood axe of efficiency 1
                             - stone axe of efficiency 1
                             - iron axe of efficiency 2
+                            prevent-buy-if-player-has:  
+                            - diamond axe of efficiency 2                                                     
                         '5':
                             type: item
                             name:
@@ -1160,6 +1180,8 @@ Shop:
                             - stone axe of efficiency 1
                             - stone axe of efficiency 2
                             - iron axe of efficiency 2
+                            prevent-buy-if-player-has: 
+                            - diamond axe of efficiency 2                                                      
         Armor:
             type: category
             GUI: '&8&l» &bARMOR'
