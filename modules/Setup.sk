@@ -193,8 +193,8 @@ function bw_setup_menu(p: player, menu: text):
 						set {_check} to "&8&l[&a&l✔&8&l] &aDone."
 					else:
 						set {_check} to "&8&l[&c&l✘&8&l] &cNot set."
-					make a gui slot {_bed-slot} of {_p} with {bw::cache::bed::engine} named "&7&l« &aSET BED FOR TEAM %{_display-name}% &8&l(&7STAY ON IT&8&l) &8&l- %{_check}% &7&l»" to run:
-						yaml value "Misc.game-block" from "bw.config" is "bed":
+					make a gui slot {_bed-slot} of {_p} with {-bw::cache::bed::engine} named "&7&l« &aSET BED FOR TEAM %{_display-name}% &8&l(&7STAY ON IT&8&l) &8&l- %{_check}% &7&l»" to run:
+						yaml value "Misc.game-block" from "bw.config" contains "bed":
 							if minecraft version contains "1.8" or "1.9" or "1.10" or "1.11" or "1.12":
 								loop "HEAD" and "FOOT":
 									set yaml value "TEAMS.%{_team}%.BED.%loop-value-2%.location" from "bw.arena.%{_arena}%" to bw_setup_get_data(location of {_p}, "%loop-value-2%")
@@ -503,13 +503,13 @@ function bw_setup_arena(p: player, do: text, arena: text):
 
 on right click:		
 	metadata value "BW-SETUP" of player is set	
-	if name of item is "&8&l[&bARENA &8&l- &bSETTINGS&8&l]":
+	if name of event-item is "&8&l[&bARENA &8&l- &bSETTINGS&8&l]":
 		cancel event
 		bw_setup_menu(player, "ARENA-SETTING")
-	if name of item is "&8&l[&bARENA &8&l- &bTEAMS&8&l]":
+	if name of event-item is "&8&l[&bARENA &8&l- &bTEAMS&8&l]":
 		cancel event
 		bw_setup_menu(player, "ARENA-TEAMS")
-	if name of item is "&8&l[&bARENA &8&l- &bGENERATORS&8&l]":
+	if name of event-item is "&8&l[&bARENA &8&l- &bGENERATORS&8&l]":
 		cancel event
 		bw_setup_menu(player, "ARENA-GENERATORS")	
 
