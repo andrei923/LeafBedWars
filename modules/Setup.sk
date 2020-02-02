@@ -6,7 +6,7 @@ options:
 #
 # \\ CODE - Do not modify it if you don't know what are you doing -_- //
 #
-function bw_setup_get_data(loc: location, data: text) :: location:
+function bw_setup_get_part(loc: location, data: text) :: location:
 	loop blocks in radius 2 around {_loc}:
 		"%type of loop-block%" contains "bed"
 		loop numbers between 8 and 15:
@@ -17,7 +17,7 @@ function bw_setup_get_data(loc: location, data: text) :: location:
 				if {_data} is "FOOT":
 					return location of loop-block 
 					
-function bw_setup_menu(p: player, menu: text):		
+function bw_setup_menu(p: player, menu: text):	
 	if {_p} has permission "leafbw.setup":
 		set {_arena} to metadata value "BW-SETUP" of {_p}
 		{_menu} is "ARENA-SETTING":	
@@ -194,28 +194,29 @@ function bw_setup_menu(p: player, menu: text):
 					else:
 						set {_check} to "&8&l[&c&l✘&8&l] &cNot set."
 					make a gui slot {_bed-slot} of {_p} with {-bw::cache::bed::engine} named "&7&l« &aSET BED FOR TEAM %{_display-name}% &8&l(&7STAY ON IT&8&l) &8&l- %{_check}% &7&l»" to run:
-						yaml value "Misc.game-block" from "bw.config" contains "bed":
+						yaml value "Misc.Game Block" from "bw.config" contains "bed":
 							if minecraft version contains "1.8" or "1.9" or "1.10" or "1.11" or "1.12":
 								loop "HEAD" and "FOOT":
-									set yaml value "TEAMS.%{_team}%.BED.%loop-value-2%.location" from "bw.arena.%{_arena}%" to bw_setup_get_data(location of {_p}, "%loop-value-2%")
+									set yaml value "TEAMS.%{_team}%.BED.%loop-value-2%.location" from "bw.arena.%{_arena}%" to bw_setup_get_part(location of {_p}, "%loop-value-2%")
 									set {_f} to facing of block at yaml value "TEAMS.%{_team}%.BED.%loop-value-2%.location" from "bw.arena.%{_arena}%"
 									set yaml value "TEAMS.%{_team}%.BED.%loop-value-2%.facing" from "bw.arena.%{_arena}%" to "%{_f}%"
 								stop
-							else:
-								loop blocks in radius 2 around {_p}:
-									if "%type of loop-block%" contains "bed":	
-										set {_part} to loop-block.getBlockData().getPart()
-										set yaml value "TEAMS.%{_team}%.BED.%{_part}%.location" from "bw.arena.%{_arena}%" to location of loop-block	
-										set yaml value "TEAMS.%{_team}%.BED.%{_part}%.location" from "bw.arena.%{_arena}%" to location of loop-block
-										set yaml value "TEAMS.%{_team}%.BED.%{_part}%.facing" from "bw.arena.%{_arena}%" to "%facing of loop-block%"				
+							loop blocks in radius 2 of {_p}:
+								if "%type of loop-block%" contains "bed":	
+									set {_part} to loop-block.getBlockData().getPart()
+									set yaml value "TEAMS.%{_team}%.BED.%{_part}%.location" from "bw.arena.%{_arena}%" to location of loop-block	
+									set yaml value "TEAMS.%{_team}%.BED.%{_part}%.location" from "bw.arena.%{_arena}%" to location of loop-block
+									set yaml value "TEAMS.%{_team}%.BED.%{_part}%.facing" from "bw.arena.%{_arena}%" to "%facing of loop-block%"				
 						else:
-							loop blocks in radius 2 around {_p}:
-								if "%type of loop-block%" contains yaml value "Misc.game-block" from "bw.config":			
+							loop blocks in radius 2 of {_p}:
+								if "%type of loop-block%" contains yaml value "Misc.Game Block" from "bw.config":			
 									set yaml value "TEAMS.%{_team}%.BED.HEAD.location" from "bw.arena.%{_arena}%" to location of loop-block
 									set yaml value "TEAMS.%{_team}%.BED.FOOT.location" from "bw.arena.%{_arena}%" to location of loop-block
 						if yaml value "TEAMS.%{_team}%.BED.HEAD.location" from "bw.arena.%{_arena}%" and yaml value "TEAMS.%{_team}%.BED.FOOT.location" from "bw.arena.%{_arena}%" is set:
 							send "{@prefix} &aBED for team %{_display-name}% &ahas been set!"	
 							bw_setup_menu(player, "ARENA-TEAMS")
+						else:
+							send "{@prefix} &aNo bed found!" 
 					if yaml value "TEAMS.%{_team}%.SHOP" from "bw.arena.%{_arena}%" is set:
 						set {_check} to "&8&l[&a&l✔&8&l] &aDone."
 					else:
