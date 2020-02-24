@@ -190,7 +190,7 @@ Shop:
                     - '&7COST: &2{cost} EMERALD'
                     - ''
                     currency: emerald
-                    cost: 1
+                    cost: 2
                     potion: true
                     effect: speed
                     duration: 45
@@ -322,7 +322,7 @@ Shop:
                     potion: true
                     effect: Invisibility
                     duration: 30
-                    tier: 2
+                    tier: 1
                     items:
                     - potion
                 Water Bucket:
