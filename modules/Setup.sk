@@ -298,7 +298,7 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 			if arg-1 is "editarena":
 				if arg-2 is set:
 					if yaml value "STATE" from "bw.arena.%arg-2%" is set:
-						remove arg-2 from {bw::arenas::*}
+						remove arg-2 from {-bw::arenas::*}
 						set yaml value "STATE" from "bw.arena.%arg-2%" to "SETUP" 
 						send "{@prefix} &7You are now editing arena &a%arg-2%. &7!"	
 						loop yaml nodes with keys "TEAMS" from "bw.arena.%arg-2%":
@@ -337,7 +337,7 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 			if arg-1 is "deleteArena":
 				if yaml "bw.arena.%arg-2%" is loaded:
 					delete yaml "bw.arena.%arg-2%"
-					remove arg-2 from {bw::arenas::*}
+					remove arg-2 from {-bw::arenas::*}
 					bw_setup_arena(player,"exit", arg-2)
 					send "{@prefix} &aArena &c%arg-2% has been deleted &7!"	
 				else:
