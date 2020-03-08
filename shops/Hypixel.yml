@@ -583,7 +583,7 @@ Shop:
                     currency: emerald
                     cost: 4
                     items:
-                    - 4 Obsidian
+                    - 16 Obsidian
         Meele:
             type: category
             GUI: '&8&l» &bMEELE'
