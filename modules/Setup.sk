@@ -21,7 +21,7 @@ function bw_setup_menu(p: player, menu: text):
 	if {_p} has permission "leafbw.setup":
 		set {_arena} to metadata value "BW-SETUP" of {_p}
 		{_menu} is "ARENA-SETTING":	
-			open virtual chest inventory with size 5 named "&8&l» &3ARENA SETTINGS" to {_p}
+			open chest inventory with 5 rows named "&8&l» &3ARENA SETTINGS" to {_p}
 			wait a tick
 			#MIN TEAMS CHECK	
 			if yaml value "MIN-TEAMS" from "bw.arena.%{_arena}%" is set:
@@ -30,7 +30,7 @@ function bw_setup_menu(p: player, menu: text):
 				set {_check} to "&8&l[&c&l✘&8&l] &cNot set."
 			make a gui slot 12 of {_p} with player head named {_check} with leaf lore "&3&l» &7&nClick to set minimum players to start arena." to run:	
 				set {_slot} to -1
-				open virtual chest inventory with size 1 named "&8&l» &7SET MIN" to {_p}
+				open chest inventory with 1 rows named "&8&l» &7SET MIN" to {_p}
 				wait a tick
 				loop 8 times:
 					set {_int} to loop-value-1
@@ -45,7 +45,7 @@ function bw_setup_menu(p: player, menu: text):
 				set {_check} to "&8&l[&c&l✘&8&l] &cNot set."			
 			make a gui slot 14 of {_p} with player head named {_check} with leaf lore "&3&l» &7&nClick to set the number of players in team &8(&aSET 1 FOR SOLO MODE&8)." to run:		
 				set {_slot} to 0	
-				open virtual chest inventory with size 6 named "&8&l» &7Players per team" to {_p}
+				open chest inventory with 6 rows named "&8&l» &7Players per team" to {_p}
 				wait 2 ticks
 				loop 54 times:
 					set {_int} to loop-value-1
@@ -109,7 +109,7 @@ function bw_setup_menu(p: player, menu: text):
 				close {_p}'s inventory	
 		#TEAMS
 		if {_menu} is "ARENA-TEAMS":					
-			open virtual chest inventory with size 6 named "&8&l» &3ARENA SETTINGS" to {_p}
+			open chest inventory with 6 rows named "&8&l» &3ARENA SETTINGS" to {_p}
 			wait a tick
 		#TEAMS CHECK
 			set {_enable-slot} to 0
@@ -238,7 +238,7 @@ function bw_setup_menu(p: player, menu: text):
 				add 1 to {_loop} 					
 		#GENERATORS
 		{_menu} is "ARENA-GENERATORS":					
-			open virtual chest inventory with size 4 named "&8&l» &3ARENA GENERATORS" to {_p}
+			open chest inventory with 4 rows named "&8&l» &3ARENA GENERATORS" to {_p}
 			wait a tick
 			set {_emerald} to size of yaml list "GENERATORS.EMERALD" from "bw.arena.%{_arena}%"
 			set {_diamond} to size of yaml list "GENERATORS.DIAMOND" from "bw.arena.%{_arena}%"
