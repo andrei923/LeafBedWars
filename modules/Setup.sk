@@ -6,16 +6,18 @@ options:
 #
 # \\ CODE - Do not modify it if you don't know what are you doing -_- //
 #
-function bw_setup_get_part(loc: location, data: text) :: location:
+function bw_setupGetBedData(loc: location, data: text) :: location:
 	loop blocks in radius 2 around {_loc}:
 		"%type of loop-block%" contains "bed"
-		loop numbers between 8 and 15:
-			if type of loop-block is "26:%loop-number-2%" parsed as material: 
-				if {_data} is "HEAD": 
-					return location of loop-block	
-			else:
-				if {_data} is "FOOT":
-					return location of loop-block 
+		set {_b} to loop-block.getState().getData()
+		if {_data} is "HEAD": 
+			{_b}.isHeadOfBed() is true
+			return location of loop-block	
+		if {_data} is "FOOT":
+			{_b}.isHeadOfBed() is false
+			return location of loop-block 
+		if {_data} is "FACING":	
+			return {_b}.getFacing()		
 					
 function bw_setup_menu(p: player, menu: text):	
 	if {_p} has permission "leafbw.setup":
@@ -189,16 +191,15 @@ function bw_setup_menu(p: player, menu: text):
 						yaml value "Misc.Game Block" from "bw.config" contains "bed":
 							if minecraft version contains "1.8" or "1.9" or "1.10" or "1.11" or "1.12":
 								loop "HEAD" and "FOOT":
-									set yaml value "TEAMS.%{_team}%.BED.%loop-value-2%.location" from "bw.arena.%{_arena}%" to bw_setup_get_part(location of {_p}, "%loop-value-2%")
-									set {_f} to facing of block at yaml value "TEAMS.%{_team}%.BED.%loop-value-2%.location" from "bw.arena.%{_arena}%"
-									set yaml value "TEAMS.%{_team}%.BED.%loop-value-2%.facing" from "bw.arena.%{_arena}%" to "%facing of {_p}%"
+									set yaml value "TEAMS.%{_team}%.BED.%loop-value-2%.location" from "bw.arena.%{_arena}%" to bw_setupGetBedData(location of {_p}, "%loop-value-2%")
+									set yaml value "TEAMS.%{_team}%.BED.%loop-value-2%.facing" from "bw.arena.%{_arena}%" to bw_setupGetBedData(location of {_p}, "FACING")
 							else:
 								loop blocks in radius 2 of {_p}:
 									"%type of loop-block%" contains "bed"	
 									set {_part} to loop-block.getBlockData().getPart()
 									set yaml value "TEAMS.%{_team}%.BED.%{_part}%.location" from "bw.arena.%{_arena}%" to location of loop-block	
 									set yaml value "TEAMS.%{_team}%.BED.%{_part}%.location" from "bw.arena.%{_arena}%" to location of loop-block
-									set yaml value "TEAMS.%{_team}%.BED.%{_part}%.facing" from "bw.arena.%{_arena}%" to "%facing of {_p}%"				
+									set yaml value "TEAMS.%{_team}%.BED.%{_part}%.facing" from "bw.arena.%{_arena}%" to bw_setupGetBedData(location of {_p}, "FACING")				
 						else:
 							loop blocks in radius 2 of {_p}:
 								if "%type of loop-block%" contains yaml value "Misc.Game Block" from "bw.config":			
@@ -298,12 +299,21 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 			if arg-1 is "editarena":
 				if arg-2 is set:
 					if yaml value "STATE" from "bw.arena.%arg-2%" is set:
-						remove arg-2 from {-bw::arenas::*}
-						set yaml value "STATE" from "bw.arena.%arg-2%" to "SETUP" 
-						send "{@prefix} &7You are now editing arena &a%arg-2%. &7!"	
-						loop yaml nodes with keys "TEAMS" from "bw.arena.%arg-2%":
-							bw_spawn_team_bed(arg-2, loop-value-1)						
-						bw_setup_arena(player,"enter", arg-2)																
+						if {-bw::cache::player::%player%::state} is "IN-LOBBY":
+							#
+							bw_separe_player(player)
+							bw_clear_data(player)
+							bw_clear_player(player)						
+							#
+							remove arg-2 from {bw::arenas::*}
+							set yaml value "STATE" from "bw.arena.%arg-2%" to "SETUP" 
+							send "{@prefix} &7You are now editing arena &a%arg-2%. &7!"	
+							loop yaml nodes with keys "TEAMS" from "bw.arena.%arg-2%":
+								bw_spawn_team_bed(arg-2, loop-value-1)						
+							bw_setup_arena(player,"enter", arg-2)			
+							#					
+						if {-bw::cache::player::%player%::state} is "IN-GAME" or "IN-GAME-SPEC":
+							send "%yaml value ""Messages.Prefix"" from ""bw.language""%%yaml value ""Messages.In Game"" from ""bw.language""%"																				
 					else:
 						send "{@prefix} &cThis arena not exists!"
 				else:
@@ -337,7 +347,7 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 			if arg-1 is "deleteArena":
 				if yaml "bw.arena.%arg-2%" is loaded:
 					delete yaml "bw.arena.%arg-2%"
-					remove arg-2 from {-bw::arenas::*}
+					remove arg-2 from {bw::arenas::*}
 					bw_setup_arena(player,"exit", arg-2)
 					send "{@prefix} &aArena &c%arg-2% has been deleted &7!"	
 				else:
