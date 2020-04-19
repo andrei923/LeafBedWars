@@ -1,3 +1,8 @@
+import:		
+	org.bukkit.Material		
+	org.bukkit.block.BlockFace
+	org.bukkit.material.MaterialData
+
 options:
 
 
@@ -6,19 +11,27 @@ options:
 #
 # \\ CODE - Do not modify it if you don't know what are you doing -_- //
 #
+
 function bw_setupGetBedData(loc: location, data: text) :: location:
-	loop blocks in radius 2 around {_loc}:
-		"%type of loop-block%" contains "bed"
-		set {_b} to loop-block.getState().getData()
-		if {_data} is "HEAD": 
-			{_b}.isHeadOfBed() is true
-			return location of loop-block	
-		if {_data} is "FOOT":
-			{_b}.isHeadOfBed() is false
-			return location of loop-block 
-		if {_data} is "FACING":	
-			return {_b}.getFacing()		
-					
+	minecraft version contains "1.8" or "1.9" or "1.10" or "1.11" or "1.12":
+		loop blocks in radius 2 around {_loc}:
+			"%type of loop-block%" contains "bed"
+			set {_b} to loop-block
+			if {_data} is "HEAD": 
+				{_b}.getState().getData().isHeadOfBed() is true
+				set {-bw::cache::setupBeds::CurrentFacing} to "%facing of loop-block%"
+				return location of loop-block	
+			if {_data} is "FOOT":
+				{_b}.getState().getData().isHeadOfBed() is false
+				set {-bw::cache::setupBeds::CurrentFacing} to "%facing of loop-block%"
+				return location of loop-block 
+	else:
+		loop blocks in radius 2 of {_p}:
+			"%type of loop-block%" contains "bed"	
+			if {_data} is loop-block.getBlockData().getPart():
+				set {-bw::cache::setupBeds::CurrentFacing} to "%facing of loop-block%"
+				return location of loop-block
+			
 function bw_setup_menu(p: player, menu: text):	
 	if {_p} has permission "leafbw.setup":
 		set {_arena} to metadata value "BW-SETUP" of {_p}
@@ -189,22 +202,15 @@ function bw_setup_menu(p: player, menu: text):
 						set {_check} to "&8&l[&c&l✘&8&l] &cNot set."
 					make a gui slot {_bed-slot} of {_p} with {-bw::cache::bed::engine} named "&7&l« &aSET BED FOR TEAM %{_display-name}% &8&l(&7STAY ON IT&8) &8&l- %{_check}% &7&l»" to run:
 						yaml value "Misc.Game Block" from "bw.config" contains "bed":
-							if minecraft version contains "1.8" or "1.9" or "1.10" or "1.11" or "1.12":
-								loop "HEAD" and "FOOT":
-									set yaml value "TEAMS.%{_team}%.BED.%loop-value-2%.location" from "bw.arena.%{_arena}%" to bw_setupGetBedData(location of {_p}, "%loop-value-2%")
-									set yaml value "TEAMS.%{_team}%.BED.%loop-value-2%.facing" from "bw.arena.%{_arena}%" to bw_setupGetBedData(location of {_p}, "FACING")
-							else:
-								loop blocks in radius 2 of {_p}:
-									"%type of loop-block%" contains "bed"	
-									set {_part} to loop-block.getBlockData().getPart()
-									set yaml value "TEAMS.%{_team}%.BED.%{_part}%.location" from "bw.arena.%{_arena}%" to location of loop-block	
-									set yaml value "TEAMS.%{_team}%.BED.%{_part}%.location" from "bw.arena.%{_arena}%" to location of loop-block
-									set yaml value "TEAMS.%{_team}%.BED.%{_part}%.facing" from "bw.arena.%{_arena}%" to bw_setupGetBedData(location of {_p}, "FACING")				
+							loop "HEAD" and "FOOT":
+								set yaml value "TEAMS.%{_team}%.BED.%loop-value-2%.location" from "bw.arena.%{_arena}%" to bw_setupGetBedData(location of {_p}, "%loop-value-2%")
+								set yaml value "TEAMS.%{_team}%.BED.%loop-value-2%.facing" from "bw.arena.%{_arena}%" to {-bw::cache::setupBeds::CurrentFacing}
+								wait a tick	
 						else:
 							loop blocks in radius 2 of {_p}:
-								if "%type of loop-block%" contains yaml value "Misc.Game Block" from "bw.config":			
-									set yaml value "TEAMS.%{_team}%.BED.HEAD.location" from "bw.arena.%{_arena}%" to location of loop-block
-									set yaml value "TEAMS.%{_team}%.BED.FOOT.location" from "bw.arena.%{_arena}%" to location of loop-block
+								"%type of loop-block%" contains yaml value "Misc.Game Block" from "bw.config"	
+								set yaml value "TEAMS.%{_team}%.BED.HEAD.location" from "bw.arena.%{_arena}%" to location of loop-block
+								set yaml value "TEAMS.%{_team}%.BED.FOOT.location" from "bw.arena.%{_arena}%" to location of loop-block
 						if yaml value "TEAMS.%{_team}%.BED.HEAD.location" from "bw.arena.%{_arena}%" and yaml value "TEAMS.%{_team}%.BED.FOOT.location" from "bw.arena.%{_arena}%" is set:
 							send "{@prefix} &aBED for team %{_display-name}% &ahas been set!" to {_p}	
 							bw_setup_menu(player, "ARENA-TEAMS")
