@@ -305,21 +305,21 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 			if arg-1 is "editarena":
 				if arg-2 is set:
 					if yaml value "STATE" from "bw.arena.%arg-2%" is set:
+						if {-bw::cache::player::%player%::state} is "IN-GAME" or "IN-GAME-SPEC":
+							send "%yaml value ""Messages.Prefix"" from ""bw.language""%%yaml value ""Messages.In Game"" from ""bw.language""%"	
+							stop					
 						if {-bw::cache::player::%player%::state} is "IN-LOBBY":
 							#
 							bw_separe_player(player)
 							bw_clear_data(player)
 							bw_clear_player(player)						
-							#
-							remove arg-2 from {bw::arenas::*}
-							set yaml value "STATE" from "bw.arena.%arg-2%" to "SETUP" 
-							send "{@prefix} &7You are now editing arena &a%arg-2%. &7!"	
-							loop yaml nodes with keys "TEAMS" from "bw.arena.%arg-2%":
-								bw_spawn_team_bed(arg-2, loop-value-1)						
-							bw_setup_arena(player,"enter", arg-2)			
-							#					
-						if {-bw::cache::player::%player%::state} is "IN-GAME" or "IN-GAME-SPEC":
-							send "%yaml value ""Messages.Prefix"" from ""bw.language""%%yaml value ""Messages.In Game"" from ""bw.language""%"																				
+							#							
+						remove arg-2 from {bw::arenas::*}
+						set yaml value "STATE" from "bw.arena.%arg-2%" to "SETUP" 
+						send "{@prefix} &7You are now editing arena &a%arg-2%. &7!"	
+						loop yaml nodes with keys "TEAMS" from "bw.arena.%arg-2%":
+							bw_spawn_team_bed(arg-2, loop-value-1)						
+						bw_setup_arena(player,"enter", arg-2)																										
 					else:
 						send "{@prefix} &cThis arena not exists!"
 				else:
