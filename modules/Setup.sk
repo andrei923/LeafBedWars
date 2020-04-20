@@ -314,7 +314,7 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 							bw_clear_data(player)
 							bw_clear_player(player)						
 							#							
-						remove arg-2 from {bw::arenas::*}
+						remove arg-2 from {-bw::arenas::*}
 						set yaml value "STATE" from "bw.arena.%arg-2%" to "SETUP" 
 						send "{@prefix} &7You are now editing arena &a%arg-2%. &7!"	
 						loop yaml nodes with keys "TEAMS" from "bw.arena.%arg-2%":
@@ -353,7 +353,7 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 			if arg-1 is "deleteArena":
 				if yaml "bw.arena.%arg-2%" is loaded:
 					delete yaml "bw.arena.%arg-2%"
-					remove arg-2 from {bw::arenas::*}
+					remove arg-2 from {-bw::arenas::*}
 					bw_setup_arena(player,"exit", arg-2)
 					send "{@prefix} &aArena &c%arg-2% has been deleted &7!"	
 				else:
@@ -405,6 +405,7 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 												set yaml value "STATE" from "bw.arena.%arg-2%" to "READY"
 												save yaml "bw.arena.%arg-2%"
 												bw_waiting_lobby("save", {_arena}, {_arena})	
+												add {_arena} to {-bw::arenas::*}
 											else:
 												send "{@prefix} &cYou have to set the number of players in a team!"													
 										else:
