@@ -13,7 +13,7 @@ options:
 #
 
 function bw_setupGetBedData(loc: location, data: text) :: location:
-	minecraft version contains "1.8" or "1.9" or "1.10" or "1.11" or "1.12":
+	if minecraft version contains "1.8" or "1.9" or "1.10" or "1.11" or "1.12":
 		loop blocks in radius 2 around {_loc}:
 			"%type of loop-block%" contains "bed"
 			set {_b} to loop-block
@@ -26,9 +26,9 @@ function bw_setupGetBedData(loc: location, data: text) :: location:
 				set {-bw::cache::setupBeds::CurrentFacing} to "%facing of loop-block%"
 				return location of loop-block 
 	else:
-		loop blocks in radius 2 of {_p}:
+		loop blocks in radius 2 around {_loc}:
 			"%type of loop-block%" contains "bed"	
-			if {_data} is loop-block.getBlockData().getPart():
+			if {_data} is "%loop-block.getBlockData().getPart()%":
 				set {-bw::cache::setupBeds::CurrentFacing} to "%facing of loop-block%"
 				return location of loop-block
 			
