@@ -6,7 +6,7 @@ import:
 options:
 
 
-	prefix: &6&lBW &8&l- &c&lSETUP &e&l»
+	prefix: &6&lBW &8- &cSETUP &e&l»
 
 #
 # \\ CODE - Do not modify it if you don't know what are you doing -_- //
@@ -36,35 +36,35 @@ function bw_setup_menu(p: player, menu: text):
 	if {_p} has permission "leafbw.setup":
 		set {_arena} to metadata value "BW-SETUP" of {_p}
 		{_menu} is "ARENA-SETTING":	
-			open chest inventory with 5 rows named "&8&l» &3ARENA SETTINGS" to {_p}
+			open chest inventory with 5 rows named "&8» &3ARENA SETTINGS" to {_p}
 			wait a tick
 			#MIN TEAMS CHECK	
 			if yaml value "MIN-TEAMS" from "bw.arena.%{_arena}%" is set:
-				set {_check} to "&8&l[&a&l✔&8&l] &aDone."
+				set {_check} to "&8[&a✔&8] &aDone."
 			else:
-				set {_check} to "&8&l[&c&l✘&8&l] &cNot set."
+				set {_check} to "&8[&c✘&8] &cNot set."
 			make a gui slot 12 of {_p} with player head named {_check} with leaf lore "&3&l» &7&nClick to set minimum players to start arena." to run:	
 				set {_slot} to -1
-				open chest inventory with 1 rows named "&8&l» &7SET MIN" to {_p}
+				open chest inventory with 1 rows named "&8» &7SET MIN" to {_p}
 				wait a tick
 				loop 8 times:
 					set {_int} to loop-value-1
-					make a gui slot {_slot} of {_p} with loop-number of player head named "&3&l» &7&nClick to set minimum teams to &c&l- &8&l(&b%{_int}%&8)" to run:
+					make a gui slot {_slot} of {_p} with loop-number of player head named "&3&l» &7&nClick to set minimum teams to &c- &8(&b%{_int}%&8)" to run:
 						set yaml value "MIN-TEAMS" from "bw.arena.%{_arena}%" to {_int}
 						send "{@prefix} &7Setted the &aminimun teams &7to &a%{_int}%&7!" to {_p}
 						bw_setup_menu(player, "ARENA-SETTING")
 					add 1 to {_slot}	
 			if yaml value "PLAYERS-PER-TEAM" from "bw.arena.%{_arena}%" is set:
-				set {_check} to "&8&l[&a&l✔&8&l] &aDone."
+				set {_check} to "&8[&a✔&8] &aDone."
 			else:
-				set {_check} to "&8&l[&c&l✘&8&l] &cNot set."			
+				set {_check} to "&8[&c✘&8] &cNot set."			
 			make a gui slot 14 of {_p} with player head named {_check} with leaf lore "&3&l» &7&nClick to set the number of players in team &8(&aSET 1 FOR SOLO MODE&8)." to run:		
 				set {_slot} to 0	
-				open chest inventory with 6 rows named "&8&l» &7Players per team" to {_p}
+				open chest inventory with 6 rows named "&8» &7Players per team" to {_p}
 				wait 2 ticks
 				loop 54 times:
 					set {_int} to loop-value-1
-					make a gui slot {_slot} of {_p} with loop-number of player head named "&3&l» &7&nClick to set the number of players in team to &c&l- &8(&b%{_int}%&8)" to run:
+					make a gui slot {_slot} of {_p} with loop-number of player head named "&3&l» &7&nClick to set the number of players in team to &c- &8(&b%{_int}%&8)" to run:
 						set yaml value "PLAYERS-PER-TEAM" from "bw.arena.%{_arena}%" to {_int}
 						send "{@prefix} &7Setted the &aplayers in team &7to &a%{_int}%&7!" to {_p}
 						bw_setup_menu(player, "ARENA-SETTING")
@@ -72,44 +72,44 @@ function bw_setup_menu(p: player, menu: text):
 				stop
 			#CENTER CHECK	
 			if yaml value "LOCATION.CENTER" from "bw.arena.%{_arena}%" is set:
-				set {_check} to "&8&l[&a&l✔&8&l] &aDone."
+				set {_check} to "&8[&a✔&8] &aDone."
 			else:
-				set {_check} to "&8&l[&c&l✘&8&l] &cNot set."					
+				set {_check} to "&8[&c✘&8] &cNot set."					
 			make a gui slot 29 of {_p} with compass named {_check} with leaf lore "&3&l» &7&nClick to set arena center." to run:
 				set yaml value "LOCATION.CENTER" from "bw.arena.%{_arena}%" to location of {_p}	
 				send "{@prefix} &7Setted the &aArena Center &7to your current location!" to {_p}		
 				close {_p}'s inventory
 			#LOBBY CHECK	
 			if yaml value "LOCATION.LOBBY" from "bw.arena.%{_arena}%" is set:
-				set {_check} to "&8&l[&a&l✔&8&l] &aDone."
+				set {_check} to "&8[&a✔&8] &aDone."
 			else:
-				set {_check} to "&8&l[&c&l✘&8&l] &cNot set."					
+				set {_check} to "&8[&c✘&8] &cNot set."					
 			make a gui slot 33 of {_p} with pumpkin named {_check} with leaf lore "&3&l» &7Click to set arena lobby." to run:
 				set yaml value "LOCATION.LOBBY" from "bw.arena.%{_arena}%" to location of {_p}	
 				send "{@prefix} &7Setted the &aArena lobby &7to your location&7!" to {_p}
 				close {_p}'s inventory			
 			#LOBBY POS 1 CHECK	
 			if yaml value "LOCATION.LOBBY-POS-1" from "bw.arena.%{_arena}%" is set:
-				set {_check} to "&8&l[&a&l✔&8&l] &aDone."
+				set {_check} to "&8[&a✔&8] &aDone."
 			else:
-				set {_check} to "&8&l[&c&l✘&8&l] &cNot set."			
+				set {_check} to "&8[&c✘&8] &cNot set."			
 			make a gui slot 0 of {_p} with nether star named {_check} with leaf lore "&3&l» &7&nCLICK TO SET LOBBY POSITION-1 &8(&aOPTIONAL&8)" to run:		
 				set yaml value "LOCATION.LOBBY-POS-1" from "bw.arena.%{_arena}%" to location of {_p}
-				send "{@prefix} &7LOBBY POSITION-1 for arena &a%{_arena}% &7has been set at &8&l[&3%location of {_p}%&8&l]" to {_p}
+				send "{@prefix} &7LOBBY POSITION-1 for arena &a%{_arena}% &7has been set at &8[&3%location of {_p}%&8]" to {_p}
 				close {_p}'s inventory	
 			#LOBBY POS 2 CHECK	
 			if yaml value "LOCATION.LOBBY-POS-2" from "bw.arena.%{_arena}%" is set:
-				set {_check} to "&8&l[&a&l✔&8&l] &aDone."
+				set {_check} to "&8[&a✔&8] &aDone."
 			else:
-				set {_check} to "&8&l[&c&l✘&8&l] &cNot set."			
+				set {_check} to "&8[&c✘&8] &cNot set."			
 			make a gui slot 8 of {_p} with nether star named {_check} with leaf lore "&3&l» &7&nCLICK TO SET LOBBY POSITION-2 &8(&aOPTIONAL&8)" to run:		
 				set yaml value "LOCATION.LOBBY-POS-2" from "bw.arena.%{_arena}%" to location of {_p}
-				send "{@prefix} &7LOBBY POSITION-2 for arena &a%{_arena}% &7has been set at &8&l[&3%location of {_p}%&8&l]" to {_p}
+				send "{@prefix} &7LOBBY POSITION-2 for arena &a%{_arena}% &7has been set at &8[&3%location of {_p}%&8]" to {_p}
 				close {_p}'s inventory					
 			if yaml value "MAX-BUILD-HEIGHT" from "bw.arena.%{_arena}%" is set:
-				set {_check} to "&8&l[&a&l✔&8&l] &aDone."
+				set {_check} to "&8[&a✔&8] &aDone."
 			else:
-				set {_check} to "&8&l[&c&l✘&8&l] &cNot set."					
+				set {_check} to "&8[&c✘&8] &cNot set."					
 			make a gui slot 22 of {_p} with snowball named {_check} with leaf lore "&3&l» &7&nSET MAX HEIGHT &8(&aOPTIONAL&8)" to run:
 				set yaml value "MAX-BUILD-HEIGHT" from "bw.arena.%{_arena}%" to y-coords of {_p}
 				send "{@prefix} &e&l» &7Setted the &3&lMax height &7to your current location!" to {_p}
@@ -119,12 +119,12 @@ function bw_setup_menu(p: player, menu: text):
 				make {_p} execute command "bwsetup saveArena %{_arena}%"
 				close {_p}'s inventory	
 				
-			make a gui slot 36 of {_p} with lava bucket named "&3&l» &c&nClick to delete arena &8&l(&c&l!&8)" to run:
+			make a gui slot 36 of {_p} with lava bucket named "&3&l» &c&nClick to delete arena &8(&c!&8)" to run:
 				make {_p} execute command "bwsetup deleteArena %{_arena}%"
 				close {_p}'s inventory	
 		#TEAMS
 		if {_menu} is "ARENA-TEAMS":					
-			open chest inventory with 6 rows named "&8&l» &3ARENA SETTINGS" to {_p}
+			open chest inventory with 6 rows named "&8» &3Arena Teams." to {_p}
 			wait a tick
 		#TEAMS CHECK
 			set {_enable-slot} to 0
@@ -132,75 +132,48 @@ function bw_setup_menu(p: player, menu: text):
 			set {_bed-slot} to 18	
 			set {_gen-slot} to 27		
 			set {_shop-slot} to 36		
-			set {_upgrade-slot} to 45	
-			set {_loop} to 1
-			loop 8 times:
-				if {_loop} is 1:
-					set {_team} to "RED"
-					set {_display-block} to red clay
-					set {_display-name} to "&c&lRED"
-				if {_loop} is 2:
-					set {_team} to "BLUE"
-					set {_display-block} to blue clay
-					set {_display-name} to "&1&lBLUE"
-				if {_loop} is 3:
-					set {_team} to "GREEN"
-					set {_display-block} to green clay
-					set {_display-name} to "&a&lGREEN"	
-				if {_loop} is 4:
-					set {_team} to "YELLOW"
-					set {_display-block} to yellow clay
-					set {_display-name} to "&e&lYELLOW"			
-				if {_loop} is 5:
-					set {_team} to "CYAN"
-					set {_display-block} to light blue clay
-					set {_display-name} to "&b&lCYAN"	
-				if {_loop} is 6:
-					set {_team} to "WHITE"
-					set {_display-block} to white clay
-					set {_display-name} to "&f&lWHITE"	
-				if {_loop} is 7:
-					set {_team} to "PINK"
-					set {_display-block} to pink clay
-					set {_display-name} to "&d&lPINK"	
-				if {_loop} is 8:
-					set {_team} to "GRAY"
-					set {_display-block} to gray clay
-					set {_display-name} to "&8&lGRAY"					
+			set {_upgrade-slot} to 45
+			loop "RED", "BLUE", "GREEN", "YELLOW", "CYAN", "WHITE", "PINK" and "GRAY":
+				set {_team} to loop-value-1
+				set {_display-item} to "%{_team}% clay" parsed as material
+				set {_display-name} to yaml value "Teams.Name.%{_team}%" from "bw.language"		
 				if yaml value "TEAMS.%{_team}%" from "bw.arena.%{_arena}%" is set:
-					set {_check} to "&8&l[&a&l✔&8&l] &aDone."
+					set {_check} to "&8[&a✔&8] &aDone."
 				else:
-					set {_check} to "&8&l[&c&l✘&8&l] &cNot set."
-				make a gui slot {_enable-slot} of {_p} with {_display-block} named "%{_display-name}% &8&l- %{_check}%" to run:
+					set {_check} to "&8[&c✘&8] &cNot set."
+				make a gui slot {_enable-slot} of {_p} with {_display-item} named {_display-name} to run:
 					if yaml value "TEAMS.%{_team}%" from "bw.arena.%{_arena}%" is set:
 						delete yaml value "TEAMS.%{_team}%" from "bw.arena.%{_arena}%"
 						bw_setup_menu(player, "ARENA-TEAMS")
 						stop
 					if yaml value "TEAMS.%{_team}%" from "bw.arena.%{_arena}%" is not set:
 						set yaml value "TEAMS.%{_team}%" from "bw.arena.%{_arena}%" to "empty"
-					bw_setup_menu(player, "ARENA-TEAMS")	
+					bw_setup_menu(player, "ARENA-TEAMS")
 				if yaml value "TEAMS.%{_team}%" from "bw.arena.%{_arena}%" is set:
 					if yaml value "TEAMS.%{_team}%.SPAWN" from "bw.arena.%{_arena}%" is set:	
-						set {_check} to "&8&l[&a&l✔&8&l] &aDone."
+						set {_item} to beacon named "&aSPAWN FOR TEAM %{_display-name}% &8- &8[&a✔&8] &aDone."
 					else:
-						set {_check} to "&8&l[&c&l✘&8&l] &cNot set."
-					make a gui slot {_spawn-slot} of {_p} with beacon named "&7&l« &aSPAWN FOR TEAM %{_display-name}% &8&l- %{_check}% &7&l»" to run:
+						set {_item} to beacon named "&aSPAWN FOR TEAM %{_display-name}% &8- &8[&c✘&8] &cNot set."
+					make a gui slot {_spawn-slot} of {_p} with {_item} to run:
 						set yaml value "TEAMS.%{_team}%.SPAWN" from "bw.arena.%{_arena}%" to location of {_p}
 						send "{@prefix} &aSpawn for team %{_display-name}% &ahas been set!"  to {_p}
 						bw_setup_menu(player, "ARENA-TEAMS")
+					#
 					if yaml value "TEAMS.%{_team}%.GENERATOR" from "bw.arena.%{_arena}%" is set:	
-						set {_check} to "&8&l[&a&l✔&8&l] &aDone."
+						set {_item} to hopper named "&aGENERATOR FOR TEAM %{_display-name}% &8- &8[&a✔&8] &aDone."
 					else:
-						set {_check} to "&8&l[&c&l✘&8&l] &cNot set."
-					make a gui slot {_gen-slot} of {_p} with hopper named "&7&l« &aGENERATOR FOR TEAM %{_display-name}% &8&l- %{_check}% &7&l»" to run:
+						set {_item} to hopper named "&aGENERATOR FOR TEAM %{_display-name}% &8- &8[&c✘&8] &cNot set."
+					make a gui slot {_gen-slot} of {_p} with hopper named "&aGENERATOR FOR TEAM %{_display-name}% &8- %{_check}%" to run:
 						set yaml value "TEAMS.%{_team}%.GENERATOR" from "bw.arena.%{_arena}%" to location of {_p}
 						send "{@prefix} &aGenerator for team %{_display-name}% &ahas been set!"  to {_p}
 						bw_setup_menu(player, "ARENA-TEAMS")
+					#
 					if yaml value "TEAMS.%{_team}%.BED.HEAD.location" from "bw.arena.%{_arena}%" and yaml value "TEAMS.%{_team}%.BED.FOOT.location" from "bw.arena.%{_arena}%" is set:
-						set {_check} to "&8&l[&a&l✔&8&l] &aDone."
+						set {_item} to {-bw::cache::bed::engine} named "&aSET BED FOR TEAM %{_display-name}% &8(&7STAY ON IT&8) &8- &8[&a✔&8] &aDone."
 					else:
-						set {_check} to "&8&l[&c&l✘&8&l] &cNot set."
-					make a gui slot {_bed-slot} of {_p} with {-bw::cache::bed::engine} named "&7&l« &aSET BED FOR TEAM %{_display-name}% &8&l(&7STAY ON IT&8) &8&l- %{_check}% &7&l»" to run:
+						set {_item} to {-bw::cache::bed::engine} named "&aSET BED FOR TEAM %{_display-name}% &8(&7STAY ON IT&8) &8- &8[&c✘&8] &cNot set."
+					make a gui slot {_bed-slot} of {_p} with {_item} to run:
+						delete yaml yaml value "TEAMS.%{_team}%.BED" from "bw.arena.%{_arena}%"
 						yaml value "Misc.Game Block" from "bw.config" contains "bed":
 							loop "HEAD" and "FOOT":
 								set yaml value "TEAMS.%{_team}%.BED.%loop-value-2%.location" from "bw.arena.%{_arena}%" to bw_setupGetBedData(location of {_p}, "%loop-value-2%")
@@ -216,21 +189,23 @@ function bw_setup_menu(p: player, menu: text):
 							bw_setup_menu(player, "ARENA-TEAMS")
 						else:
 							send "{@prefix} &aNo bed found!" to {_p}
+					#		
 					if yaml value "TEAMS.%{_team}%.SHOP" from "bw.arena.%{_arena}%" is set:
-						set {_check} to "&8&l[&a&l✔&8&l] &aDone."
+						set {_item} to player head named "&aSHOP FOR TEAM: %{_display-name}% &8- &8[&a✔&8] &aDone."
 					else:
-						set {_check} to "&8&l[&c&l✘&8&l] &cNot set."
-					make a gui slot {_shop-slot} of {_p} with player head named "&7&l« &aSHOP FOR TEAM: %{_display-name}% &8&l- %{_check}% &7&l»" to run:
+						set {_item} to player head named "&aSHOP FOR TEAM: %{_display-name}% &8- &8[&c✘&8] &cNot set."
+					make a gui slot {_shop-slot} of {_p} with {_item} to run:
 						set {_loc} to location of player
 						set pitch of {_loc} to 0
 						set yaml value "TEAMS.%{_team}%.SHOP" from "bw.arena.%{_arena}%" to {_loc}
 						send "{@prefix} &aShop for team %{_display-name}% &ahas been set!" to {_p}
 						bw_setup_menu(player, "ARENA-TEAMS")				
 					if yaml value "TEAMS.%{_team}%.UPGRADE" from "bw.arena.%{_arena}%" is set:
-						set {_check} to "&8&l[&a&l✔&8&l] &aDone."
+						set {_item} to anvil named "&aUPGRADE FOR TEAM: %{_display-name}% &8- &8[&a✔&8] &aDone."
 					else:
-						set {_check} to "&8&l[&c&l✘&8&l] &cNot set."
-					make a gui slot {_upgrade-slot} of {_p} with anvil named "&7&l« &aUPGRADE FOR TEAM: %{_display-name}% &8&l- %{_check}% &7&l»" to run:
+						set {_item} to anvil named "&aUPGRADE FOR TEAM: %{_display-name}% &8- &8[&c✘&8] &cNot set."
+					#
+					make a gui slot {_upgrade-slot} of {_p} with {_item} to run:
 						set {_loc} to location of player
 						set pitch of {_loc} to 0					
 						set yaml value "TEAMS.%{_team}%.UPGRADE" from "bw.arena.%{_arena}%" to {_loc}
@@ -241,29 +216,28 @@ function bw_setup_menu(p: player, menu: text):
 				add 1 to {_bed-slot}
 				add 1 to {_gen-slot}	
 				add 1 to {_shop-slot}	
-				add 1 to {_upgrade-slot}	
-				add 1 to {_loop} 					
+				add 1 to {_upgrade-slot}					
 		#GENERATORS
 		{_menu} is "ARENA-GENERATORS":					
-			open chest inventory with 4 rows named "&8&l» &3ARENA GENERATORS" to {_p}
+			open chest inventory with 4 rows named "&8» &3ARENA GENERATORS" to {_p}
 			wait a tick
 			set {_emerald} to size of yaml list "GENERATORS.EMERALD" from "bw.arena.%{_arena}%"
 			set {_diamond} to size of yaml list "GENERATORS.DIAMOND" from "bw.arena.%{_arena}%"
-			make a gui slot 11 of {_p} with emerald block named "&7&lADD &8&l[&a&lEMERALD&8&l] &7&lGENERATOR &8(&b%{_emerald}%&8)" to run:	
+			make a gui slot 11 of {_p} with emerald block named "&7Add &8[&aEMERALD&8] &7Generator &8(&b%{_emerald}%&8)" to run:	
 				add location of player to yaml list "GENERATORS.EMERALD" from "bw.arena.%{_arena}%"
-				send "{@prefix} &8&l[&a&lEMERALD&8&l] &7Generator added to &8&l[&3%location of player%&8&l]" to {_p}
+				send "{@prefix} &8[&aEMERALD&8] &7Generator added to &8[&3%location of player%&8]" to {_p}
 				bw_setup_menu({_p}, "ARENA-GENERATORS")
-			make a gui slot 15 of {_p} with diamond block named "&7&lADD &8&l[&b&lDIAMOND&8&l] &7&lGENERATOR &8(&b%{_diamond}%&8)" to run:	
+			make a gui slot 15 of {_p} with diamond block named "&7Add &8[&bDIAMOND&8] &7Generator &8(&b%{_diamond}%&8)" to run:	
 				add location of player to yaml list "GENERATORS.DIAMOND" from "bw.arena.%{_arena}%"
-				send "{@prefix} &8&l[&b&lDIAMOND&8&l] &7Generator added to &8&l[&3%location of player%&8&l]" to {_p}
+				send "{@prefix} &8[&bDIAMOND&8] &7Generator added to &8[&3%location of player%&8]" to {_p}
 				bw_setup_menu({_p}, "ARENA-GENERATORS")
-			make a gui slot 20 of {_p} with red dye named "&7&lDELETE &8&l[&a&lEMERALD&8&l] &7&lGENERATORS" to run:	
+			make a gui slot 20 of {_p} with red dye named "&7Delete all &8[&aEMERALD&8] &7Generators" to run:	
 				delete yaml list "GENERATORS.EMERALD" from "bw.arena.%{_arena}%"
-				send "{@prefix} &c&lDELETED ALL &8&l[&a&lEMERALD&8&l] &7&lGENERATORS" to {_p}
+				send "{@prefix} &7Delete all &8[&aEMERALD&8] &7Generators" to {_p}
 				bw_setup_menu({_p}, "ARENA-GENERATORS")
-			make a gui slot 24 of {_p} with red dye named "&7&lDELETE &8&l[&b&lDIAMOND&8&l] &7&lGENERATORS" to run:	
+			make a gui slot 24 of {_p} with red dye named "&7Delete all &8[&bDIAMOND&8] &7Generators" to run:	
 				delete yaml list "GENERATORS.DIAMOND" from "bw.arena.%{_arena}%"	
-				send "{@prefix} &c&lDELETED ALL &8&l[&b&lDIAMOND&8&l] &7&lGENERATORS" to {_p}
+				send "{@prefix} &7Delete all &8[&bDIAMOND&8] &7Generators" to {_p}
 				bw_setup_menu({_p}, "ARENA-GENERATORS")	
 		save yaml "bw.arena.%{_arena}%"	
 
@@ -273,7 +247,7 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 	trigger:	
 		if player has permission "leafbw.setup":			
 			if arg-1 is "help":	
-				send "&8&l«&7&l&m-------&8[ {@prefix} &8]&7&l&m-------&r&8&l»"				
+				send "&8«&7&l&m-------&8[ {@prefix} &8]&7&l&m-------&r&8»"				
 				send "&7&l➜ &a/bwsetup setlobby"	
 				send "&7&l➜ &a/bwsetup setnpc &8(&7stats, shop, shopkeeper or trails&8)"					
 				send "&7&l➜ &a/bwsetup setplaynpc &8(&7mode&8)"							
@@ -286,7 +260,7 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 				send "&7&l➜ &a/bwsetup setlobbyleave &8(&7needed only when bungeecord: false&8) - &7optional"							
 				send "&7&l➜ &a/bwsetup createtopholo &8(&7type&8)"	
 				send "&7&l➜ &a/bwsetup deletetopholo &8(&7id&8)"																																
-				send "&8&l«&7&l&m-------------------------&r&8&l»"			
+				send "&8«&7&l&m-------------------------&r&8»"			
 				stop					
 			if arg-1 is "createArena":
 				if arg-2 is set:	
@@ -424,33 +398,33 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 					send "{@prefix} &7Specify arena name"						
 			if arg-1 is "setlobby":
 				set yaml value "LOCATIONS.LOBBY" from "bw.data" to player's location
-				send "&6&lBW &8&l- &c&lSETUP &e&l» &7Setted the &aLobby &7to your current location!"
+				send "&6&lBW &8- &cSETUP &e&l» &7Setted the &aLobby &7to your current location!"
 				save yaml "bw.data"	
 			if arg-1 is "setnpc":
 				if arg-2 is "STATS" or "SHOP" or "TRAILS" or "SHOPKEEPER":
 					set yaml value "Npcs.Lobby.%arg-2 in upper case%.Location" from "bw.data" to location of player
-					send "&6&lBW &8&l- &c&lSETUP &e&l» &7Setted the &b%arg-2 in upper case% &aNpc &7to your current location!"
+					send "&6&lBW &8- &cSETUP &e&l» &7Setted the &b%arg-2 in upper case% &aNpc &7to your current location!"
 					save yaml "bw.data"	
 				else:
-					send "&6&lBW &8&l- &c&lSETUP &e&l» &7Incorrect npc use stats, trails or shopkeeper!"			
+					send "&6&lBW &8- &cSETUP &e&l» &7Incorrect npc use stats, trails or shopkeeper!"			
 			if arg-1 is "setplaynpc":
 				if arg-2 is "SOLO" or "DOUBLES" or "TRIPLES" or "QUADRUPLES" or "MEGA":
 					set yaml value "Npcs.Lobby.%arg-2 in upper case%.Location" from "bw.data" to location of player
-					send "&6&lBW &8&l- &c&lSETUP &e&l» &7Setted the &b%arg-2 in upper case% &aPlay Npc &7to your current location!"
+					send "&6&lBW &8- &cSETUP &e&l» &7Setted the &b%arg-2 in upper case% &aPlay Npc &7to your current location!"
 					save yaml "bw.data"
 					bw_update_play_npcs()
 				else:
-					send "&6&lBW &8&l- &c&lSETUP &e&l» &7Please specify mode."											
+					send "&6&lBW &8- &cSETUP &e&l» &7Please specify mode."											
 			if arg-1 is "createtopholo":
 				if arg-2 is "coins" or "level" or "xp" or "wins" or "kills" or "deaths" or "final-kills" or "broken-beds":
 					set {_size} to size of yaml nodes with keys "Holograms2" from "bw.data"
 					set yaml value "Holograms2.%{_size}%.type" from "bw.data" to arg-2			
 					set yaml value "Holograms2.%{_size}%.location" from "bw.data" to location of player
-					send "&6&lBW &8&l- &c&lSETUP &e&l» &7Created leaderboards hologram with id &a%{_size}%!"
+					send "&6&lBW &8- &cSETUP &e&l» &7Created leaderboards hologram with id &a%{_size}%!"
 					save yaml "bw.data"
 					bw_update_Leaderboards()
 				else:
-					send "&6&lBW &8&l- &c&lSETUP &e&l» &7Please specify a type, types: &3coins, level, xp, wins, kills, deaths, final-kills and broken-beds."		
+					send "&6&lBW &8- &cSETUP &e&l» &7Please specify a type, types: &3coins, level, xp, wins, kills, deaths, final-kills and broken-beds."		
 			if arg-1 is "deletetopholo":
 				if yaml value "Holograms2.%arg-2%" from "bw.data" is set:
 					set {_loc} to yaml value "Holograms2.%arg-2%.location" from "bw.data"
@@ -458,11 +432,11 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 						metadata value "Leaf_BEDWARS" of loop-entity is set
 						clear loop-entity				
 					delete yaml value "Holograms2.%arg-2%" from "bw.data"
-					send "&6&lBW &8&l- &c&lSETUP &e&l» &7Deleted for top holo &a%arg-2%!"
+					send "&6&lBW &8- &cSETUP &e&l» &7Deleted for top holo &a%arg-2%!"
 					save yaml "bw.data"
 					bw_update_Leaderboards()
 				else:
-					send "&6&lBW &8&l- &c&lSETUP &e&l» &7Please specify the hologram id."											
+					send "&6&lBW &8- &cSETUP &e&l» &7Please specify the hologram id."											
 			if arg-1 is "deleteholo":
 				if yaml value "Holograms.%arg-2%" from "bw.data" is set:
 					set {_loc} to yaml value "Holograms.%arg-2%.location" from "bw.data"
@@ -470,13 +444,13 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 						metadata value "Leaf_BEDWARS" of loop-entity is set
 						clear loop-entity											
 					delete yaml value "Holograms.%arg-2%" from "bw.data"
-					send "&6&lBW &8&l- &c&lSETUP &e&l» &7Deleted for holo &a%arg-2%!"
+					send "&6&lBW &8- &cSETUP &e&l» &7Deleted for holo &a%arg-2%!"
 					save yaml "bw.data"
 				else:
-					send "&6&lBW &8&l- &c&lSETUP &e&l» &7Please specify the hologram id."														
+					send "&6&lBW &8- &cSETUP &e&l» &7Please specify the hologram id."														
 			if arg-1 is "setlobbyleave":
 				set yaml value "LOCATIONS.LOBBY-LEAVE" from "bw.data" to player's location
-				send "&6&lBW &8&l- &c&lSETUP &e&l» &7Setted the &aLobby Leave &7to your current location!"
+				send "&6&lBW &8- &cSETUP &e&l» &7Setted the &aLobby Leave &7to your current location!"
 				save yaml "bw.data"			
 		else:
 			send "{@prefix} &7You don't have permission do to this."
@@ -486,26 +460,26 @@ function bw_setup_arena(p: player, do: text, arena: text):
 	if {_do} is "enter":
 		clear {_p}'s inventory			
 		set metadata value "BW-SETUP" of {_p} to {_arena}
-		set slot 3 of {_p} to player head named "&8&l[&bARENA &8&l- &bSETTINGS&8&l]" with custom nbt "{SkullOwner:{Id:""79d6eb9e-78bc-4f5f-a521-3fefbc0f0057"",Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Y0MDk0MmYzNjRmNmNiY2VmZmNmMTE1MTc5NjQxMDI4NmE0OGIxYWViYTc3MjQzZTIxODAyNmMwOWNkMSJ9fX0=""}]}}}"	
-		set slot 4 of {_p} to player head named "&8&l[&bARENA &8&l- &bTEAMS&8&l]" with custom nbt "{SkullOwner:{Id:""33a84c61-263c-4689-a62c-3b8044e1ff4d"",Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDVjNmRjMmJiZjUxYzM2Y2ZjNzcxNDU4NWE2YTU2ODNlZjJiMTRkNDdkOGZmNzE0NjU0YTg5M2Y1ZGE2MjIifX19""}]}}}"		
-		set slot 5 of {_p} to player head named "&8&l[&bARENA &8&l- &bGENERATORS&8&l]" with custom nbt "{SkullOwner:{Id:""7c10ae35-bc55-465c-a0fc-b2415e900c79"",Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWM5MDZkNjg4ZTY1ODAyNTY5ZDk3MDViNTc5YmNlNTZlZGM4NmVhNWMzNmJkZDZkNmZjMzU1MTZhNzdkNCJ9fX0=""}]}}}"		
+		set slot 3 of {_p} to player head named "&8[&bARENA &8- &bSETTINGS&8]" with custom nbt "{SkullOwner:{Id:""79d6eb9e-78bc-4f5f-a521-3fefbc0f0057"",Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Y0MDk0MmYzNjRmNmNiY2VmZmNmMTE1MTc5NjQxMDI4NmE0OGIxYWViYTc3MjQzZTIxODAyNmMwOWNkMSJ9fX0=""}]}}}"	
+		set slot 4 of {_p} to player head named "&8[&bARENA &8- &bTEAMS&8]" with custom nbt "{SkullOwner:{Id:""33a84c61-263c-4689-a62c-3b8044e1ff4d"",Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDVjNmRjMmJiZjUxYzM2Y2ZjNzcxNDU4NWE2YTU2ODNlZjJiMTRkNDdkOGZmNzE0NjU0YTg5M2Y1ZGE2MjIifX19""}]}}}"		
+		set slot 5 of {_p} to player head named "&8[&bARENA &8- &bGENERATORS&8]" with custom nbt "{SkullOwner:{Id:""7c10ae35-bc55-465c-a0fc-b2415e900c79"",Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWM5MDZkNjg4ZTY1ODAyNTY5ZDk3MDViNTc5YmNlNTZlZGM4NmVhNWMzNmJkZDZkNmZjMzU1MTZhNzdkNCJ9fX0=""}]}}}"		
 		teleport {_p} to yaml value "LOCATION.CENTER" from "bw.arena.%{_arena}%"
 		stop
 	if {_do} is "exit":		
 		delete metadata value "BW-SETUP" of {_p}
 		loop all items in {_p}'s inventory:
-			name of loop-item is "&8&l[&bARENA &8&l- &bSETTINGS&8&l]" or "&8&l[&bARENA &8&l- &bTEAMS&8&l]" or "&8&l[&bARENA &8&l- &bGENERATORS&8&l]"
+			name of loop-item is "&8[&bARENA &8- &bSETTINGS&8]" or "&8[&bARENA &8- &bTEAMS&8]" or "&8[&bARENA &8- &bGENERATORS&8]"
 			clear loop-item
 
 on right click:		
 	metadata value "BW-SETUP" of player is set	
-	if name of event-item is "&8&l[&bARENA &8&l- &bSETTINGS&8&l]":
+	if name of event-item is "&8[&bARENA &8- &bSETTINGS&8]":
 		cancel event
 		bw_setup_menu(player, "ARENA-SETTING")
-	if name of event-item is "&8&l[&bARENA &8&l- &bTEAMS&8&l]":
+	if name of event-item is "&8[&bARENA &8- &bTEAMS&8]":
 		cancel event
 		bw_setup_menu(player, "ARENA-TEAMS")
-	if name of event-item is "&8&l[&bARENA &8&l- &bGENERATORS&8&l]":
+	if name of event-item is "&8[&bARENA &8- &bGENERATORS&8]":
 		cancel event
 		bw_setup_menu(player, "ARENA-GENERATORS")	
 
