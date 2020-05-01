@@ -1,34 +1,33 @@
 Shop:
-    Settings:
+    Settings:  
         Main-Category: Quick-Buy
-        Player-have-items: '&a✔&7'
-        Player-not-have-items: '&c✘&7'
-        Main-Gui: '&7SHOP'
+        Player-Has-Items: '&a✔&7'
+        Player-Has-No-Items: '&c✘&7'
         Remove-Glass-Bottle: true
     Categories:
         Quick-Buy:
-            type: category
-            GUI: '&8&l» &bQUICK BUY'
-            size: 6
-            name: '&8&l» &bQUICK BUY'
-            slot: 0
-            display: nether star
-            lore:
+            Type: Category
+            Menu: '&8&l» &bQUICK BUY'
+            Name: '&8&l» &bQUICK BUY'           
+            Size: 6
+            Slot: 0
+            Display: nether star
+            Lore:
             - ''
             Contains:
                 Category Mark:
-                    type: border
-                    display: green glass pane
-                    name: '&e'
-                    slots:
+                    Type: Border
+                    Display: green glass pane
+                    Name: '&e'
+                    Slots:
                     - 9
-                    lore:
+                    Lore:
                     - ''
                 Black Border:
-                    type: border
-                    display: black glass pane
-                    name: '&e'
-                    slots:
+                    Type: Border
+                    Display: black glass pane
+                    Name: '&e'
+                    Slots:
                     - 9
                     - 10
                     - 11
@@ -38,315 +37,315 @@ Shop:
                     - 15
                     - 16
                     - 17
-                    lore:
+                    Lore:
                     - '&3&l&3&l⬆ &7Categories'
                     - ''
                     - '&3&l⬇ &7Items'
                     - ''
                 Quick-Buy:
-                    type: category
-                    category: Quick-Buy
-                    name: '&8&l» &bQUICK BUY'
-                    slot: 0
-                    display: nether star
-                    lore:
+                    Type: Category
+                    Category: Quick-Buy
+                    Name: '&8&l» &bQUICK BUY'
+                    Slot: 0
+                    Display: nether star
+                    Lore:
                     - ''
                 Blocks:
-                    type: category
-                    category: Blocks
-                    name: '&8&l» &bBLOCKS'
-                    slot: 1
-                    display: hardened clay
-                    lore:
+                    Type: Category
+                    Category: Blocks
+                    Name: '&8&l» &bBLOCKS'
+                    Slot: 1
+                    Display: hardened clay
+                    Lore:
                     - '' 
                 Meele:
-                    type: category
-                    category: Meele
-                    name: '&8&l» &bMEELE'
-                    slot: 2
-                    display: gold sword
-                    lore:
+                    Type: Category
+                    Category: Meele
+                    Name: '&8&l» &bMEELE'
+                    Slot: 2
+                    Display: gold sword
+                    Lore:
                     - ''
                 Armor:
-                    type: category
-                    category: Armor
-                    name: '&8&l» &bARMOR'
-                    slot: 3
-                    display: chain boots
-                    lore:
+                    Type: Category
+                    Category: Armor
+                    Name: '&8&l» &bARMOR'
+                    Slot: 3
+                    Display: chain boots
+                    Lore:
                     - ''
                 Tools:
-                    type: category
-                    category: Tools
-                    name: '&8&l» &bTOOLS'
-                    slot: 4
-                    display: stone pickaxe
-                    lore:
+                    Type: Category
+                    Category: Tools
+                    Name: '&8&l» &bTOOLS'
+                    Slot: 4
+                    Display: stone pickaxe
+                    Lore:
                     - ''
                 Ranged:
-                    type: category
-                    category: Ranged
-                    name: '&8&l» &bRANGED'
-                    slot: 5
-                    display: bow
-                    lore:
+                    Type: Category
+                    Category: Ranged
+                    Name: '&8&l» &bRANGED'
+                    Slot: 5
+                    Display: bow
+                    Lore:
                     - ''
                 Potions:
-                    type: category
-                    category: Potions
-                    name: '&8&l» &bPOTIONS'
-                    slot: 6
-                    display: brewing stand
-                    lore:
+                    Type: Category
+                    Category: Potions
+                    Name: '&8&l» &bPOTIONS'
+                    Slot: 6
+                    Display: brewing stand
+                    Lore:
                     - ''
                 Utility:
-                    type: category
-                    category: Utility
-                    name: '&8&l» &bUTILITY'
-                    slot: 7
-                    display: tnt
-                    lore:
+                    Type: Category
+                    Category: Utility
+                    Name: '&8&l» &bUTILITY'
+                    Slot: 7
+                    Display: tnt
+                    Lore:
                     - ''
                 Wool:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} WOOL'
-                        msg: '&aWool'
-                    slot: 19
-                    display: 16 {team} wool block
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} WOOL'
+                        Msg: '&aWool'
+                    Slot: 19
+                    Display: 16 {team} wool block
+                    Lore:
                     - ''
-                    - '&7COST: &f{cost} IRON'
+                    - '&7Cost: &f{cost} IRON'
                     - ''
                     - '&7Great for bridging across'
                     - '&7islands.Turns into your team''s color.'
-                    currency: iron ingot
-                    cost: 4
-                    items:
+                    Currency: iron ingot
+                    Cost: 4
+                    Items:
                     - 16 {team} wool block
                 Stone Sword:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Stone Sword'
-                        msg: '&aStone Sword'
-                    slot: 20
-                    display: Stone Sword
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Stone Sword'
+                        Msg: '&aStone Sword'
+                    Slot: 20
+                    Display: Stone Sword
+                    Lore:
                     - ''
-                    - '&7COST: &f{cost} IRON'
+                    - '&7Cost: &f{cost} IRON'
                     - ''
-                    currency: iron ingot
-                    cost: 10
-                    prevent-buy-if-player-has:
+                    Currency: iron ingot
+                    Cost: 10
+                    Prevent-Buy-If-Player-Has:
                     - Stone Sword
                     - Iron Sword
                     - Diamond Sword
-                    items:
+                    Items:
                     - Stone Sword
-                    remove-items:
+                    Remove-Items:
                     - Wood Sword
                 Chain Armor:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Permanent Chainmail Armor'
-                        msg: '&aPermanent Chainmail Armor'
-                    slot: 21
-                    display: Chain boots
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Permanent Chainmail Armor'
+                        Msg: '&aPermanent Chainmail Armor'
+                    Slot: 21
+                    Display: Chain boots
+                    Lore:
                     - ''
-                    - '&7COST: &f{cost} IRON'
+                    - '&7Cost: &f{cost} IRON'
                     - ''
                     - '&7Chainmail leggings and boots'
                     - '&7wich you will always spawn with.'
                     - ''
-                    currency: iron ingot
-                    cost: 40
-                    items:
+                    Currency: iron ingot
+                    Cost: 40
+                    Items:
                     - Permanent Chainmail Armor
                 Bow:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Bow'
-                        msg: '&aBow'
-                    slot: 23
-                    display: Bow
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Bow'
+                        Msg: '&aBow'
+                    Slot: 23
+                    Display: Bow
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
-                    currency: gold ingot
-                    cost: 10
-                    items:
+                    Currency: gold ingot
+                    Cost: 10
+                    Items:
                     - bow
                 Speed 2 Potion:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} SPEED 2 POTION (45 seconds)'
-                        msg: '&aSPEED 2 POTION (45 seconds)'
-                        item: '&aSpeed 2 Potion (45 seconds)'
-                    slot: 24
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} SPEED 2 POTION (45 seconds)'
+                        Msg: '&aSPEED 2 POTION (45 seconds)'
+                        Item: '&aSpeed 2 Potion (45 seconds)'
+                    Slot: 24
+                    Lore:
                     - ''
-                    - '&7COST: &2{cost} EMERALD'
+                    - '&7Cost: &2{cost} EMERALD'
                     - ''
-                    currency: emerald
-                    cost: 2
-                    potion: true
-                    effect: speed
-                    duration: 45
-                    tier: 2
-                    items:
+                    Currency: emerald
+                    Cost: 2
+                    Potion: true
+                    Effect: speed
+                    Duration: 45
+                    Tier: 2
+                    Items:
                     - potion
                 TnT:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} TnT'
-                        msg: '&aTnT'
-                    slot: 25
-                    display: tnt
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} TnT'
+                        Msg: '&aTnT'
+                    Slot: 25
+                    Display: tnt
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
                     - '&7Instantly ignites, appropriate'
                     - '&7to explode things'
                     - ''
-                    currency: gold ingot
-                    cost: 4
-                    items:
+                    Currency: gold ingot
+                    Cost: 4
+                    Items:
                     - tnt
                 Oak Planks:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Oak Planks'
-                        msg: '&aOak Planks'
-                    slot: 28
-                    display: 16 Oak Planks
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Oak Planks'
+                        Msg: '&aOak Planks'
+                    Slot: 28
+                    Display: 16 Oak Planks
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
                     - '&7Good block to defend your bed.'
                     - '&7Strong against pickaxes.'
                     - ''
-                    currency: gold ingot
-                    cost: 4
-                    items:
+                    Currency: gold ingot
+                    Cost: 4
+                    Items:
                     - 16 Oak Planks
                 Iron Sword:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Iron Sword'
-                        msg: '&aIron Sword'
-                    slot: 29
-                    display: Iron Sword
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Iron Sword'
+                        Msg: '&aIron Sword'
+                    Slot: 29
+                    Display: Iron Sword
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
-                    currency: gold ingot
-                    cost: 7
-                    prevent-buy-if-player-has:
+                    Currency: gold ingot
+                    Cost: 7
+                    Prevent-Buy-If-Player-Has:
                     - Iron Sword
                     - Diamond Sword
-                    items:
+                    Items:
                     - Iron Sword
-                    remove-items:
+                    Remove-Items:
                     - Wood Sword
                     - Stone Sword
                 Iron Armor:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Permanent Iron Armor'
-                        msg: '&aPermanent Iron Armor'
-                    slot: 30
-                    display: iron boots
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Permanent Iron Armor'
+                        Msg: '&aPermanent Iron Armor'
+                    Slot: 30
+                    Display: iron boots
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
                     - '&7Iron leggings and boots'
                     - '&7wich you will always spawn with.'
                     - ''
-                    currency: gold ingot
-                    cost: 12
-                    items:
+                    Currency: gold ingot
+                    Cost: 12
+                    Items:
                     - Permanent Iron Armor
                 Permanent Shears:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Permanent Shears'
-                        msg: '&aPermanent Shears'
-                    permanent: true
-                    slot: 31
-                    display: shears
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Permanent Shears'
+                        Msg: '&aPermanent Shears'
+                    Permanent: true
+                    Slot: 31
+                    Display: shears
+                    Lore:
                     - ''
-                    - '&7COST: &f{cost} IRON'
+                    - '&7Cost: &f{cost} IRON'
                     - ''
                     - '&7Great to get rid of wool.'
                     - '&7will always spawn with these shears.'
                     - ''
-                    currency: iron ingot
-                    cost: 40
-                    items:
+                    Currency: iron ingot
+                    Cost: 40
+                    Items:
                     - shears
                 Arrow:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Arrow'
-                        msg: '&aArrow'
-                    slot: 32
-                    display: 4 arrow
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Arrow'
+                        Msg: '&aArrow'
+                    Slot: 32
+                    Display: 4 arrow
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
-                    currency: gold ingot
-                    cost: 2
-                    items:
+                    Currency: gold ingot
+                    Cost: 2
+                    Items:
                     - 4 arrow
                 Invisibility Potion:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Invisibility Potion (30 seconds)'
-                        msg: '&aInvisibility Potion (30 seconds)'
-                        item: '&aInvisibility Potion (30 seconds)'
-                    slot: 33
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Invisibility Potion (30 seconds)'
+                        Msg: '&aInvisibility Potion (30 seconds)'
+                        Item: '&aInvisibility Potion (30 seconds)'
+                    Slot: 33
+                    Lore:
                     - ''
-                    - '&7COST: &2{cost} EMERALD'
+                    - '&7Cost: &2{cost} EMERALD'
                     - ''
-                    currency: emerald
-                    cost: 2
-                    potion: true
-                    effect: Invisibility
-                    duration: 30
-                    tier: 1
-                    items:
+                    Currency: emerald
+                    Cost: 2
+                    Potion: true
+                    Effect: Invisibility
+                    Duration: 30
+                    Tier: 1
+                    Items:
                     - potion
                 Water Bucket:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Water bucket'
-                        msg: '&Water bucket'
-                    slot: 34
-                    display: water bucket
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Water bucket'
+                        Msg: '&Water bucket'
+                    Slot: 34
+                    Display: water bucket
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
                     - '&7Great to slow down approaching'
                     - '&7ememies. Can also proctect||&7agaist tnt.'
-                    currency: gold ingot
-                    cost: 8
-                    items:
+                    Currency: gold ingot
+                    Cost: 8
+                    Items:
                     - water bucket
                 some border:
-                    type: border
-                    display: black glass pane
-                    name: '&e'
-                    slots:
+                    Type: Border
+                    Display: black glass pane
+                    Name: '&e'
+                    Slots:
                     - 9
                     - 10
                     - 11
@@ -356,26 +355,26 @@ Shop:
                     - 15
                     - 16
                     - 17
-                    lore:
+                    Lore:
                     - '&3&l&3&l⬆ &7Categories'
                     - ''
                     - '&3&l⬇ &7Items'
                     - ''
         Blocks:
-            type: category
-            GUI: '&8&l» &bBLOCKS'
-            size: 6
-            name: '&8&l» &bBLOCKS'
-            slot: 1
-            display: hardened clay
-            lore:
+            Type: Category
+            Menu: '&8&l» &bBLOCKS'
+            Size: 6
+            Name: '&8&l» &bBLOCKS'
+            Slot: 1
+            Display: hardened clay
+            Lore:
             - ''
             Contains:
                 Black Border:
-                    type: border
-                    display: black glass pane
-                    name: '&e'
-                    slots:
+                    Type: Border
+                    Display: black glass pane
+                    Name: '&e'
+                    Slots:
                     - 9
                     - 10
                     - 11
@@ -385,220 +384,220 @@ Shop:
                     - 15
                     - 16
                     - 17
-                    lore:
+                    Lore:
                     - '&3&l&3&l⬆ &7Categories'
                     - ''
                     - '&3&l⬇ &7Items'
                     - ''
-                category mark:
-                    type: border
-                    display: green glass pane
-                    name: '&e'
-                    slots:
+                Category Mark:
+                    Type: Border
+                    Display: green glass pane
+                    Name: '&e'
+                    Slots:
                     - 10
-                    lore:
+                    Lore:
                     - ''
                 Quick-Buy:
-                    type: category
-                    category: Quick-Buy
-                    name: '&8&l» &bQUICK BUY'
-                    slot: 0
-                    display: nether star
-                    lore:
+                    Type: Category
+                    Category: Quick-Buy
+                    Name: '&8&l» &bQUICK BUY'
+                    Slot: 0
+                    Display: nether star
+                    Lore:
                     - ''
                 Blocks:
-                    type: category
-                    category: Blocks
-                    name: '&8&l» &bBLOCKS'
-                    slot: 1
-                    display: hardened clay
-                    lore:
+                    Type: Category
+                    Category: Blocks
+                    Name: '&8&l» &bBLOCKS'
+                    Slot: 1
+                    Display: hardened clay
+                    Lore:
                     - ''
                 Meele:
-                    type: category
-                    category: Meele
-                    name: '&8&l» &bMEELE'
-                    slot: 2
-                    display: gold sword
-                    lore:
+                    Type: Category
+                    Category: Meele
+                    Name: '&8&l» &bMEELE'
+                    Slot: 2
+                    Display: gold sword
+                    Lore:
                     - ''
                 Armor:
-                    type: category
-                    category: Armor
-                    name: '&8&l» &bARMOR'
-                    slot: 3
-                    display: chain boots
-                    lore:
+                    Type: Category
+                    Category: Armor
+                    Name: '&8&l» &bARMOR'
+                    Slot: 3
+                    Display: chain boots
+                    Lore:
                     - ''
                 Tools:
-                    type: category
-                    category: Tools
-                    name: '&8&l» &bTOOLS'
-                    slot: 4
-                    display: stone pickaxe
-                    lore:
+                    Type: Category
+                    Category: Tools
+                    Name: '&8&l» &bTOOLS'
+                    Slot: 4
+                    Display: stone pickaxe
+                    Lore:
                     - ''
                 Ranged:
-                    type: category
-                    category: Ranged
-                    name: '&8&l» &bRANGED'
-                    slot: 5
-                    display: bow
-                    lore:
+                    Type: Category
+                    Category: Ranged
+                    Name: '&8&l» &bRANGED'
+                    Slot: 5
+                    Display: bow
+                    Lore:
                     - ''
                 Potions:
-                    type: category
-                    category: Potions
-                    name: '&8&l» &bPOTIONS'
-                    slot: 6
-                    display: brewing stand
-                    lore:
+                    Type: Category
+                    Category: Potions
+                    Name: '&8&l» &bPOTIONS'
+                    Slot: 6
+                    Display: brewing stand
+                    Lore:
                     - ''
                 Utility:
-                    type: category
-                    category: Utility
-                    name: '&8&l» &bUTILITY'
-                    slot: 7
-                    display: tnt
-                    lore:
+                    Type: Category
+                    Category: Utility
+                    Name: '&8&l» &bUTILITY'
+                    Slot: 7
+                    Display: tnt
+                    Lore:
                     - ''
                 Wool:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} WOOL'
-                        msg: '&aWool'
-                    slot: 19
-                    display: 16 {team} wool block
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} WOOL'
+                        Msg: '&aWool'
+                    Slot: 19
+                    Display: 16 {team} wool block
+                    Lore:
                     - ''
-                    - '&7COST: &f{cost} IRON'
+                    - '&7Cost: &f{cost} IRON'
                     - ''
                     - '&7Great for bridging across'
                     - '&7islands.Turns into your team''s color.'
                     - ''
-                    currency: iron ingot
-                    cost: 4
-                    items:
+                    Currency: iron ingot
+                    Cost: 4
+                    Items:
                     - 16 {team} wool block
                 Hardened Clay:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Hardened Clay'
-                        msg: '&aHardened Clay'
-                    slot: 20
-                    display: 16 Hardened Clay
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Hardened Clay'
+                        Msg: '&aHardened Clay'
+                    Slot: 20
+                    Display: 16 Hardened Clay
+                    Lore:
                     - ''
-                    - '&7COST: &f{cost} IRON'
+                    - '&7Cost: &f{cost} IRON'
                     - ''
                     - '&7Basic block to protect your bed.'
                     - ''
-                    currency: iron ingot
-                    cost: 12
-                    items:
+                    Currency: iron ingot
+                    Cost: 12
+                    Items:
                     - 16 Hardened Clay
                 Glass:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Blast-Proof Glass'
-                        msg: '&aBlast-Proof Glass'
-                    slot: 21
-                    display: 4 {team} glass block
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Blast-Proof Glass'
+                        Msg: '&aBlast-Proof Glass'
+                    Slot: 21
+                    Display: 4 {team} glass block
+                    Lore:
                     - ''
-                    - '&7COST: &f{cost} IRON'
+                    - '&7Cost: &f{cost} IRON'
                     - ''
                     - '&7Immune to explosions.'
                     - ''
-                    currency: iron ingot
-                    cost: 12
-                    items:
+                    Currency: iron ingot
+                    Cost: 12
+                    Items:
                     - 4 {team} glass block
                 End Stone:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} End Stone'
-                        msg: '&aEnd Stone'
-                    slot: 22
-                    display: 12 End Stone
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} End Stone'
+                        Msg: '&aEnd Stone'
+                    Slot: 22
+                    Display: 12 End Stone
+                    Lore:
                     - ''
-                    - '&7COST: &f{cost} IRON'
+                    - '&7Cost: &f{cost} IRON'
                     - ''
                     - '&7Solid block to protect your bed.'
                     - ''
-                    currency: iron ingot
-                    cost: 24
-                    items:
+                    Currency: iron ingot
+                    Cost: 24
+                    Items:
                     - 12 End Stone
                 Ladder:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Ladder'
-                        msg: '&aLadder'
-                    slot: 23
-                    display: 16 Ladder
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Ladder'
+                        Msg: '&aLadder'
+                    Slot: 23
+                    Display: 16 Ladder
+                    Lore:
                     - ''
-                    - '&7COST: &f{cost} IRON'
+                    - '&7Cost: &f{cost} IRON'
                     - ''
                     - '&7Useful to save cats stuck in trees.'
                     - ''
-                    currency: iron ingot
-                    cost: 4
-                    items:
+                    Currency: iron ingot
+                    Cost: 4
+                    Items:
                     - 16 Ladder
                 Oak Planks:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Oak Planks'
-                        msg: '&aOak Planks'
-                    slot: 24
-                    display: 16 Oak Planks
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Oak Planks'
+                        Msg: '&aOak Planks'
+                    Slot: 24
+                    Display: 16 Oak Planks
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
                     - '&7Good block to defend your bed.'
                     - '&7Strong against pickaxes.'
                     - ''
-                    currency: gold ingot
-                    cost: 4
-                    items:
+                    Currency: gold ingot
+                    Cost: 4
+                    Items:
                     - 16 Oak Planks
                 Obsidian:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Obsidian'
-                        msg: '&aObsidian'
-                    slot: 25
-                    display: 16 Obsidian
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Obsidian'
+                        Msg: '&aObsidian'
+                    Slot: 25
+                    Display: 16 Obsidian
+                    Lore:
                     - ''
-                    - '&7COST: &2{cost} EMERALD'
+                    - '&7Cost: &2{cost} EMERALD'
                     - ''
                     - '&7Good block to defend your bed.'
                     - '&7Strong against pickaxes.'
                     - ''
-                    currency: emerald
-                    cost: 4
-                    items:
+                    Currency: emerald
+                    Cost: 4
+                    Items:
                     - 16 Obsidian
         Meele:
-            type: category
-            GUI: '&8&l» &bMEELE'
-            size: 6
-            name: '&8&l» &bMEELE'
-            slot: 2
-            display: gold sword
-            lore:
+            Type: Category
+            Menu: '&8&l» &bMEELE'
+            Size: 6
+            Name: '&8&l» &bMEELE'
+            Slot: 2
+            Display: gold sword
+            Lore:
             - ''
             Contains:
                 Black Border:
-                    type: border
-                    display: black glass pane
-                    name: '&e'
-                    slots:
+                    Type: Border
+                    Display: black glass pane
+                    Name: '&e'
+                    Slots:
                     - 9
                     - 10
                     - 11
@@ -608,178 +607,178 @@ Shop:
                     - 15
                     - 16
                     - 17
-                    lore:
+                    Lore:
                     - '&3&l&3&l⬆ &7Categories'
                     - ''
                     - '&3&l⬇ &7Items'
                     - ''
-                category mark:
-                    type: border
-                    display: green glass pane
-                    name: '&e'
-                    slots:
+                Category Mark:
+                    Type: Border
+                    Display: green glass pane
+                    Name: '&e'
+                    Slots:
                     - 11
-                    lore:
+                    Lore:
                     - ''
                 Quick-Buy:
-                    type: category
-                    category: Quick-Buy
-                    name: '&8&l» &bQUICK BUY'
-                    slot: 0
-                    display: nether star
-                    lore:
+                    Type: Category
+                    Category: Quick-Buy
+                    Name: '&8&l» &bQUICK BUY'
+                    Slot: 0
+                    Display: nether star
+                    Lore:
                     - ''
                 Blocks:
-                    type: category
-                    category: Blocks
-                    name: '&8&l» &bBLOCKS'
-                    slot: 1
-                    display: hardened clay
-                    lore:
+                    Type: Category
+                    Category: Blocks
+                    Name: '&8&l» &bBLOCKS'
+                    Slot: 1
+                    Display: hardened clay
+                    Lore:
                     - ''
                 Meele:
-                    type: category
-                    category: Meele
-                    name: '&8&l» &bMEELE'
-                    slot: 2
-                    display: gold sword
-                    lore:
+                    Type: Category
+                    Category: Meele
+                    Name: '&8&l» &bMEELE'
+                    Slot: 2
+                    Display: gold sword
+                    Lore:
                     - ''
                 Armor:
-                    type: category
-                    category: Armor
-                    name: '&8&l» &bARMOR'
-                    slot: 3
-                    display: chain boots
-                    lore:
+                    Type: Category
+                    Category: Armor
+                    Name: '&8&l» &bARMOR'
+                    Slot: 3
+                    Display: chain boots
+                    Lore:
                     - ''
                 Tools:
-                    type: category
-                    category: Tools
-                    name: '&8&l» &bTOOLS'
-                    slot: 4
-                    display: stone pickaxe
-                    lore:
+                    Type: Category
+                    Category: Tools
+                    Name: '&8&l» &bTOOLS'
+                    Slot: 4
+                    Display: stone pickaxe
+                    Lore:
                     - ''
                 Ranged:
-                    type: category
-                    category: Ranged
-                    name: '&8&l» &bRANGED'
-                    slot: 5
-                    display: bow
-                    lore:
+                    Type: Category
+                    Category: Ranged
+                    Name: '&8&l» &bRANGED'
+                    Slot: 5
+                    Display: bow
+                    Lore:
                     - ''
                 Potions:
-                    type: category
-                    category: Potions
-                    name: '&8&l» &bPOTIONS'
-                    slot: 6
-                    display: brewing stand
-                    lore:
+                    Type: Category
+                    Category: Potions
+                    Name: '&8&l» &bPOTIONS'
+                    Slot: 6
+                    Display: brewing stand
+                    Lore:
                     - ''
                 Utility:
-                    type: category
-                    category: Utility
-                    name: '&8&l» &bUTILITY'
-                    slot: 7
-                    display: tnt
-                    lore:
+                    Type: Category
+                    Category: Utility
+                    Name: '&8&l» &bUTILITY'
+                    Slot: 7
+                    Display: tnt
+                    Lore:
                     - ''
                 Stone Sword:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Stone Sword'
-                        msg: '&aStone Sword'
-                    slot: 19
-                    display: Stone Sword
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Stone Sword'
+                        Msg: '&aStone Sword'
+                    Slot: 19
+                    Display: Stone Sword
+                    Lore:
                     - ''
-                    - '&7COST: &f{cost} IRON'
+                    - '&7Cost: &f{cost} IRON'
                     - ''
-                    currency: iron ingot
-                    cost: 10
-                    prevent-buy-if-player-has:
+                    Currency: iron ingot
+                    Cost: 10
+                    Prevent-Buy-If-Player-Has:
                     - Stone Sword
                     - Iron Sword
                     - Diamond Sword
-                    items:
+                    Items:
                     - Stone Sword
-                    remove-items:
+                    Remove-Items:
                     - Wood Sword
                 Iron Sword:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Iron Sword'
-                        msg: '&aIron Sword'
-                    slot: 20
-                    display: Iron Sword
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Iron Sword'
+                        Msg: '&aIron Sword'
+                    Slot: 20
+                    Display: Iron Sword
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
-                    currency: gold ingot
-                    cost: 7
-                    prevent-buy-if-player-has:
+                    Currency: gold ingot
+                    Cost: 7
+                    Prevent-Buy-If-Player-Has:
                     - Iron Sword
                     - Diamond Sword
-                    items:
+                    Items:
                     - Iron Sword
-                    remove-items:
+                    Remove-Items:
                     - Wood Sword
                     - Stone Sword
                 Diamond Sword:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Diamond Sword'
-                        msg: '&aDiamond Sword'
-                    slot: 21
-                    display: Diamond Sword
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Diamond Sword'
+                        Msg: '&aDiamond Sword'
+                    Slot: 21
+                    Display: Diamond Sword
+                    Lore:
                     - ''
-                    - '&7COST: &2{cost} EMERALD'
+                    - '&7Cost: &2{cost} EMERALD'
                     - ''
-                    currency: emerald
-                    cost: 4
-                    prevent-buy-if-player-has:
+                    Currency: emerald
+                    Cost: 4
+                    Prevent-Buy-If-Player-Has:
                     - Diamond Sword
-                    items:
+                    Items:
                     - Diamond Sword
-                    remove-items:
+                    Remove-Items:
                     - Wood Sword
                     - Stone Sword
                     - Iron Sword
                 STICK:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} STICK (KnockBack I)'
-                        msg: '&aSTICK (KnockBack I)'
-                    slot: 22
-                    display: stick of knockback 1
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} STICK (KnockBack I)'
+                        Msg: '&aSTICK (KnockBack I)'
+                    Slot: 22
+                    Display: stick of knockback 1
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
-                    currency: gold ingot
-                    prevent-buy-if-player-has:
+                    Currency: gold ingot
+                    Prevent-Buy-If-Player-Has:
                     - stick of knockback 1
-                    cost: 6
-                    items:
+                    Cost: 6
+                    Items:
                     - stick of knockback 1
         Tools:
-            type: category
-            GUI: '&8&l» &bTOOLS'
-            size: 6
-            name: '&8&l» &bTOOLS'
-            slot: 3
-            display: stone pickaxe
-            lore:
+            Type: Category
+            Menu: '&8&l» &bTOOLS'
+            Size: 6
+            Name: '&8&l» &bTOOLS'
+            Slot: 3
+            Display: stone pickaxe
+            Lore:
             - ''
             Contains:
                 Black Border:
-                    type: border
-                    display: black glass pane
-                    name: '&e'
-                    slots:
+                    Type: Border
+                    Display: black glass pane
+                    Name: '&e'
+                    Slots:
                     - 9
                     - 10
                     - 11
@@ -789,414 +788,414 @@ Shop:
                     - 15
                     - 16
                     - 17
-                    lore:
+                    Lore:
                     - '&3&l&3&l⬆ &7Categories'
                     - ''
                     - '&3&l⬇ &7Items'
                     - ''
-                category mark:
-                    type: border
-                    display: green glass pane
-                    name: '&e'
-                    slots:
+                Category Mark:
+                    Type: Border
+                    Display: green glass pane
+                    Name: '&e'
+                    Slots:
                     - 13
-                    lore:
+                    Lore:
                     - ''
                 Quick-Buy:
-                    type: category
-                    category: Quick-Buy
-                    name: '&8&l» &bQUICK BUY'
-                    slot: 0
-                    display: nether star
-                    lore:
+                    Type: Category
+                    Category: Quick-Buy
+                    Name: '&8&l» &bQUICK BUY'
+                    Slot: 0
+                    Display: nether star
+                    Lore:
                     - ''
                 Blocks:
-                    type: category
-                    category: Blocks
-                    name: '&8&l» &bBLOCKS'
-                    slot: 1
-                    display: hardened clay
-                    lore:
+                    Type: Category
+                    Category: Blocks
+                    Name: '&8&l» &bBLOCKS'
+                    Slot: 1
+                    Display: hardened clay
+                    Lore:
                     - ''
                 Meele:
-                    type: category
-                    category: Meele
-                    name: '&8&l» &bMEELE'
-                    slot: 2
-                    display: gold sword
-                    lore:
+                    Type: Category
+                    Category: Meele
+                    Name: '&8&l» &bMEELE'
+                    Slot: 2
+                    Display: gold sword
+                    Lore:
                     - ''
                 Armor:
-                    type: category
-                    category: Armor
-                    name: '&8&l» &bARMOR'
-                    slot: 3
-                    display: chain boots
-                    lore:
+                    Type: Category
+                    Category: Armor
+                    Name: '&8&l» &bARMOR'
+                    Slot: 3
+                    Display: chain boots
+                    Lore:
                     - ''
                 Tools:
-                    type: category
-                    category: Tools
-                    name: '&8&l» &bTOOLS'
-                    slot: 4
-                    display: stone pickaxe
-                    lore:
+                    Type: Category
+                    Category: Tools
+                    Name: '&8&l» &bTOOLS'
+                    Slot: 4
+                    Display: stone pickaxe
+                    Lore:
                     - ''
                 Ranged:
-                    type: category
-                    category: Ranged
-                    name: '&8&l» &bRANGED'
-                    slot: 5
-                    display: bow
-                    lore:
+                    Type: Category
+                    Category: Ranged
+                    Name: '&8&l» &bRANGED'
+                    Slot: 5
+                    Display: bow
+                    Lore:
                     - ''
                 Potions:
-                    type: category
-                    category: Potions
-                    name: '&8&l» &bPOTIONS'
-                    slot: 6
-                    display: brewing stand
-                    lore:
+                    Type: Category
+                    Category: Potions
+                    Name: '&8&l» &bPOTIONS'
+                    Slot: 6
+                    Display: brewing stand
+                    Lore:
                     - ''
                 Utility:
-                    type: category
-                    category: Utility
-                    name: '&8&l» &bUTILITY'
-                    slot: 7
-                    display: tnt
-                    lore:
+                    Type: Category
+                    Category: Utility
+                    Name: '&8&l» &bUTILITY'
+                    Slot: 7
+                    Display: tnt
+                    Lore:
                     - ''
                 Permanent Shears:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Permanent Shears'
-                        msg: '&aPermanent Shears'
-                    permanent: true
-                    slot: 19
-                    display: shears
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Permanent Shears'
+                        Msg: '&aPermanent Shears'
+                    Permanent: true
+                    Slot: 19
+                    Display: shears
+                    Lore:
                     - ''
-                    - '&7COST: &f{cost} IRON'
+                    - '&7Cost: &f{cost} IRON'
                     - ''
                     - '&7Great to get rid of wool.'
                     - '&7will always spawn with these shears.'
                     - ''
-                    currency: iron ingot
-                    cost: 40
-                    prevent-buy-if-player-has:   
+                    Currency: iron ingot
+                    Cost: 40
+                    Prevent-Buy-If-Player-Has:   
                     - shears                                   
-                    items:
+                    Items:
                     - shears
                 Upgradable Pickaxe:
-                    upgradable: true
-                    levels:
+                    Upgradable: true
+                    Levels:
                         '1':
-                            type: item
-                            name:
-                                gui: '&8&l» {check} Wooden Pickaxe (Efficiency I)'
-                                msg: '&aWooden Pickaxe (Efficiency I)'
-                            permanent: true
-                            slot: 20
-                            display: wood pickaxe
-                            lore:
+                            Type: Item
+                            Name:
+                                Menu: '&8&l» {check} Wooden Pickaxe (Efficiency I)'
+                                Msg: '&aWooden Pickaxe (Efficiency I)'
+                            Permanent: true
+                            Slot: 20
+                            Display: wood pickaxe
+                            Lore:
                             - ''
-                            - '&7COST: &f{cost} IRON'
+                            - '&7Cost: &f{cost} IRON'
                             - ''
                             - '&7Tier: &e&lI'
                             - ''
-                            - '&7This is an upgradable item.'
+                            - '&7This is an Upgradable Item.'
                             - '&7It will lose 1 tier upon death!'
                             - ''
-                            - '&7You will permanently'
+                            - '&7You will Permanently'
                             - '&7respawn with at least lowest tier'
                             - ''
-                            currency: iron ingot
-                            cost: 10
-                            items:
+                            Currency: iron ingot
+                            Cost: 10
+                            Items:
                             - wood pickaxe of efficiency 1
-                            prevent-buy-if-player-has:
+                            Prevent-Buy-If-Player-Has:
                             - wood pickaxe of efficiency 1
                         '2':
-                            type: item
-                            name:
-                                gui: '&8&l» {check} Iron Pickaxe (Efficiency II)'
-                                msg: '&aIron Pickaxe (Efficiency II)'
-                            permanent: true
-                            slot: 20
-                            display: iron pickaxe
-                            lore:
+                            Type: Item
+                            Name:
+                                Menu: '&8&l» {check} Iron Pickaxe (Efficiency II)'
+                                Msg: '&aIron Pickaxe (Efficiency II)'
+                            Permanent: true
+                            Slot: 20
+                            Display: iron pickaxe
+                            Lore:
                             - ''
-                            - '&7COST: &f{cost} IRON'
+                            - '&7Cost: &f{cost} IRON'
                             - ''
                             - '&7Tier: &e&lII'
                             - ''
-                            - '&7This is an upgradable item.'
+                            - '&7This is an Upgradable Item.'
                             - '&7It will lose 1 tier upon death!'
                             - ''
-                            - '&7You will permanently'
+                            - '&7You will Permanently'
                             - '&7respawn with at least lowest tier'
                             - ''
-                            currency: iron ingot
-                            cost: 12
-                            items:
+                            Currency: iron ingot
+                            Cost: 12
+                            Items:
                             - iron pickaxe of efficiency 2
-                            remove-items:
+                            Remove-Items:
                             - wood pickaxe of efficiency 1
-                            prevent-buy-if-player-has:           
+                            Prevent-Buy-If-Player-Has:           
                             - iron pickaxe of efficiency 2                                             
                         '3':
-                            type: item
-                            name:
-                                gui: '&8&l» {check} Gold Pickaxe (Efficiency III,
+                            Type: Item
+                            Name:
+                                Menu: '&8&l» {check} Gold Pickaxe (Efficiency III,
                                     Sharpness II)'
-                                msg: '&aGold Pickaxe (Efficiency III, Sharpness II)'
-                            permanent: true
-                            slot: 20
-                            display: gold pickaxe
-                            lore:
+                                Msg: '&aGold Pickaxe (Efficiency III, Sharpness II)'
+                            Permanent: true
+                            Slot: 20
+                            Display: gold pickaxe
+                            Lore:
                             - ''
-                            - '&7COST: &6{cost} GOLD'
+                            - '&7Cost: &6{cost} GOLD'
                             - ''
                             - '&7Tier: &e&lIII'
                             - ''
-                            - '&7This is an upgradable item.'
+                            - '&7This is an Upgradable Item.'
                             - '&7It will lose 1 tier upon death!'
                             - ''
-                            - '&7You will permanently'
+                            - '&7You will Permanently'
                             - '&7respawn with at least lowest tier'
                             - ''
-                            currency: gold ingot
-                            cost: 3
-                            items:
+                            Currency: gold ingot
+                            Cost: 3
+                            Items:
                             - gold pickaxe of efficiency 3 and sharpness 2
-                            remove-items:
+                            Remove-Items:
                             - wood pickaxe of efficiency 1
                             - iron pickaxe of efficiency 2
-                            prevent-buy-if-player-has:  
+                            Prevent-Buy-If-Player-Has:  
                             - gold pickaxe of efficiency 3 and sharpness 2                         
                         '4':
-                            type: item
-                            name:
-                                gui: '&8&l» {check} Diamond Pickaxe (Efficiency IV)'
-                                msg: '&aDiamond Pickaxe (Efficiency IV)'
-                            permanent: true
-                            slot: 20
-                            display: diamond pickaxe
-                            lore:
+                            Type: Item
+                            Name:
+                                Menu: '&8&l» {check} Diamond Pickaxe (Efficiency IV)'
+                                Msg: '&aDiamond Pickaxe (Efficiency IV)'
+                            Permanent: true
+                            Slot: 20
+                            Display: diamond pickaxe
+                            Lore:
                             - ''
-                            - '&7COST: &6{cost} GOLD'
+                            - '&7Cost: &6{cost} GOLD'
                             - ''
                             - '&7Tier: &e&lIV'
                             - ''
-                            - '&7This is an upgradable item.'
+                            - '&7This is an Upgradable Item.'
                             - '&7It will lose 1 tier upon death!'
                             - ''
-                            - '&7You will permanently'
+                            - '&7You will Permanently'
                             - '&7respawn with at least lowest tier'
                             - ''
-                            currency: gold ingot
-                            cost: 6
-                            items:
+                            Currency: gold ingot
+                            Cost: 6
+                            Items:
                             - diamond pickaxe of efficiency 4
-                            remove-items:
+                            Remove-Items:
                             - gold pickaxe of efficiency 3 and sharpness 2
                             - wood pickaxe of efficiency 1
                             - iron pickaxe of efficiency 2
-                            prevent-buy-if-player-has:    
+                            Prevent-Buy-If-Player-Has:    
                             - diamond pickaxe of efficiency 4                                                   
                         '5':
-                            type: item
-                            name:
-                                gui: '&8&l» {check} Diamond Pickaxe &a(MAXED)'
-                                msg: '&aDiamond Pickaxe &a(MAXED)'
-                            permanent: true
-                            slot: 20
-                            display: diamond pickaxe
-                            lore:
+                            Type: Item
+                            Name:
+                                Menu: '&8&l» {check} Diamond Pickaxe &a(MAXED)'
+                                Msg: '&aDiamond Pickaxe &a(MAXED)'
+                            Permanent: true
+                            Slot: 20
+                            Display: diamond pickaxe
+                            Lore:
                             - ''
-                            - '&7COST: &6{cost} GOLD'
+                            - '&7Cost: &6{cost} GOLD'
                             - ''
                             - '&7Tier: &e&lV'
                             - ''
-                            - '&7This is an upgradable item.'
+                            - '&7This is an Upgradable Item.'
                             - '&7It will lose 1 tier upon death!'
                             - ''
-                            - '&7You will permanently'
+                            - '&7You will Permanently'
                             - '&7respawn with at least lowest tier'
                             - ''
-                            currency: gold ingot
-                            cost: 6
-                            items:
+                            Currency: gold ingot
+                            Cost: 6
+                            Items:
                             - diamond pickaxe of efficiency 4 and sharpness 2
-                            remove-items:
+                            Remove-Items:
                             - diamond pickaxe of efficiency 4
                             - gold pickaxe of efficiency 3 and sharpness 2
                             - wood pickaxe of efficiency 1
                             - iron pickaxe of efficiency 2
-                            prevent-buy-if-player-has:     
+                            Prevent-Buy-If-Player-Has:     
                             - diamond pickaxe of efficiency 4 and sharpness 2                                                   
                 Upgradable Axe:
-                    upgradable: true
-                    levels:
+                    Upgradable: true
+                    Levels:
                         '1':
-                            type: item
-                            name:
-                                gui: '&8&l» {check} Wood Axe (Efficiency I)'
-                                msg: '&aWood Axe (Efficiency I)'
-                            permanent: true
-                            slot: 21
-                            display: wood axe
-                            lore:
+                            Type: Item
+                            Name:
+                                Menu: '&8&l» {check} Wood Axe (Efficiency I)'
+                                Msg: '&aWood Axe (Efficiency I)'
+                            Permanent: true
+                            Slot: 21
+                            Display: wood axe
+                            Lore:
                             - ''
-                            - '&7COST: &f{cost} IRON'
+                            - '&7Cost: &f{cost} IRON'
                             - ''
                             - '&7Tier: &e&lI'
                             - ''
-                            - '&7This is an upgradable item.'
+                            - '&7This is an Upgradable Item.'
                             - '&7It will lose 1 tier upon death!'
                             - ''
-                            - '&7You will permanently'
+                            - '&7You will Permanently'
                             - '&7respawn with at least lowest tier'
                             - ''
-                            currency: iron ingot
-                            cost: 10
-                            items:
+                            Currency: iron ingot
+                            Cost: 10
+                            Items:
                             - wood axe of efficiency 1
-                            prevent-buy-if-player-has:    
+                            Prevent-Buy-If-Player-Has:    
                             - wood axe of efficiency 1                                                    
                         '2':
-                            type: item
-                            name:
-                                gui: '&8&l» {check} Stone Axe (Efficiency II)'
-                                msg: '&aStone Axe (Efficiency II)'
-                            permanent: true
-                            slot: 21
-                            display: stone axe
-                            lore:
+                            Type: Item
+                            Name:
+                                Menu: '&8&l» {check} Stone Axe (Efficiency II)'
+                                Msg: '&aStone Axe (Efficiency II)'
+                            Permanent: true
+                            Slot: 21
+                            Display: stone axe
+                            Lore:
                             - ''
-                            - '&7COST: &f{cost} IRON'
+                            - '&7Cost: &f{cost} IRON'
                             - ''
                             - '&7Tier: &e&lII'
                             - ''
-                            - '&7This is an upgradable item.'
+                            - '&7This is an Upgradable Item.'
                             - '&7It will lose 1 tier upon death!'
                             - ''
-                            - '&7You will permanently'
+                            - '&7You will Permanently'
                             - '&7respawn with at least lowest tier'
                             - ''
-                            currency: iron ingot
-                            cost: 10
-                            items:
+                            Currency: iron ingot
+                            Cost: 25
+                            Items:
                             - stone axe of efficiency 1
-                            remove-items:
+                            Remove-Items:
                             - wood axe of efficiency 1
-                            prevent-buy-if-player-has: 
+                            Prevent-Buy-If-Player-Has: 
                             - stone axe of efficiency 1                                                      
                         '3':
-                            type: item
-                            name:
-                                gui: '&8&l» {check} Iron Axe (Efficiency II)'
-                                msg: '&aIron Axe (Efficiency II)'
-                            permanent: true
-                            slot: 21
-                            display: iron axe
-                            lore:
+                            Type: Item
+                            Name:
+                                Menu: '&8&l» {check} Iron Axe (Efficiency II)'
+                                Msg: '&aIron Axe (Efficiency II)'
+                            Permanent: true
+                            Slot: 21
+                            Display: iron axe
+                            Lore:
                             - ''
-                            - '&7COST: &6{cost} GOLD'
+                            - '&7Cost: &6{cost} GOLD'
                             - ''
                             - '&7Tier: &e&lIII'
                             - ''
-                            - '&7This is an upgradable item.'
+                            - '&7This is an Upgradable Item.'
                             - '&7It will lose 1 tier upon death!'
                             - ''
-                            - '&7You will permanently'
+                            - '&7You will Permanently'
                             - '&7respawn with at least lowest tier'
                             - ''
-                            currency: gold ingot
-                            cost: 3
-                            items:
+                            Currency: gold ingot
+                            Cost: 3
+                            Items:
                             - iron axe of efficiency 2
-                            remove-items:
+                            Remove-Items:
                             - wood axe of efficiency 1
                             - stone axe of efficiency 1
-                            prevent-buy-if-player-has:  
+                            Prevent-Buy-If-Player-Has:  
                             - iron axe of efficiency 2                                                      
                         '4':
-                            type: item
-                            name:
-                                gui: '&8&l» {check} Diamond Axe (Efficiency II)'
-                                msg: '&aDiamond Axe (Efficiency II)'
-                            permanent: true
-                            slot: 21
-                            display: diamond axe
-                            lore:
+                            Type: Item
+                            Name:
+                                Menu: '&8&l» {check} Diamond Axe (Efficiency II)'
+                                Msg: '&aDiamond Axe (Efficiency II)'
+                            Permanent: true
+                            Slot: 21
+                            Display: diamond axe
+                            Lore:
                             - ''
-                            - '&7COST: &6{cost} GOLD'
+                            - '&7Cost: &6{cost} GOLD'
                             - ''
                             - '&7Tier: &e&lIV'
                             - ''
-                            - '&7This is an upgradable item.'
+                            - '&7This is an Upgradable Item.'
                             - '&7It will lose 1 tier upon death!'
                             - ''
-                            - '&7You will permanently'
+                            - '&7You will Permanently'
                             - '&7respawn with at least lowest tier'
                             - ''
-                            currency: gold ingot
-                            cost: 6
-                            items:
+                            Currency: gold ingot
+                            Cost: 6
+                            Items:
                             - diamond axe of efficiency 2
-                            remove-items:
+                            Remove-Items:
                             - wood axe of efficiency 1
                             - stone axe of efficiency 1
                             - iron axe of efficiency 2
-                            prevent-buy-if-player-has:  
+                            Prevent-Buy-If-Player-Has:  
                             - diamond axe of efficiency 2                                                     
                         '5':
-                            type: item
-                            name:
-                                gui: '&8&l» {check} Diamond Axe (Efficiency II) &a(MAXED)'
-                                msg: '&aDiamond Axe (Efficiency II) (MAXED)'
-                            permanent: true
-                            slot: 21
-                            display: diamond axe
-                            lore:
+                            Type: Item
+                            Name:
+                                Menu: '&8&l» {check} Diamond Axe (Efficiency II) &a(MAXED)'
+                                Msg: '&aDiamond Axe (Efficiency II) (MAXED)'
+                            Permanent: true
+                            Slot: 21
+                            Display: diamond axe
+                            Lore:
                             - ''
-                            - '&7COST: &6{cost} GOLD'
+                            - '&7Cost: &6{cost} GOLD'
                             - ''
                             - '&7Tier: &e&lV'
                             - ''
-                            - '&7This is an upgradable item.'
+                            - '&7This is an Upgradable Item.'
                             - '&7It will lose 1 tier upon death!'
                             - ''
-                            - '&7You will permanently'
+                            - '&7You will Permanently'
                             - '&7respawn with at least lowest tier'
                             - ''
-                            currency: gold ingot
-                            cost: 6
-                            items:
+                            Currency: gold ingot
+                            Cost: 6
+                            Items:
                             - diamond axe of efficiency 2
-                            remove-items:
+                            Remove-Items:
                             - wood axe of efficiency 1
                             - stone axe of efficiency 1
                             - stone axe of efficiency 2
                             - iron axe of efficiency 2
-                            prevent-buy-if-player-has: 
+                            Prevent-Buy-If-Player-Has: 
                             - diamond axe of efficiency 2                                                      
         Armor:
-            type: category
-            GUI: '&8&l» &bARMOR'
-            size: 6
-            name: '&8&l» &bARMOR'
-            slot: 3
-            display: chain boots
-            lore:
+            Type: Category
+            Menu: '&8&l» &bARMOR'
+            Size: 6
+            Name: '&8&l» &bARMOR'
+            Slot: 3
+            Display: chain boots
+            Lore:
             - ''
             Contains:
                 Black Border:
-                    type: border
-                    display: black glass pane
-                    name: '&e'
-                    slots:
+                    Type: Border
+                    Display: black glass pane
+                    Name: '&e'
+                    Slots:
                     - 9
                     - 10
                     - 11
@@ -1206,152 +1205,152 @@ Shop:
                     - 15
                     - 16
                     - 17
-                    lore:
+                    Lore:
                     - '&3&l&3&l⬆ &7Categories'
                     - ''
                     - '&3&l⬇ &7Items'
                     - ''
-                category mark:
-                    type: border
-                    display: green glass pane
-                    name: '&e'
-                    slots:
+                Category Mark:
+                    Type: Border
+                    Display: green glass pane
+                    Name: '&e'
+                    Slots:
                     - 12
-                    lore:
+                    Lore:
                     - ''
                 Quick-Buy:
-                    type: category
-                    category: Quick-Buy
-                    name: '&8&l» &bQUICK BUY'
-                    slot: 0
-                    display: nether star
-                    lore:
+                    Type: Category
+                    Category: Quick-Buy
+                    Name: '&8&l» &bQUICK BUY'
+                    Slot: 0
+                    Display: nether star
+                    Lore:
                     - ''
                 Blocks:
-                    type: category
-                    category: Blocks
-                    name: '&8&l» &bBLOCKS'
-                    slot: 1
-                    display: hardened clay
-                    lore:
+                    Type: Category
+                    Category: Blocks
+                    Name: '&8&l» &bBLOCKS'
+                    Slot: 1
+                    Display: hardened clay
+                    Lore:
                     - ''
                 Meele:
-                    type: category
-                    category: Meele
-                    name: '&8&l» &bMEELE'
-                    slot: 2
-                    display: gold sword
-                    lore:
+                    Type: Category
+                    Category: Meele
+                    Name: '&8&l» &bMEELE'
+                    Slot: 2
+                    Display: gold sword
+                    Lore:
                     - ''
                 Armor:
-                    type: category
-                    category: Armor
-                    name: '&8&l» &bARMOR'
-                    slot: 3
-                    display: chain boots
-                    lore:
+                    Type: Category
+                    Category: Armor
+                    Name: '&8&l» &bARMOR'
+                    Slot: 3
+                    Display: chain boots
+                    Lore:
                     - ''
                 Tools:
-                    type: category
-                    category: Tools
-                    name: '&8&l» &bTOOLS'
-                    slot: 4
-                    display: stone pickaxe
-                    lore:
+                    Type: Category
+                    Category: Tools
+                    Name: '&8&l» &bTOOLS'
+                    Slot: 4
+                    Display: stone pickaxe
+                    Lore:
                     - ''
                 Ranged:
-                    type: category
-                    category: Ranged
-                    name: '&8&l» &bRANGED'
-                    slot: 5
-                    display: bow
-                    lore:
+                    Type: Category
+                    Category: Ranged
+                    Name: '&8&l» &bRANGED'
+                    Slot: 5
+                    Display: bow
+                    Lore:
                     - ''
                 Potions:
-                    type: category
-                    category: Potions
-                    name: '&8&l» &bPOTIONS'
-                    slot: 6
-                    display: brewing stand
-                    lore:
+                    Type: Category
+                    Category: Potions
+                    Name: '&8&l» &bPOTIONS'
+                    Slot: 6
+                    Display: brewing stand
+                    Lore:
                     - ''
                 Utility:
-                    type: category
-                    category: Utility
-                    name: '&8&l» &bUTILITY'
-                    slot: 7
-                    display: tnt
-                    lore:
+                    Type: Category
+                    Category: Utility
+                    Name: '&8&l» &bUTILITY'
+                    Slot: 7
+                    Display: tnt
+                    Lore:
                     - ''
                 Chain Armor:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Permanent Chainmail Armor'
-                        msg: '&aPermanent Chainmail Armor'
-                    slot: 19
-                    display: Chain boots
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Permanent Chainmail Armor'
+                        Msg: '&aPermanent Chainmail Armor'
+                    Slot: 19
+                    Display: Chain boots
+                    Lore:
                     - ''
-                    - '&7COST: &f{cost} IRON'
+                    - '&7Cost: &f{cost} IRON'
                     - ''
                     - '&7Chainmail leggings and boots'
                     - '&7wich you will always spawn with.'
                     - ''
-                    currency: iron ingot
-                    cost: 40
-                    items:
+                    Currency: iron ingot
+                    Cost: 40
+                    Items:
                     - Permanent Chainmail Armor
                 Iron Armor:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Permanent Iron Armor'
-                        msg: '&aPermanent Iron Armor'
-                    slot: 20
-                    display: iron boots
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Permanent Iron Armor'
+                        Msg: '&aPermanent Iron Armor'
+                    Slot: 20
+                    Display: iron boots
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
                     - '&7Iron leggings and boots'
                     - '&7wich you will always spawn with.'
                     - ''
-                    currency: gold ingot
-                    cost: 12
-                    items:
+                    Currency: gold ingot
+                    Cost: 12
+                    Items:
                     - Permanent Iron Armor
                 Diamond Armor:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Permanent Diamond Armor'
-                        msg: '&aPermanent Diamond Armor'
-                    slot: 21
-                    display: Diamond boots
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Permanent Diamond Armor'
+                        Msg: '&aPermanent Diamond Armor'
+                    Slot: 21
+                    Display: Diamond boots
+                    Lore:
                     - ''
-                    - '&7COST: &2{cost} EMERALD'
+                    - '&7Cost: &2{cost} EMERALD'
                     - ''
                     - '&7Diamond leggings and boots'
                     - '&7wich you will always spawn with.'
                     - ''
-                    currency: emerald
-                    cost: 6
-                    items:
+                    Currency: emerald
+                    Cost: 6
+                    Items:
                     - Permanent Diamond Armor
         Ranged:
-            type: category
-            GUI: '&8&l» &bRANGED'
-            size: 6
-            name: '&8&l» &bRANGED'
-            slot: 5
-            display: bow
-            lore:
+            Type: Category
+            Menu: '&8&l» &bRANGED'
+            Size: 6
+            Name: '&8&l» &bRANGED'
+            Slot: 5
+            Display: bow
+            Lore:
             - ''
             Contains:
                 Black Border:
-                    type: border
-                    display: black glass pane
-                    name: '&e'
-                    slots:
+                    Type: Border
+                    Display: black glass pane
+                    Name: '&e'
+                    Slots:
                     - 9
                     - 10
                     - 11
@@ -1361,158 +1360,158 @@ Shop:
                     - 15
                     - 16
                     - 17
-                    lore:
+                    Lore:
                     - '&3&l&3&l⬆ &7Categories'
                     - ''
                     - '&3&l⬇ &7Items'
                     - ''
-                category mark:
-                    type: border
-                    display: green glass pane
-                    name: '&e'
-                    slots:
+                Category Mark:
+                    Type: Border
+                    Display: green glass pane
+                    Name: '&e'
+                    Slots:
                     - 14
-                    lore:
+                    Lore:
                     - ''
                 Quick-Buy:
-                    type: category
-                    category: Quick-Buy
-                    name: '&8&l» &bQUICK BUY'
-                    slot: 0
-                    display: nether star
-                    lore:
+                    Type: Category
+                    Category: Quick-Buy
+                    Name: '&8&l» &bQUICK BUY'
+                    Slot: 0
+                    Display: nether star
+                    Lore:
                     - ''
                 Blocks:
-                    type: category
-                    category: Blocks
-                    name: '&8&l» &bBLOCKS'
-                    slot: 1
-                    display: hardened clay
-                    lore:
+                    Type: Category
+                    Category: Blocks
+                    Name: '&8&l» &bBLOCKS'
+                    Slot: 1
+                    Display: hardened clay
+                    Lore:
                     - ''
                 Meele:
-                    type: category
-                    category: Meele
-                    name: '&8&l» &bMEELE'
-                    slot: 2
-                    display: gold sword
-                    lore:
+                    Type: Category
+                    Category: Meele
+                    Name: '&8&l» &bMEELE'
+                    Slot: 2
+                    Display: gold sword
+                    Lore:
                     - ''
                 Armor:
-                    type: category
-                    category: Armor
-                    name: '&8&l» &bARMOR'
-                    slot: 3
-                    display: chain boots
-                    lore:
+                    Type: Category
+                    Category: Armor
+                    Name: '&8&l» &bARMOR'
+                    Slot: 3
+                    Display: chain boots
+                    Lore:
                     - ''
                 Tools:
-                    type: category
-                    category: Tools
-                    name: '&8&l» &bTOOLS'
-                    slot: 4
-                    display: stone pickaxe
-                    lore:
+                    Type: Category
+                    Category: Tools
+                    Name: '&8&l» &bTOOLS'
+                    Slot: 4
+                    Display: stone pickaxe
+                    Lore:
                     - ''
                 Ranged:
-                    type: category
-                    category: Ranged
-                    name: '&8&l» &bRANGED'
-                    slot: 5
-                    display: bow
-                    lore:
+                    Type: Category
+                    Category: Ranged
+                    Name: '&8&l» &bRANGED'
+                    Slot: 5
+                    Display: bow
+                    Lore:
                     - ''
                 Potions:
-                    type: category
-                    category: Potions
-                    name: '&8&l» &bPOTIONS'
-                    slot: 6
-                    display: brewing stand
-                    lore:
+                    Type: Category
+                    Category: Potions
+                    Name: '&8&l» &bPOTIONS'
+                    Slot: 6
+                    Display: brewing stand
+                    Lore:
                     - ''
                 Utility:
-                    type: category
-                    category: Utility
-                    name: '&8&l» &bUTILITY'
-                    slot: 7
-                    display: tnt
-                    lore:
+                    Type: Category
+                    Category: Utility
+                    Name: '&8&l» &bUTILITY'
+                    Slot: 7
+                    Display: tnt
+                    Lore:
                     - ''
                 Arrow:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Arrow'
-                        msg: '&aArrow'
-                    slot: 19
-                    display: 4 arrow
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Arrow'
+                        Msg: '&aArrow'
+                    Slot: 19
+                    Display: 4 arrow
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
-                    currency: gold ingot
-                    cost: 2
-                    items:
+                    Currency: gold ingot
+                    Cost: 2
+                    Items:
                     - 4 arrow
                 Bow:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Bow'
-                        msg: '&aBow'
-                    slot: 20
-                    display: Bow
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Bow'
+                        Msg: '&aBow'
+                    Slot: 20
+                    Display: Bow
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
-                    currency: gold ingot
-                    cost: 10
-                    items:
+                    Currency: gold ingot
+                    Cost: 10
+                    Items:
                     - bow
                 Bow Power I:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Bow (Power I)'
-                        msg: '&aBow (Power I)'
-                    slot: 21
-                    display: bow of power 1
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Bow (Power I)'
+                        Msg: '&aBow (Power I)'
+                    Slot: 21
+                    Display: bow of power 1
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
-                    currency: gold ingot
-                    cost: 24
-                    items:
+                    Currency: gold ingot
+                    Cost: 24
+                    Items:
                     - bow of power 1
                 Bow Power I and Puch I:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Bow (Power I,Punch I)'
-                        msg: '&aBow (Power I,Punch I)'
-                    slot: 22
-                    display: bow of power 1 and punch 1
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Bow (Power I,Punch I)'
+                        Msg: '&aBow (Power I,Punch I)'
+                    Slot: 22
+                    Display: bow of power 1 and punch 1
+                    Lore:
                     - ''
-                    - '&7COST: &2{cost} EMERALD'
+                    - '&7Cost: &2{cost} EMERALD'
                     - ''
-                    currency: emerald
-                    cost: 6
-                    items:
+                    Currency: emerald
+                    Cost: 6
+                    Items:
                     - bow of power 1 and punch 1
         Potions:
-            type: category
-            GUI: '&8&l» &bPOTIONS'
-            size: 6
-            name: '&8&l» &bPOTIONS'
-            slot: 5
-            display: brewing stand
-            lore:
+            Type: Category
+            Menu: '&8&l» &bPOTIONS'
+            Size: 6
+            Name: '&8&l» &bPOTIONS'
+            Slot: 5
+            Display: brewing stand
+            Lore:
             - ''
             Contains:
                 Black Border:
-                    type: border
-                    display: black glass pane
-                    name: '&e'
-                    slots:
+                    Type: Border
+                    Display: black glass pane
+                    Name: '&e'
+                    Slots:
                     - 9
                     - 10
                     - 11
@@ -1522,155 +1521,155 @@ Shop:
                     - 15
                     - 16
                     - 17
-                    lore:
+                    Lore:
                     - '&3&l&3&l⬆ &7Categories'
                     - ''
                     - '&3&l⬇ &7Items'
                     - ''
-                category mark:
-                    type: border
-                    display: green glass pane
-                    name: '&e'
-                    slots:
+                Category Mark:
+                    Type: Border
+                    Display: green glass pane
+                    Name: '&e'
+                    Slots:
                     - 15
-                    lore:
+                    Lore:
                     - ''
                 Quick-Buy:
-                    type: category
-                    category: Quick-Buy
-                    name: '&8&l» &bQUICK BUY'
-                    slot: 0
-                    display: nether star
-                    lore:
+                    Type: Category
+                    Category: Quick-Buy
+                    Name: '&8&l» &bQUICK BUY'
+                    Slot: 0
+                    Display: nether star
+                    Lore:
                     - ''
                 Blocks:
-                    type: category
-                    category: Blocks
-                    name: '&8&l» &bBLOCKS'
-                    slot: 1
-                    display: hardened clay
-                    lore:
+                    Type: Category
+                    Category: Blocks
+                    Name: '&8&l» &bBLOCKS'
+                    Slot: 1
+                    Display: hardened clay
+                    Lore:
                     - ''
                 Meele:
-                    type: category
-                    category: Meele
-                    name: '&8&l» &bMEELE'
-                    slot: 2
-                    display: gold sword
-                    lore:
+                    Type: Category
+                    Category: Meele
+                    Name: '&8&l» &bMEELE'
+                    Slot: 2
+                    Display: gold sword
+                    Lore:
                     - ''
                 Armor:
-                    type: category
-                    category: Armor
-                    name: '&8&l» &bARMOR'
-                    slot: 3
-                    display: chain boots
-                    lore:
+                    Type: Category
+                    Category: Armor
+                    Name: '&8&l» &bARMOR'
+                    Slot: 3
+                    Display: chain boots
+                    Lore:
                     - ''
                 Tools:
-                    type: category
-                    category: Tools
-                    name: '&8&l» &bTOOLS'
-                    slot: 4
-                    display: stone pickaxe
-                    lore:
+                    Type: Category
+                    Category: Tools
+                    Name: '&8&l» &bTOOLS'
+                    Slot: 4
+                    Display: stone pickaxe
+                    Lore:
                     - ''
                 Ranged:
-                    type: category
-                    category: Ranged
-                    name: '&8&l» &bRANGED'
-                    slot: 5
-                    display: bow
-                    lore:
+                    Type: Category
+                    Category: Ranged
+                    Name: '&8&l» &bRANGED'
+                    Slot: 5
+                    Display: bow
+                    Lore:
                     - ''
                 Potions:
-                    type: category
-                    category: Potions
-                    name: '&8&l» &bPOTIONS'
-                    slot: 6
-                    display: brewing stand
-                    lore:
+                    Type: Category
+                    Category: Potions
+                    Name: '&8&l» &bPOTIONS'
+                    Slot: 6
+                    Display: brewing stand
+                    Lore:
                     - ''
                 Utility:
-                    type: category
-                    category: Utility
-                    name: '&8&l» &bUTILITY'
-                    slot: 7
-                    display: tnt
-                    lore:
+                    Type: Category
+                    Category: Utility
+                    Name: '&8&l» &bUTILITY'
+                    Slot: 7
+                    Display: tnt
+                    Lore:
                     - ''
                 Speed 2 Potion:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} SPEED 2 POTION (45 seconds)'
-                        msg: '&aSPEED 2 POTION (45 seconds)'
-                        item: '&aSpeed 2 Potion (45 seconds)'
-                    slot: 19
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} SPEED 2 POTION (45 seconds)'
+                        Msg: '&aSPEED 2 POTION (45 seconds)'
+                        Item: '&aSpeed 2 Potion (45 seconds)'
+                    Slot: 19
+                    Lore:
                     - ''
-                    - '&7COST: &2{cost} EMERALD'
+                    - '&7Cost: &2{cost} EMERALD'
                     - ''
-                    currency: emerald
-                    cost: 2
-                    potion: true
-                    effect: speed
-                    duration: 45
-                    tier: 2
-                    items:
+                    Currency: emerald
+                    Cost: 2
+                    Potion: true
+                    Effect: speed
+                    Duration: 45
+                    Tier: 2
+                    Items:
                     - potion
                 Jump V Potion:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Jump V Potion (45 seconds)'
-                        msg: '&aJump V Potion (45 seconds)'
-                        item: '&aJump V Potion (45 seconds)'
-                    slot: 20
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Jump V Potion (45 seconds)'
+                        Msg: '&aJump V Potion (45 seconds)'
+                        Item: '&aJump V Potion (45 seconds)'
+                    Slot: 20
+                    Lore:
                     - ''
-                    - '&7COST: &2{cost} EMERALD'
+                    - '&7Cost: &2{cost} EMERALD'
                     - ''
-                    currency: emerald
-                    cost: 2
-                    potion: true
-                    effect: jump
-                    duration: 45
-                    tier: 5
-                    items:
+                    Currency: emerald
+                    Cost: 2
+                    Potion: true
+                    Effect: jump
+                    Duration: 45
+                    Tier: 5
+                    Items:
                     - potion
                 Invisibility Potion:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Invisibility Potion (30 seconds)'
-                        msg: '&aInvisibility Potion (30 seconds)'
-                        item: '&aInvisibility Potion (30 seconds)'
-                    slot: 21
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Invisibility Potion (30 seconds)'
+                        Msg: '&aInvisibility Potion (30 seconds)'
+                        Item: '&aInvisibility Potion (30 seconds)'
+                    Slot: 21
+                    Lore:
                     - ''
-                    - '&7COST: &2{cost} EMERALD'
+                    - '&7Cost: &2{cost} EMERALD'
                     - ''
-                    currency: emerald
-                    cost: 2
-                    potion: true
-                    effect: Invisibility
-                    duration: 35
-                    tier: 1
-                    items:
+                    Currency: emerald
+                    Cost: 2
+                    Potion: true
+                    Effect: Invisibility
+                    Duration: 35
+                    Tier: 1
+                    Items:
                     - potion
         Utility:
-            type: category
-            GUI: '&8&l» &bUTILITY'
-            size: 6
-            name: '&8&l» &bUTILITY'
-            slot: 6
-            display: tnt
-            lore:
+            Type: Category
+            Menu: '&8&l» &bUTILITY'
+            Size: 6
+            Name: '&8&l» &bUTILITY'
+            Slot: 6
+            Display: tnt
+            Lore:
             - ''
             Contains:
                 Black Border:
-                    type: border
-                    display: black glass pane
-                    name: '&e'
-                    slots:
+                    Type: Border
+                    Display: black glass pane
+                    Name: '&e'
+                    Slots:
                     - 9
                     - 10
                     - 11
@@ -1680,246 +1679,246 @@ Shop:
                     - 15
                     - 16
                     - 17
-                    lore:
+                    Lore:
                     - '&3&l&3&l⬆ &7Categories'
                     - ''
                     - '&3&l⬇ &7Items'
                     - ''
-                category mark:
-                    type: border
-                    display: green glass pane
-                    name: '&e'
-                    slots:
+                Category Mark:
+                    Type: Border
+                    Display: green glass pane
+                    Name: '&e'
+                    Slots:
                     - 16
-                    lore:
+                    Lore:
                     - ''
                 Quick-Buy:
-                    type: category
-                    category: Quick-Buy
-                    name: '&8&l» &bQUICK BUY'
-                    slot: 0
-                    display: nether star
-                    lore:
+                    Type: Category
+                    Category: Quick-Buy
+                    Name: '&8&l» &bQUICK BUY'
+                    Slot: 0
+                    Display: nether star
+                    Lore:
                     - ''
                 Blocks:
-                    type: category
-                    category: Blocks
-                    name: '&8&l» &bBLOCKS'
-                    slot: 1
-                    display: hardened clay
-                    lore:
+                    Type: Category
+                    Category: Blocks
+                    Name: '&8&l» &bBLOCKS'
+                    Slot: 1
+                    Display: hardened clay
+                    Lore:
                     - ''
                 Meele:
-                    type: category
-                    category: Meele
-                    name: '&8&l» &bMEELE'
-                    slot: 2
-                    display: gold sword
-                    lore:
+                    Type: Category
+                    Category: Meele
+                    Name: '&8&l» &bMEELE'
+                    Slot: 2
+                    Display: gold sword
+                    Lore:
                     - ''
                 Armor:
-                    type: category
-                    category: Armor
-                    name: '&8&l» &bARMOR'
-                    slot: 3
-                    display: chain boots
-                    lore:
+                    Type: Category
+                    Category: Armor
+                    Name: '&8&l» &bARMOR'
+                    Slot: 3
+                    Display: chain boots
+                    Lore:
                     - ''
                 Tools:
-                    type: category
-                    category: Tools
-                    name: '&8&l» &bTOOLS'
-                    slot: 4
-                    display: stone pickaxe
-                    lore:
+                    Type: Category
+                    Category: Tools
+                    Name: '&8&l» &bTOOLS'
+                    Slot: 4
+                    Display: stone pickaxe
+                    Lore:
                     - ''
                 Ranged:
-                    type: category
-                    category: Ranged
-                    name: '&8&l» &bRANGED'
-                    slot: 5
-                    display: bow
-                    lore:
+                    Type: Category
+                    Category: Ranged
+                    Name: '&8&l» &bRANGED'
+                    Slot: 5
+                    Display: bow
+                    Lore:
                     - ''
                 Potions:
-                    type: category
-                    category: Potions
-                    name: '&8&l» &bPOTIONS'
-                    slot: 6
-                    display: brewing stand
-                    lore:
+                    Type: Category
+                    Category: Potions
+                    Name: '&8&l» &bPOTIONS'
+                    Slot: 6
+                    Display: brewing stand
+                    Lore:
                     - ''
                 Utility:
-                    type: category
-                    category: Utility
-                    name: '&8&l» &bUTILITY'
-                    slot: 7
-                    display: tnt
-                    lore:
+                    Type: Category
+                    Category: Utility
+                    Name: '&8&l» &bUTILITY'
+                    Slot: 7
+                    Display: tnt
+                    Lore:
                     - ''
                 Gold Apple:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Golden Apple'
-                        msg: '&aGolden Apple'
-                    slot: 19
-                    display: golden apple
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Golden Apple'
+                        Msg: '&aGolden Apple'
+                    Slot: 19
+                    Display: golden apple
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
                     - '&7Well-rounded healing.'
                     - ''
-                    currency: gold ingot
-                    cost: 3
-                    items:
+                    Currency: gold ingot
+                    Cost: 3
+                    Items:
                     - golden apple
                 Bed Bug:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Bed Bug'
-                        msg: '&aBed Bug'
-                    slot: 20
-                    display: snowball
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Bed Bug'
+                        Msg: '&aBed Bug'
+                    Slot: 20
+                    Display: snowball
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
                     - '&7Spawns silverfish were the'
                     - '&7snowball lands to distract your'
                     - '&7enemies. Lasts 15 seconds.'
                     - ''
-                    currency: gold ingot
-                    cost: 40
-                    items:
+                    Currency: gold ingot
+                    Cost: 40
+                    Items:
                     - snowball
                 Dream Defender:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Dream Defender'
-                        msg: '&aDream Defender'
-                        item: '&aDream Defender'
-                    slot: 21
-                    display: iron chestplate
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Dream Defender'
+                        Msg: '&aDream Defender'
+                        Item: '&aDream Defender'
+                    Slot: 21
+                    Display: iron chestplate
+                    Lore:
                     - ''
-                    - '&7COST: &f{cost} IRON'
+                    - '&7Cost: &f{cost} IRON'
                     - ''
                     - '&7Iron Goldem to help defent your'
                     - '&7base.'
                     - ''
-                    currency: iron ingot
-                    cost: 120
-                    items:
+                    Currency: iron ingot
+                    Cost: 120
+                    Items:
                     - iron block
                 FireBall:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} FireBall'
-                        msg: '&aFireBall'
-                        item: '&aFireBall'
-                    slot: 22
-                    display: fire charge
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} FireBall'
+                        Msg: '&aFireBall'
+                        Item: '&aFireBall'
+                    Slot: 22
+                    Display: fire charge
+                    Lore:
                     - ''
-                    - '&7COST: &f{cost} IRON'
+                    - '&7Cost: &f{cost} IRON'
                     - ''
                     - '&7Right-click to launch great to'
                     - '&7Knock back enemies walking on'
                     - '&7the bridges'
                     - ''
-                    currency: iron ingot
-                    cost: 40
-                    items:
+                    Currency: iron ingot
+                    Cost: 40
+                    Items:
                     - fire charge
                 TnT:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} TnT'
-                        msg: '&aTnT'
-                    slot: 23
-                    display: tnt
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} TnT'
+                        Msg: '&aTnT'
+                    Slot: 23
+                    Display: tnt
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
                     - '&7Instantly ignites, appropriate'
                     - '&7to explode things!'
                     - ''
-                    currency: gold ingot
-                    cost: 4
-                    items:
+                    Currency: gold ingot
+                    Cost: 4
+                    Items:
                     - tnt
                 EnderPearl:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} EnderPearl'
-                        msg: '&aEnderPearl'
-                    slot: 24
-                    display: ender pearl
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} EnderPearl'
+                        Msg: '&aEnderPearl'
+                    Slot: 24
+                    Display: ender pearl
+                    Lore:
                     - ''
-                    - '&7COST: &2{cost} EMERALD'
+                    - '&7Cost: &2{cost} EMERALD'
                     - ''
                     - '&7The quickest way to invade enemy'
                     - '&7bases.'
                     - ''
-                    currency: emerald
-                    cost: 4
-                    items:
+                    Currency: emerald
+                    Cost: 4
+                    Items:
                     - ender pearl
                 Sponge:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Sponge'
-                        msg: '&aSponge'
-                    slot: 25
-                    display: Sponge
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Sponge'
+                        Msg: '&aSponge'
+                    Slot: 25
+                    Display: Sponge
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
                     - '&7Great for soaking up water.'
                     - ''
-                    currency: gold ingot
-                    cost: 3
-                    items:
+                    Currency: gold ingot
+                    Cost: 3
+                    Items:
                     - Sponge
                 Bridge Egg:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Bridge Egg'
-                        msg: '&aBridge Egg'
-                        item: '&aBridge Egg'
-                    slot: 28
-                    display: egg
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Bridge Egg'
+                        Msg: '&aBridge Egg'
+                        Item: '&aBridge Egg'
+                    Slot: 28
+                    Display: egg
+                    Lore:
                     - ''
-                    - '&7COST: &2{cost} EMERALD'
+                    - '&7Cost: &2{cost} EMERALD'
                     - ''
                     - '&7This egg creates a bridge in its'
                     - '&7trail after being thrown.'
                     - ''
-                    currency: emerald
-                    cost: 3
-                    items:
+                    Currency: emerald
+                    Cost: 3
+                    Items:
                     - egg
                 Water Bucket:
-                    type: item
-                    name:
-                        gui: '&8&l» {check} Water Bucket'
-                        msg: '&aWater Bucket'
-                    slot: 29
-                    display: Water Bucket
-                    lore:
+                    Type: Item
+                    Name:
+                        Menu: '&8&l» {check} Water Bucket'
+                        Msg: '&aWater Bucket'
+                    Slot: 29
+                    Display: Water Bucket
+                    Lore:
                     - ''
-                    - '&7COST: &6{cost} GOLD'
+                    - '&7Cost: &6{cost} GOLD'
                     - ''
                     - '&7Great to slow down approaching'
                     - '&7ememies. Can also proctect'
                     - '&7agaist tnt.'
                     - ''
-                    currency: gold ingot
-                    cost: 8
-                    items:
+                    Currency: gold ingot
+                    Cost: 8
+                    Items:
                     - Water Bucket

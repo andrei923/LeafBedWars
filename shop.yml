@@ -1,6 +1,6 @@
 Trails:
-    GUI: '&8&l» &7Arrow Trails'
-    Current: '&8&l» &7Current Trail.'
+    GUI: '&8» &7Arrow Trails'
+    Current: '&8» &7Current Trail.'
     Background: air
     Purchased:
     - '&8➥ &7Click to Select'
@@ -134,10 +134,10 @@ Trails:
             Particle: SNOWBALL
 
 ShopKeepers:
-    GUI: '&8&l» &7ShopKeepers'
+    GUI: '&8» &7ShopKeepers'
     Current:
-        Shop: '&8&l» &7Current Shop Npc.'
-        Upgrade: '&8&l» &7Current Upgrade Npc.'
+        Shop: '&8» &7Current Shop Npc.'
+        Upgrade: '&8» &7Current Upgrade Npc.'
     Background: air
     Purchased:
     - ''
