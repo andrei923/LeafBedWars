@@ -1,40 +1,40 @@
-GUI:
-    Traps: '&8&l» &7Queue a trap'
-    Upgrades: '&8&l» &7Upgrades'
+Menu:
+    Traps: '&8» &7Queue a trap'
+    Upgrades: '&8» &7Upgrades'
 
 Upgrades:
     Sharpened-Swords:
         not_purchased:
-            name: '&8&l» {check} Sharpened Swords'
-            item: iron sword
-            slot: 10
-            lore:
+            Name: '&8» {check} Sharpened Swords'
+            Item: iron sword
+            Slot: 10
+            Lore:
             - ''
             - '&7You team permanently gains'
             - '&7Sharpness 1 on all swords and axes!'
             - ''
             - '&7Cost: &b8 Diamonds'
-            display: Sharpened Swords
-            cost: 8
-            currency: diamond
-            action: UPGRADE-SHARPENENED-SWORDS
+            Display: Sharpened Swords
+            Cost: 8
+            Currency: diamond
+            Action: UPGRADE-SHARPENENED-SWORDS
         purchased:
-            name: '&8&l» &aSharpened Swords'
-            item: iron sword
-            slot: 10
-            lore:
+            Name: '&8» &aSharpened Swords'
+            Item: iron sword
+            Slot: 10
+            Lore:
             - ''
             - '&7You team permanently gains'
             - '&7Sharpness 1 on all swords and axes!'
             - ''
             - '&7Cost: &b8 Diamonds'
-            action: nothing
+            Action: nothing
     Reinforced-Armor:
         '0':
-            name: '&8&l» {check} Reinforced Armor I'
-            item: iron chestplate
-            slot: 11
-            lore:
+            Name: '&8» {check} Reinforced Armor I'
+            Item: iron chestplate
+            Slot: 11
+            Lore:
             - ''
             - '&7You team permanently gains'
             - '&7Protection on all armor pieces!'
@@ -43,15 +43,15 @@ Upgrades:
             - '&7Tier 2: Proteaction II, &b4 Diamonds'
             - '&7Tier 3: Proteaction III, &b8 Diamonds'
             - '&7Tier 4: Proteaction IV, &b16 Diamonds'
-            display: Reinforced Armor I
-            cost: 4
-            currency: diamond
-            action: UPGRADE-REINFORCED-ARMOR
+            Display: Reinforced Armor I
+            Cost: 2
+            Currency: diamond
+            Action: UPGRADE-REINFORCED-ARMOR
         '1':
-            name: '&8&l» {check} Reinforced Armor II'
-            item: iron chestplate
-            slot: 11
-            lore:
+            Name: '&8» {check} Reinforced Armor II'
+            Item: iron chestplate
+            Slot: 11
+            Lore:
             - ''
             - '&7You team permanently gains'
             - '&7Protection on all armor pieces!'
@@ -60,15 +60,15 @@ Upgrades:
             - '&7Tier 2: Proteaction II, &b4 Diamonds'
             - '&7Tier 3: Proteaction III, &b8 Diamonds'
             - '&7Tier 4: Proteaction IV, &b16 Diamonds'
-            display: Reinforced Armor II
-            cost: 4
-            currency: diamond
-            action: UPGRADE-REINFORCED-ARMOR
+            Display: Reinforced Armor II
+            Cost: 4
+            Currency: diamond
+            Action: UPGRADE-REINFORCED-ARMOR
         '2':
-            name: '&8&l» {check} Reinforced Armor III'
-            item: iron chestplate
-            slot: 11
-            lore:
+            Name: '&8» {check} Reinforced Armor III'
+            Item: iron chestplate
+            Slot: 11
+            Lore:
             - ''
             - '&7You team permanently gains'
             - '&7Protection on all armor pieces!'
@@ -77,15 +77,15 @@ Upgrades:
             - '&7&mTier 2: Proteaction II, &b4 Diamonds'
             - '&7Tier 3: Proteaction III, &b8 Diamonds'
             - '&7Tier 4: Proteaction IV, &b16 Diamonds'
-            display: Reinforced Armor III
-            cost: 8
-            currency: diamond
-            action: UPGRADE-REINFORCED-ARMOR
+            Display: Reinforced Armor III
+            Cost: 8
+            Currency: diamond
+            Action: UPGRADE-REINFORCED-ARMOR
         '3':
-            name: '&8&l» {check} Reinforced Armor IV'
-            item: iron chestplate
-            slot: 11
-            lore:
+            Name: '&8» {check} Reinforced Armor IV'
+            Item: iron chestplate
+            Slot: 11
+            Lore:
             - ''
             - '&7You team permanently gains'
             - '&7Protection on all armor pieces!'
@@ -94,15 +94,15 @@ Upgrades:
             - '&7&mTier 2: Proteaction II, &b4 Diamonds'
             - '&7&mTier 3: Proteaction III, &b8 Diamonds'
             - '&7Tier 4: Proteaction IV, &b16 Diamonds'
-            display: Reinforced Armor IV
-            cost: 16
-            currency: diamond
-            action: UPGRADE-REINFORCED-ARMOR
+            Display: Reinforced Armor IV
+            Cost: 16
+            Currency: diamond
+            Action: UPGRADE-REINFORCED-ARMOR
         '4':
-            name: '&8&l» &aReinforced Armor'
-            item: iron chestplate
-            slot: 11
-            lore:
+            Name: '&8» &aReinforced Armor'
+            Item: iron chestplate
+            Slot: 11
+            Lore:
             - ''
             - '&7You team permanently gains'
             - '&7Protection on all armor pieces!'
@@ -111,60 +111,60 @@ Upgrades:
             - '&7&mTier 2: Proteaction II, &b4 Diamonds'
             - '&7&mTier 3: Proteaction III, &b8 Diamonds'
             - '&7&mTier 4: Proteaction IV, &b16 Diamonds'
-            cost: 16
-            currency: diamond
-            action: nothing
+            Cost: 16
+            Currency: diamond
+            Action: nothing
     Maniac-Miner:
         '0':
-            name: '&8&l» {check} Maniac Miner I'
-            item: gold pickaxe
-            slot: 13
-            lore:
+            Name: '&8» {check} Maniac Miner I'
+            Item: gold pickaxe
+            Slot: 13
+            Lore:
             - ''
             - '&7You players in your team'
             - '&7Permanently gain haste.'
             - ''
             - '&7Tier 1: Haste I, &b4 Diamonds'
             - '&7Tier 2: Haste II, &b6 Diamonds'
-            display: Maniac Miner I
-            cost: 4
-            currency: diamond
-            action: UPGRADE-MANIAC-MINER
+            Display: Maniac Miner I
+            Cost: 4
+            Currency: diamond
+            Action: UPGRADE-MANIAC-MINER
         '1':
-            name: '&8&l» {check} Maniac Miner II'
-            item: gold pickaxe
-            slot: 13
-            lore:
+            Name: '&8» {check} Maniac Miner II'
+            Item: gold pickaxe
+            Slot: 13
+            Lore:
             - ''
             - '&7You players in your team'
             - '&7Permanently gain haste.'
             - ''
             - '&7&mTier 1: Haste I, &b4 Diamonds'
             - '&7Tier 2: Haste II, &b6 Diamonds'
-            display: Maniac Miner II
-            cost: 6
-            currency: diamond
-            action: UPGRADE-MANIAC-MINER
+            Display: Maniac Miner II
+            Cost: 6
+            Currency: diamond
+            Action: UPGRADE-MANIAC-MINER
         '2':
-            name: '&8&l» &aManiac Miner'
-            item: gold pickaxe
-            slot: 13
-            lore:
+            Name: '&8» &aManiac Miner'
+            Item: gold pickaxe
+            Slot: 13
+            Lore:
             - ''
             - '&7You players in your team'
             - '&7Permanently gain haste.'
             - ''
             - '&7&mTier 1: Haste I, &b4 Diamonds'
             - '&7&mTier 2: Haste II, &b6 Diamonds'
-            cost: 6
-            currency: diamond
-            action: nothing
+            Cost: 6
+            Currency: diamond
+            Action: nothing
     Forge:
         '0':
-            name: '&8&l» {check} Iron Forge'
-            item: unlit furnace
-            slot: 15
-            lore:
+            Name: '&8» {check} Iron Forge'
+            Item: unlit furnace
+            Slot: 15
+            Lore:
             - ''
             - '&7Upgrade resource spawning on your island'
             - ''
@@ -173,15 +173,15 @@ Upgrades:
             - '&7Tier 2: +100％ Resources, &b4 Diamonds'
             - '&7Tier 3: Spawn emeralds, &b6 Diamonds'
             - '&7Tier 4: +200％ Resources, &b8 Diamonds'
-            display: Iron Forge
-            cost: 2
-            currency: diamond
-            action: UPGRADE-FORGE
+            Display: Iron Forge
+            Cost: 2
+            Currency: diamond
+            Action: UPGRADE-FORGE
         '1':
-            name: '&8&l» {check} Gold Forge'
-            item: unlit furnace
-            slot: 15
-            lore:
+            Name: '&8» {check} Gold Forge'
+            Item: unlit furnace
+            Slot: 15
+            Lore:
             - ''
             - '&7Upgrade resource spawning on your island'
             - ''
@@ -190,15 +190,15 @@ Upgrades:
             - '&7Tier 2: +100％ Resources, &b4 Diamonds'
             - '&7Tier 3: Spawn emeralds, &b6 Diamonds'
             - '&7Tier 4: +200％ Resources, &b8 Diamonds'
-            display: Gold Forge
-            cost: 4
-            currency: diamond
-            action: UPGRADE-FORGE
+            Display: Gold Forge
+            Cost: 4
+            Currency: diamond
+            Action: UPGRADE-FORGE
         '2':
-            name: '&8&l» {check} Emerald Forge'
-            item: unlit furnace
-            slot: 15
-            lore:
+            Name: '&8» {check} Emerald Forge'
+            Item: unlit furnace
+            Slot: 15
+            Lore:
             - ''
             - '&7Upgrade resource spawning on your island'
             - ''
@@ -207,15 +207,15 @@ Upgrades:
             - '&7&mTier 2: +100％ Resources, &b4 Diamonds'
             - '&7Tier 3: Spawn emeralds, &b6 Diamonds'
             - '&7Tier 4: +200％ Resources, &b8 Diamonds'
-            display: Emerald Forge
-            cost: 6
-            currency: diamond
-            action: UPGRADE-FORGE
+            Display: Emerald Forge
+            Cost: 6
+            Currency: diamond
+            Action: UPGRADE-FORGE
         '3':
-            name: '&8&l» {check} Molten Forge'
-            item: unlit furnace
-            slot: 15
-            lore:
+            Name: '&8» {check} Molten Forge'
+            Item: unlit furnace
+            Slot: 15
+            Lore:
             - ''
             - '&7Upgrade resource spawning on your island'
             - ''
@@ -224,15 +224,15 @@ Upgrades:
             - '&7&mTier 2: +100％ Resources, &b4 Diamonds'
             - '&7&mTier 3: Spawn emeralds, &b6 Diamonds'
             - '&7Tier 4: +200％ Resources, &b8 Diamonds'
-            display: Molten Forge
-            cost: 8
-            currency: diamond
-            action: UPGRADE-FORGE
+            Display: Molten Forge
+            Cost: 8
+            Currency: diamond
+            Action: UPGRADE-FORGE
         '4':
-            name: '&8&l» &aMolten Forge'
-            item: unlit furnace
-            slot: 15
-            lore:
+            Name: '&8» &aMolten Forge'
+            Item: unlit furnace
+            Slot: 15
+            Lore:
             - ''
             - '&7Upgrade resource spawning on your island'
             - ''
@@ -241,134 +241,134 @@ Upgrades:
             - '&7&mTier 2: +100％ Resources, &b4 Diamonds'
             - '&7&mTier 3: Spawn emeralds, &b6 Diamonds'
             - '&7&mTier 4: +200％ Resources, &b8 Diamonds'
-            action: nothing
+            Action: nothing
     Heal-Pool:
         not_purchased:
-            name: '&8&l» {check} Heal Pool'
-            item: beacon
-            slot: 16
-            lore:
+            Name: '&8» {check} Heal Pool'
+            Item: beacon
+            Slot: 16
+            Lore:
             - ''
             - '&7Creates a Regeneration field'
             - '&7around your base!'
             - ''
             - '&7Cost: &b1 Diamonds'
-            display: Heal Pool
-            cost: 1
-            currency: diamond
-            action: UPGRADE-HEAL-POOL
+            Display: Heal Pool
+            Cost: 1
+            Currency: diamond
+            Action: UPGRADE-HEAL-POOL
         purchased:
-            name: '&8&l» &aHeal Pool'
-            item: beacon
-            slot: 16
-            lore:
+            Name: '&8» &aHeal Pool'
+            Item: beacon
+            Slot: 16
+            Lore:
             - ''
             - '&7Creates a Regeneration field'
             - '&7around your base!'
             - ''
             - '&7Cost: &b1 Diamonds'
-            action: nothing
+            Action: nothing
     Traps:
         not_purchased:
-            name: '&8&l» &eBuy a trap'
-            item: leather
-            slot: 22
-            lore:
+            Name: '&8» &eBuy a trap'
+            Item: leather
+            Slot: 22
+            Lore:
             - ''
             - '&eClick to browse!'
-            action: BROWSE-TRAPS
+            Action: BROWSE-TRAPS
 
 Traps:
     Its-a-Trap:
         not_purchased:
-            name: '&8&l» {check} It''s a trap!'
-            item: tripwire hook
-            slot: 11
-            lore:
+            Name: '&8» {check} It''s a trap!'
+            Item: tripwire hook
+            Slot: 11
+            Lore:
             - ''
             - '&7Inflicts Blindness and Slowness'
             - '&7for 5 seconds.'
             - ''
             - ''
             - '&7Cost: &b2 Diamond'
-            display: It's a trap!
-            cost: 2
-            currency: diamond
-            action: ITS-A-TRAP
+            Display: It's a trap!
+            Cost: 2
+            Currency: diamond
+            Action: ITS-A-TRAP
         purchased:
-            name: '&8&l» &aIt''s a trap!'
-            item: tripwire hook
-            slot: 11
-            lore:
+            Name: '&8» &aIt''s a trap!'
+            Item: tripwire hook
+            Slot: 11
+            Lore:
             - ''
             - '&7Inflicts Blindness and Slowness'
             - '&7for 5 seconds.'
             - ''
             - ''
             - '&7Cost: &b2 Diamond'
-            action: nothing
+            Action: nothing
     Counter-Offensive:
         not_purchased:
-            name: '&8&l» {check} Counter-Offensive Trap'
-            item: feather
-            slot: 12
-            lore:
+            Name: '&8» {check} Counter-Offensive Trap'
+            Item: feather
+            Slot: 12
+            Lore:
             - ''
             - '&7Grands Speed I for 15 seconds to'
             - '&7allied players near your base.'
             - ''
             - ''
             - '&7Cost: &b2 Diamond'
-            display: Counter-Offensive Trap
-            cost: 2
-            currency: diamond
-            action: COUNTER-OFFENSIVE
+            Display: Counter-Offensive Trap
+            Cost: 2
+            Currency: diamond
+            Action: COUNTER-OFFENSIVE
         purchased:
-            name: '&8&l» &aCounter-Offensive Trap'
-            item: feather
-            slot: 12
-            lore:
+            Name: '&8» &aCounter-Offensive Trap'
+            Item: feather
+            Slot: 12
+            Lore:
             - ''
             - '&7Grands Speed I for 15 seconds to'
             - '&7allied players near your base.'
             - ''
             - ''
             - '&7Cost: &b2 Diamond'
-            action: nothing
+            Action: nothing
     Alarm-Trap:
         not_purchased:
-            name: '&8&l» {check} Alarm Trap'
-            item: torch
-            slot: 14
-            lore:
+            Name: '&8» {check} Alarm Trap'
+            Item: torch
+            Slot: 14
+            Lore:
             - ''
             - '&7Reveals invisible players as'
             - '&7well as their name and team'
             - ''
             - ''
             - '&7Cost: &b1 Diamond'
-            display: Alarm Trap
-            cost: 1
-            currency: diamond
-            action: ALARM-TRAP
+            Display: Alarm Trap
+            Cost: 1
+            Currency: diamond
+            Action: ALARM-TRAP
         purchased:
-            name: '&8&l» &aAlarm Trap'
-            item: torch
-            slot: 14
-            lore:
+            Name: '&8» &aAlarm Trap'
+            Item: torch
+            Slot: 14
+            Lore:
             - ''
             - '&7Reveals invisible players as'
             - '&7well as their name and team'
             - ''
             - ''
             - '&7Cost: &b1 Diamond'
-            action: nothing
+            Action: nothing
     Miner-Fatigue:
         not_purchased:
-            name: '&8&l» {check} Miner Fatigue Trap'
-            item: iron pickaxe
-            slot: 15
-            lore:
+            Name: '&8» {check} Miner Fatigue Trap'
+            Item: iron pickaxe
+            Slot: 15
+            Lore:
             - ''
             - '&7Miner Fatigue Trap'
             - '&7Inflict Miner Fatigue for'
@@ -376,15 +376,15 @@ Traps:
             - ''
             - ''
             - '&7Cost: &b2 Diamond'
-            display: Miner Fatigue
-            cost: 1
-            currency: diamond
-            action: MINER-FATIGUE
+            Display: Miner Fatigue
+            Cost: 1
+            Currency: diamond
+            Action: MINER-FATIGUE
         purchased:
-            name: '&8&l» &aMiner Fatigue Trap'
-            item: iron pickaxe
-            slot: 15
-            lore:
+            Name: '&8» &aMiner Fatigue Trap'
+            Item: iron pickaxe
+            Slot: 15
+            Lore:
             - ''
             - '&7Miner Fatigue Trap'
             - '&7Inflict Miner Fatigue for'
@@ -392,4 +392,4 @@ Traps:
             - ''
             - ''
             - '&7Cost: &b2 Diamond'
-            action: nothing
+            Action: nothing

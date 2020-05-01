@@ -4,7 +4,7 @@ Messages:
     Start:
     - '&a&l■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■'
     - ''
-    - '                              &8&l● &f&lBEDWARS &8&l●'
+    - '                              &8&l● &f&lBedWars &8&l●'
     - ''
     - '          &eProtect your bed and destroy the enemy beds.'
     - '          &eUpgrade yourself and your team by collecting'
@@ -26,9 +26,9 @@ Messages:
         SOLO:
         - '&a&l■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■'
         - ''
-        - '                              &8&l● &f&lBEDWARS &8&l●'
+        - '                              &8&l● &f&lBedWars &8&l●'
         - ''
-        - '                         &eWINNER {win-team} &f- &3{team-players}'
+        - '                         &eWinner {team} &f- &3{team-players}'
         - ''
         - '                         &8● &7&nTop kills&r &8●'
         - ''
@@ -40,9 +40,9 @@ Messages:
         TEAM:
         - '&a&l■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■'
         - ''
-        - '                              &8&l● &f&lBEDWARS &8&l●'
+        - '                              &8&l● &f&lBedWars &8&l●'
         - ''
-        - '                         &eWINNERS {win-team} &f- &3{team-players}'
+        - '                         &eWinners {team} &f- &3{team-players}'
         - ''
         - '                         &8● &7&nTop kills&r &8●'
         - ''
@@ -57,6 +57,7 @@ Messages:
     Arena Is Full: '&cThis arena is full of players!'
     Team Is Full: '&7This team is full!'
     Own Bed Break: '&cYou cannot break your own bed.'
+    Reached Height Limit: '&cYou reached height limit.'
     Player Not Found: '&cPlayer not found.'
     Arena Restarting: '&cThis arena is currently being restarted!'
     Only Placed By Players: '&7You can only break blocks placed by players.'
@@ -92,13 +93,12 @@ Messages:
         Purchase: '&aPurchased &e{name} &aShopKeeper.'
         Select: '&aSelected &e{name} &aShopKeeper.'
     Kill:
-        by-player: '{victim-color}{victim} &ewas killed by {attacker-color}{attacker}.'
-        by-unknown: '{victim-color}{victim} &7died.'
-        by-void: '{victim-color}{victim} &7fell in void.'
-        by-fall: '{victim-color}{victim} &7hit the ground hard.'
-        by-player-final-kill: '{victim-color}{victim} &ewas killed by {attacker-color}{attacker}.
-            &b&lFINAL KILL.'
-        thrown-in-void: '{victim-color}{victim} &7was thrown in void by {attacker-color}{attacker}.'
+        by-player: '{victim} &ewas killed by {attacker}.'
+        by-unknown: '{victim} &7died.'
+        by-void: '{victim} &7fell in void.'
+        by-fall: '{victim} &7hit the ground hard.'
+        by-player-final-kill: '{victim} &ewas killed by {attacker}. &b&lFINAL KILL.'
+        thrown-in-void: '{victim} &7was thrown in void by {attacker}.'
     TimePlayed:
     - '&b+{xp} Bed Wars Experience (Time Played)'
     - '&6+{coins} coins! (Time Played)'
@@ -118,24 +118,13 @@ Messages:
             '3': Emerald III
         EndGame: End Game
         BedDestruction: Bed Destruction
-
-Party-Messages:
-    Prefix: '&3Party &8» &7'
-    Party-Created: '&7You created the party.'
-    Joined Party: '&7{player} &7joined to party'
-    Left Party: '&7{player} &7left the party.'
-    Party Full: '&7This Party is Full'
-    Kick Player: '&7You kicked &7{player} &7from the party.'
-    Kicked From Party: '&7{leader} &7kicked you from the party.'
-    Join Party: '&7You joined {leader}''&7''s party.'
-    Party Disband: '&7{leader} &cabandoned &7the party.'
-    Set Private: '&7The party is now &cPrivate'
-    Now Public: '&7The party is now &aPublic'
-    Is private: '&7This Party is &cPrivate&7, you need to be invited to join.'
-    Player Invite: '&7You invited {player} &7to your party.'
-    Invited To Party: '&7{leader} &7invited you to his party.'
-    Removed Invite: '&7Removed invite for &c{player}.'
-    Now Own Party: '&7You don''t have a party.'
+    Party:
+        Prefix: '&7❒ &a&nParty &8➩ &7'
+        Full: '&eThis party is full!'
+        Join: '&7{player} &ehas joined.'
+        Left: '&7{player} &ehas quit!'
+        Invite: '&7{player} &eInvited you to his party.'
+        Private: '&c&nThis party is private!'
 
 Scoreboard:
     LOBBY:
@@ -182,7 +171,7 @@ Scoreboard:
         Title: '&e&lBEDWARS'
         You: (&7You)
         Bed-Not-Broken-Symbol: '&a✔'
-        Team Eliminated-Symbol: '&c✘'
+        Team-Eliminated-Symbol: '&c✘'
         Teams-2:
         - '&7{time}'
         - ''
@@ -299,12 +288,6 @@ Titles:
         Duration: 30
         FadeIn: 10
         FadeOut: 10
-    Invite-Player:
-        Title: '&8&l» &eINVITE A PLAYER TO YOUR PARTY &8&l«'
-        Subtitle: '&7&nTYPE THE NAME IN CHAT!'
-        Duration: 30
-        FadeIn: 10
-        FadeOut: 10
     Respawn:
         Title: '&a&lRESPAWNED'
         Subtitle: '&e'
@@ -312,7 +295,7 @@ Titles:
         FadeIn: 10
         FadeOut: 10
     Win:
-        Title: '{win-team} &7TEAM'
+        Title: '{team} &7TEAM'
         Subtitle: '&6&l&oWon the game!'
         Duration: 30
         FadeIn: 10
@@ -338,6 +321,10 @@ Titles:
     Death:
         Title: '&cYOU DIED!'
         Subtitle: '&eYou will respawn in &c{seconds} &eseconds!'
+    Invite-Player:
+        Duration: 30
+        FadeIn: 10
+        FadeOut: 10
 
 Teams:
     Name:
@@ -350,14 +337,14 @@ Teams:
         PINK: '&dPINK'
         GRAY: '&8GRAY'
     Scoreboard:
-        RED: '&cR &fRedː'
-        BLUE: '&1B &fBlueː'
-        GREEN: '&aG &fGreenː'
-        YELLOW: '&eY &fYellowː'
-        CYAN: '&bA &fAquaː'
-        WHITE: '&fW &fWhiteː'
-        PINK: '&dP &fPinkː'
-        GRAY: '&8S &fGrayː'
+        RED: '&cR &fRed:'
+        BLUE: '&1B &fBlue:'
+        GREEN: '&aG &fGreen:'
+        YELLOW: '&eY &fYellow:'
+        CYAN: '&bA &fAqua:'
+        WHITE: '&fW &fWhite:'
+        PINK: '&dP &fPink:'
+        GRAY: '&8S &fGray:'
     Color:
         RED: '&c'
         BLUE: '&1'
@@ -448,8 +435,8 @@ Npcs:
             Skin-Signature: ReD9ZjaX9XQ8EYuTmfUNmC0rgNYrjNFuLM32aDQIDy+IjPh5RL1LW97nwt4P87NT6P++YgyN3eaNcsoua4RjwsEeLiSuhp6uhHOYgO9fSjGbXFI8mCeH0AIJLjQ8l1J+1AWnrXlPGhsV3ZBVLlgKSqmDYOhk34xP7Z1cRVhS9mYQqfYrrDISISjP3FGitUY+CwxsFXNIoMZnbZVqlvmDl61V0G3dGnQOGBves+lfLCY3VHZbwLm+9QNsNFMR9vPINBOpA7t6AmwT0DAzCQSGoSaOu3AhObpHCVmT+fEp0pYptbFKVObBvRZBEdjV5v1NDrXyV/opDqjP/sS3bCBzBmMf9PfRYY9ILdigBdDTZZRFJJVqt120UM7t8ebZkMi/WpXh5kg5a1ZjQN5ZcdcRVLPeshqVHzEcDhjK4QXW5/l/QTBQrc7NO4jx1J4KVGU/Jzr1wcrQbiM/b0fOfM5+H23aPMlyibKwAgS4B/fCDQRp2Ca9BCIBqUoIn9Gid+LcVu898Zj39toefuXZyfwXfKTL7iVHGfssFQUdZsFJtgwbyq6NsNw1Z7J43W/BTDg2lZEdDzT72KxeFFZBwCVWMdSa/p1neO+YSFwx4HVmxShZDGFHXi2n8hQEHKfMLCfhnaoy7ANYVV+j1QqLYcO3jR2mKYdAyvqAJNW2JzIGfiY=
 
 Holograms:
-    BED-BREAK: '&b&l« &cBed &7destroyed by {team} {player} &b&l»'
-    GENERATOR:
+    Bed-Destroyed: '&b&l« &cBed &7destroyed by {team} {player} &b&l»'
+    Generator:
         DIAMOND:
         - '&b« &eTIER &c{level} &b»'
         - '&bDIAMOND'
@@ -492,8 +479,8 @@ Signs:
         SOLO: '&a&lSOLO'
         TEAM: '&a&lTEAM'
         RANDOM: '&a&lRANDOM'
-    TOP:
-        SIGN-LINE-1: '&7&l➜ &a&lTOP'
-        SIGN-LINE-2: '&7« &b{TOP} &8#{place} &7»'
-        SIGN-LINE-3: '&e{player}'
-        SIGN-LINE-4: '&aScore: &3{value}'
+    Leaderboards:
+        Line-1: '&7&l➜ &a&lTOP'
+        Line-2: '&7« &b{TOP} &8#{place} &7»'
+        Line-3: '&e{player}'
+        Line-4: '&aScore: &3{value}'

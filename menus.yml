@@ -1,114 +1,77 @@
-GENERAL:
-    MAIN-PAGE:
-        name: '&8&l» &7Main Page &8&l«'
-        item: book
-        lore:
+General:
+    Main-Page:
+        Name: '&8» &7Main Page &8&l«'
+        Item: book
+        Lore:
         - ''
-    NEXT-PAGE:
-        name: '&8&l» &7Next Page'
-        item: custom player head
+    Next-Page:
+        Name: '&8» &7Next Page'
+        Item: custom player head
         Id: d513d666-0992-42c7-9aa6-e518a83e0b38
         Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTliZjMyOTJlMTI2YTEwNWI1NGViYTcxM2FhMWIxNTJkNTQxYTFkODkzODgyOWM1NjM2NGQxNzhlZDIyYmYifX19
-        lore:
+        Lore:
         - ''
-    PREVIOUS-PAGE:
-        name: '&8&l« &7Previous Page'
-        item: custom player head
+    Previous-Page:
+        Name: '&8&l« &7Previous Page'
+        Item: custom player head
         Id: 2391d533-ab09-434d-9980-adafde4057a3
         Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ2OWUwNmU1ZGFkZmQ4NGU1ZjNkMWMyMTA2M2YyNTUzYjJmYTk0NWVlMWQ0ZDcxNTJmZGM1NDI1YmMxMmE5In19fQ==
-        lore:
+        Lore:
         - ''
-    BACK:
-        name: '&8&l» &7Back'
-        item: custom player head
+    Back:
+        Name: '&8» &7Back'
+        Item: custom player head
         Id: 5ca62fac-d094-4346-8361-e1dfdd970607
         Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzQzNzM0NmQ4YmRhNzhkNTI1ZDE5ZjU0MGE5NWU0ZTc5ZGFlZGE3OTVjYmM1YTEzMjU2MjM2MzEyY2YifX19
-        lore:
+        Lore:
+        - ''
+    Close:
+        Name: '&8» &7Close'
+        Item: red dye
+        Lore:
         - ''
 
-ARENA-LIST:
-    GUI: '&8&l» &7BedWars Arenas'
+Arena-Browser:
+    Menu: '&8» &7BedWars Arenas'
     Background: air
-    lore:
-    - '&8&l«&7&l&m--------------------&r&8&l»'
+    Lore:
+    - '&8&l«&7&l&m--------------------&r&8»'
     - ''
-    - '&8&l» &7MAP &8➥ &e{map}'
-    - '&8&l» &7ARENA &8➥ &e{arena}'
+    - '&8» &7MAP &8➥ &e{map}'
+    - '&8» &7ARENA &8➥ &e{arena}'
     - ''
-    - '&8&l» &7MODE &8➥ &e{type}'
-    - '&8&l» &7TEAM SIZE &8➥ &e{team-size}'
+    - '&8» &7MODE &8➥ &e{type}'
+    - '&8» &7TEAM SIZE &8➥ &e{team-size}'
     - ''
-    - '&8&l» &7STATUS &8➥ &e{status}'
+    - '&8» &7STATUS &8➥ &e{status}'
     - ''
-    - '&8&l» &7PLAYERS &8➥ &8(&b{playing}&7/&b{max}&8)'
+    - '&8» &7PLAYERS &8➥ &8(&b{playing}&7/&b{max}&8)'
     - ''
-    - '&8&l» &7&lCLICK TO JOIN'
+    - '&8» &eClick to join.'
     - ''
-    - '&8&l«&7&l&m--------------------&r&8&l»'
+    - '&8&l«&7&l&m--------------------&r&8»'
 
-PARTY-GUI:
-    GUI:
-        MAIN: '&8&l» &7&nParty&r'
-        INVITE-A-PLAYER: '&8&l» &7Invite a player'
-        Background-1: black glass
-        Background-2: air
-    CREATE-PARTY:
-        name: '&8&l» &7&nCreate Party&r'
-        item: TNT
-    PARTY-LIST:
-        name: '&8&l» &7&nParty List&r'
-        item: ender chest
-    PARTY-MEMBERS:
-        name: '&8&l» &7Party Members'
-        item: TNT
-    PARTY-LEADER:
-        name: '&8&l» &7LEADER: {leader}'
-    INVITE-PLAYERS:
-        name: '&8&l» &7Invite Players'
-        item: bowl
-    PARTY-PUBLIC:
-        name: '&8&l» &7&nParty &8- &aPUBLIC'
-        item: green dye
-    PARTY-PRIVATE:
-        name: '&8&l» &7&nParty &8- &cPRIVATE'
-        item: gray dye
-    PARTY-LEAVE:
-        name: '&8&l» &7&nLeave'
-        item: red dye
-    PARTY-INVITED:
-        name: '&8&l» &7Invite list'
-        item: green dye
-    PARTY-INVITE-PLAYER:
-        name: '&8&l» &7Invite player'
-        item: paper
-    MOUSE-HOVER:
-        PARTY-NAME: '&3&l» &7{player}&7''s party.'
-        KICK-PLAYER: '&7&n{player}&r &8» &7Click to kick this player from party.'
-        INVITE-PLAYER: '&7&n{player}&r &8» &7Click to invite this player.'
-        REMOVE-INVITE: '&7&n{player}&r &8» &7Click to remove this invite.'
-        PARTY-MEMBER: '&8» &7&n{player}&r &8«'
-
-SHOP-GUI:
-    GUI: '&8&l» &7Shop'
+Shop:
+    Menu: '&8» &7Shop'
     Trails:
-        name: '&3&l» &7Projectile Trails'
-        item: bow
-        slot: 21
-        lore:
+        Name: '&3&l» &7Projectile Trails'
+        Item: bow
+        Slot: 21
+        Lore:
         - ''
-        - '&8&l» &7Change you projectile'
+        - '&8» &7Change you projectile'
         - '&7particle trail effect.'
         - ''
-        - '&8&l» &7Unlocked &a{bought-Trails}&7/&a{total-Trails}'
+        - '&8» &7Unlocked &a{bought-Trails}&7/&a{total-Trails}'
         - ''
         - '&a&l» &eClick to open.'
     ShopKeepers:
-        name: '&3&l» &7ShopKeepers'
-        item: zombie head
-        slot: 23
-        lore:
+        Name: '&3&l» &7ShopKeepers'
+        Item: zombie head
+        Slot: 23
+        Lore:
         - ''
-        - '&8&l» &7Select from various'
+        - '&8» &7Select from various'
         - '&7ShopKeepers skins, wich'
         - '&7will replace how the'
         - '&7ShopKeepers look in-game'
@@ -116,22 +79,22 @@ SHOP-GUI:
         - '&7player''s choice from '
         - '&7each team is chosen.'
         - ''
-        - '&8&l» &7Unlocked &a{bought-ShopKeepers}&7/&a{total-ShopKeepers}'
+        - '&8» &7Unlocked &a{bought-ShopKeepers}&7/&a{total-ShopKeepers}'
         - ''
         - '&a&l» &eClick to open.'
     Confirm:
-        DENY: '&c&nDeny'
-        ACCEPT: '&a&nAccept'
-        GUI: '&8» &7Confirm Purchase'
+        Deny: '&c&nDeny'
+        Accept: '&a&nAccept'
+        Menu: '&8» &7Confirm Purchase'
 
 STATS:
-    GUI: '&8» &7Stats'
+    Menu: '&8» &7Stats'
     Background: black glass pane
     TOTAL:
-        name: '&aOverall Statistics'
-        item: eye of ender
-        slot: 4
-        lore:
+        Name: '&aOverall Statistics'
+        Item: eye of ender
+        Slot: 4
+        Lore:
         - ''
         - '&7Wins: &a{wins}'
         - '&7Kills: &a{kills}'
@@ -140,10 +103,12 @@ STATS:
         - ''
         - '&7Broken Beds: &a{broken-beds}'
     SOLO:
-        name: '&aSolo Statistics'
-        item: paper
-        slot: 20
-        lore:
+        Name: '&aSolo Statistics'
+        Item: custom player head
+        Id: 826bfe2f-387c-44d7-9cd3-fc3046a6204d
+        Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2U0MWM2MDU3MmM1MzNlOTNjYTQyMTIyODkyOWU1NGQ2Yzg1NjUyOTQ1OTI0OWMyNWMzMmJhMzNhMWIxNTE3In19fQ==
+        Slot: 20
+        Lore:
         - ''
         - '&7Wins: &a{wins}'
         - '&7Kills: &a{kills}'
@@ -152,10 +117,12 @@ STATS:
         - ''
         - '&7Broken Beds: &a{broken-beds}'
     DOUBLES:
-        name: '&aDoubles Statistics'
-        item: paper
-        slot: 22
-        lore:
+        Name: '&aDoubles Statistics'
+        Item: custom player head
+        Id: f7218833-aceb-4d3e-a1bc-a334be09c375
+        Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGNkOWVlZWU4ODM0Njg4ODFkODM4NDhhNDZiZjMwMTI0ODVjMjNmNzU3NTNiOGZiZTg0ODczNDE0MTk4NDcifX19
+        Slot: 22
+        Lore:
         - ''
         - '&7Wins: &a{wins}'
         - '&7Kills: &a{kills}'
@@ -164,10 +131,12 @@ STATS:
         - ''
         - '&7Broken Beds: &a{broken-beds}'
     TRIPLES:
-        name: '&aTriples Statistics'
-        item: paper
-        slot: 24
-        lore:
+        Name: '&aTriples Statistics'
+        Item: custom player head
+        Id: 870c6ce6-78b5-4e09-8745-bd96d616e516
+        Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWQ0ZWFlMTM5MzM4NjBhNmRmNWU4ZTk1NTY5M2I5NWE4YzNiMTVjMzZiOGI1ODc1MzJhYzA5OTZiYzM3ZTUifX19
+        Slot: 24
+        Lore:
         - ''
         - '&7Wins: &a{wins}'
         - '&7Kills: &a{kills}'
@@ -176,10 +145,12 @@ STATS:
         - ''
         - '&7Broken Beds: &a{broken-beds}'
     QUADRUPLES:
-        name: '&aQuadruples Statistics'
-        item: paper
-        slot: 30
-        lore:
+        Name: '&aQuadruples Statistics'
+        Item: custom player head
+        Id: d531b607-3d92-4760-b19f-b64d51da0fa5
+        Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDJlNzhmYjIyNDI0MjMyZGMyN2I4MWZiY2I0N2ZkMjRjMWFjZjc2MDk4NzUzZjJkOWMyODU5ODI4N2RiNSJ9fX0
+        Slot: 30
+        Lore:
         - ''
         - '&7Wins: &a{wins}'
         - '&7Kills: &a{kills}'
@@ -188,10 +159,12 @@ STATS:
         - ''
         - '&7Broken Beds: &a{broken-beds}'
     MEGA:
-        name: '&aMega Statistics'
-        item: paper
-        slot: 32
-        lore:
+        Name: '&aMega Statistics'
+        Item: custom player head
+        Id: 937fb91e-562d-4ab3-b495-3c8b183c38bb
+        Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmFkYzA0OGE3Y2U3OGY3ZGFkNzJhMDdkYTI3ZDg1YzA5MTY4ODFlNTUyMmVlZWQxZTNkYWYyMTdhMzhjMWEifX19
+        Slot: 32
+        Lore:
         - ''
         - '&7Wins: &a{wins}'
         - '&7Kills: &a{kills}'
@@ -200,117 +173,201 @@ STATS:
         - ''
         - '&7Broken Beds: &a{broken-beds}'
 
-SPEC-GUI:
-    name: '&8&l» &7Teleport to'
-    PLAYER-FORMAT: '&3&l» &8[{team}&8] &7{player}'
-    lore:
+Spectator:
+    Menu: '&8» &7Teleport to'
+    NameFormat: '&3» &7({team}&7) &7{player}'
+    Lore:
     - '&3&l» &7&nClick To Teleport'
 
-PLAY:
-    GUI: '&8&l» &7PLAY BEDWARS'
-    MODES:
+Party:
+    Menu:
+        Main: '&8➩ &a&nParty.&r'
+        Members: '&8➩ &a&nParty Members.&r'
+        PartyList: '&8➩ &a&nParty List.&r'
+    Join:
+        Name: '&7❒ &8⬊ &7&nJoin Party.&r &8⬋ &7❒'
+        Item: custom player head
+        Id: 4b853c0b-d0cd-48fc-bc27-3ff98931ce2b
+        Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjYyMjE3ZDkwMmVkYzkyOWRlNGY1MWI5MDcxZjU2YmFhYWMwNDVkMDRlYzA0Yjg0MGNjYzhlYzk5NjJmNjJlMyJ9fX0=
+        Slot: 20
+        Lore:
+        - ''
+        - '&8➩ &aClick to join in a party.'
+    Create:
+        Name: '&7❒ &8⬊ &7&nCreate Party.&r &8⬋ &7❒'
+        Item: custom player head
+        Id: 67303f01-b659-4ce5-8706-b623a16c1db2
+        Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Y3Y2RlZWZjNmQzN2ZlY2FiNjc2YzU4NGJmNjIwODMyYWFhYzg1Mzc1ZTlmY2JmZjI3MzcyNDkyZDY5ZiJ9fX0=
+        Slot: 24
+        Lore:
+        - ''
+        - '&8➩ &aClick to create a party.'
+    Invite:
+        Name: '&7❒ &8⬊ &7&nInvite Player.&r &8⬋ &7❒'
+        Item: custom player head
+        Id: a18f6c08-2311-4f8c-a69c-2563148a74f3
+        Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA1NmJjMTI0NGZjZmY5OTM0NGYxMmFiYTQyYWMyM2ZlZTZlZjZlMzM1MWQyN2QyNzNjMTU3MjUzMWYifX19
+        Slot: 20
+        Lore:
+        - ''
+        - '&8➩ &aClick here to invite a player.'
+    Leave:
+        Name: '&7❒ &8⬊ &7&nLeave/Disband.&r &8⬋ &7❒'
+        Item: iron door
+        Slot: 53
+        Lore:
+        - ''
+        - '&8➩ &aClick leave the party.'
+    Members:
+        Name: '&7❒ &8⬊ &7&nParty Members.&r &8⬋ &7❒'
+        Item: custom player head
+        Id: 4b853c0b-d0cd-48fc-bc27-3ff98931ce2b
+        Value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjYyMjE3ZDkwMmVkYzkyOWRlNGY1MWI5MDcxZjU2YmFhYWMwNDVkMDRlYzA0Yjg0MGNjYzhlYzk5NjJmNjJlMyJ9fX0=
+        Slot: 31
+        Lore:
+        - ''
+        - '&8➩ &aClick to view the party members.'
+    PlayerFormat:
+        Name: '&7❒ &8⬊ &7&n{player}.&r &8⬋ &7❒'
+        Item: player head
+        Lore:
+        - ''
+        - '&8➩ &aClick to view the party members.'
+    PartyListFormat:
+        Name: '&7❒ &8⬊ &7&n{player}.&r &8⬋ &7❒'
+        Item: player head
+        Lore:
+        - ''
+        - '&8➩ &aClick to join this party.'
+    PlayerFormatAsLeader:
+        Name: '&7❒ &8⬊ &7&n{player}.&r &8⬋ &7❒'
+        Item: player head
+        Lore:
+        - ''
+        - '&8➩ &aClick to kick this player.'
+    Leader:
+        Name: '&7❒ &8⬊ &7Leader: &e&n{player}.&r &8⬋ &7❒'
+        Item: player head
+        Slot: 4
+        Lore:
+        - ''
+    Status:
+        Public:
+            Name: '&8❒ &7Status: &aPublic'
+            Item: light green dye
+            Slot: 24
+            Lore:
+            - ''
+            - '&8➩ &7Anyone can join.'
+            - '&8➩ &aClick to change the status to &cPrivate&a.'
+        Private:
+            Name: '&8❒ &7Status: &ePrivate'
+            Item: gray dye
+            Slot: 24
+            Lore:
+            - ''
+            - '&8➩ &7Only invited players can join.'
+            - '&8➩ &aClick to change the status to &bPublic.'
+
+Play:
+    Menu: '&8» &7Play BedWars'
+    Modes:
         SOLO:
-            name: '&7&l➜ &aPLAY SOLO'
-            item: bed item
-            slot: 20
-            lore:
+            Name: '&7&l➜ &aPlay Solo'
+            Item: bed item
+            Slot: 20
+            Lore:
             - ''
-            - '&8&l» &7Curently playing &a{playing}'
+            - '&8» &7Curently playing &a{playing}'
             - ''
-            - '&8&l» &eClick to play in solo mode.'
-            type: PLAY
-            mode: SOLO
+            - '&8» &eClick to play in solo mode.'
+            Type: PLAY
+            Mode: SOLO
         SOLO-MAP-SELECTOR:
-            name: '&7&l➜ &aMAP SELECTOR (SOLO)'
-            item: sign item
-            slot: 21
-            lore:
+            Name: '&7&l➜ &aMap Selector (SOLO)'
+            Item: sign item
+            Slot: 21
+            Lore:
             - ''
-            type: MAP-SELECTOR
-            mode: SOLO
+            Type: MAP-SELECTOR
+            Mode: SOLO
         TEAM:
-            name: '&7&l➜ &aPLAY TEAM'
-            item: bed item
-            slot: 24
-            lore:
+            Name: '&7&l➜ &aPlay Team'
+            Item: bed item
+            Slot: 24
+            Lore:
             - ''
-            - '&8&l» &7Curently playing &a{playing}'
+            - '&8» &7Curently playing &a{playing}'
             - ''
-            - '&8&l» &eClick to play in team mode.'
-            type: PLAY
-            mode: TEAM
+            - '&8» &eClick to play in team mode.'
+            Type: PLAY
+            Mode: TEAM
         TEAM-MAP-SELECTOR:
-            name: '&7&l➜ &aMAP SELECTOR (TEAM)'
-            item: sign item
-            slot: 25
-            lore:
+            Name: '&7&l➜ &aMap Selector (TEAM)'
+            Item: sign item
+            Slot: 25
+            Lore:
             - ''
-            type: MAP-SELECTOR
-            mode: TEAM
+            Type: MAP-SELECTOR
+            Mode: TEAM
         RANDOM:
-            name: '&7&l➜ &aPLAY ANY MODE'
-            item: gray dye
-            slot: 40
-            lore:
+            Name: '&7&l➜ &aPlay Any Mode'
+            Item: gray dye
+            Slot: 40
+            Lore:
             - ''
-            - '&8&l» &7Curently playing &a{playing}'
+            - '&8» &7Curently playing &a{playing}'
             - ''
-            - '&8&l» &eClick to play in a random mode.'
-            type: PLAY
-            mode: RANDOM
-    ARENA-SELECTOR:
-        name: '&7&l➜ &aARENA SELECTOR'
-        item: chest
-        slot: 44
-        lore:
+            - '&8» &eClick to play in a random mode.'
+            Type: PLAY
+            Mode: RANDOM
+    Arena-Browser:
+        Name: '&7&l➜ &aArena Selector'
+        Item: chest
+        Slot: 44
+        Lore:
         - ''
-        - '&8&l» &eClick to open'
-    CLOSE:
-        name: '&7&l➜ &cClose'
-        item: barrier
-        slot: 36
-        lore:
-        - ''
-    SPECIFIED-MODE:
-        GUI: '&8&l» &7BEDWARS'
-        name: '&aBed Wars ({mode})'
-        item: bed item
-        slot: 20
-        lore:
+        - '&8» &eClick to open'
+    Specified-Mode:
+        Menu: '&8» &7BEDWARS'
+        Name: '&aBed Wars ({mode})'
+        Item: bed item
+        Slot: 20
+        Lore:
         - '&aPlay Bed Wars {mode}'
-    SPECIFIED-MODE-MAP-SELECTOR:
-        name: '&7&l➜ &aMAP SELECTOR ({mode})'
-        item: sign item
-        slot: 24
-        lore:
+    Specified-Mode-Map-Selector:
+        Name: '&7&l➜ &aMap Selector ({mode})'
+        Item: sign item
+        Slot: 24
+        Lore:
         - '&a'
 
-TEAM-SELECTOR:
-    GUI: '&8&l» &7TEAM SELECTOR'
+Team-Selector:
+    Menu: '&8» &7TEAM SELECTOR'
     Background: light green glass
-    name: '&3&l» &7{team} &7TEAM &8(&e{team-size}&7/&e{max-team-size}&8)'
-    PLAYER-SLOT: '&e» &3{player}'
-    EMPTY-SLOT: '&8» &8[EMPTY SLOT]'
-    JOIN-TEAM: '&c&l» &7Click to join in this team.'
+    Format: '&3&l» &7{team} &7TEAM &8(&e{team-size}&7/&e{max-team-size}&8)'
+    PlayerFormat: '&e» &3{player}'
+    EmptySlot: '&8» &8[EMPTY SLOT]'
+    Join: '&c&l» &7Click to join in this team.'
 
-GAME-COMPASS:
-    GUI:
-        SOLO: '&8&l» &7TRACKER'
-        TEAM: '&8&l» &7TRACKER AND COMUNICATION'
-    SELECT-OPTION: '&8&l» &7SELECT OPTION'
+Game-Compass:
+    Menu:
+        Solo: '&8» &7Tracker'
+        Team: '&8» &7Tracker and Comunication'
+    Select-Option: '&8» &7Select Option'
     Comunications:
-        name: '&8Quick Comunications'
-        item: emerald
-        lore:
+        Name: '&8Quick Comunications'
+        Item: emerald
+        Lore:
         - ''
         - '&7Send Hightlighted chat'
         - '&7messages to your teammates!'
         - ''
         - '&eClick to open'
-    TRACKER:
-        name: '&8Purchase Enemy Tracker'
-        item: compass
-        lore:
+    Tracker:
+        Name: '&8Purchase Enemy Tracker'
+        Item: compass
+        Lore:
         - ''
         - '&7Purchase tracking upgrade'
         - '&7for your compass wich will'
@@ -322,112 +379,112 @@ GAME-COMPASS:
 
 Comunications:
     hello:
-        name: '&aHello (｡◕‿◕｡)/'
-        item: book
-        slot: 11
-        lore:
+        Name: '&aHello (｡◕‿◕｡)/'
+        Item: book
+        Slot: 11
+        Lore:
         - ''
         - '&eClick to send!'
-        msg: '&aHello (｡◕‿◕｡)/'
-        type: Comunications
+        Msg: '&aHello (｡◕‿◕｡)/'
+        Type: Comunications
     back-to-base:
-        name: '&aI''m coming back to base!'
-        item: book
-        slot: 12
-        lore:
+        Name: '&aI''m coming back to base!'
+        Item: book
+        Slot: 12
+        Lore:
         - ''
         - '&eClick to send!'
-        msg: '&aI''m coming back to base!'
-        type: Comunications
+        Msg: '&aI''m coming back to base!'
+        Type: Comunications
     im-defending:
-        name: '&aI''m defending'
-        item: iron bars
-        slot: 13
-        lore:
+        Name: '&aI''m defending'
+        Item: iron bars
+        Slot: 13
+        Lore:
         - ''
         - '&eClick to send!'
-        msg: '&aI''m defending'
-        type: Comunications
+        Msg: '&aI''m defending'
+        Type: Comunications
     thanks:
-        name: '&aThank You!'
-        item: book
-        slot: 20
-        lore:
+        Name: '&aThank You!'
+        Item: book
+        Slot: 20
+        Lore:
         - ''
         - '&eClick to send!'
-        msg: '&aThank You!'
-        type: Comunications
+        Msg: '&aThank You!'
+        Type: Comunications
     get-back-to-base:
-        name: '&aGet back to base!'
-        item: book
-        slot: 21
-        lore:
+        Name: '&aGet back to base!'
+        Item: book
+        Slot: 21
+        Lore:
         - ''
         - '&eClick to send!'
-        msg: '&aGet back to base!'
-        type: Comunications
+        Msg: '&aGet back to base!'
+        Type: Comunications
     defend:
-        name: '&aPlease defend!'
-        item: iron bars
-        slot: 22
-        lore:
+        Name: '&aPlease defend!'
+        Item: iron bars
+        Slot: 22
+        Lore:
         - ''
         - '&eClick to send!'
-        msg: '&aPlease defend!'
-        type: Comunications
+        Msg: '&aPlease defend!'
+        Type: Comunications
     im-attacking:
-        name: '&aI''m attacking'
-        item: iron sword
-        slot: 14
-        lore:
+        Name: '&aI''m attacking'
+        Item: iron sword
+        Slot: 14
+        Lore:
         - '&7You will be able to select'
         - '&7the Team'
         - '&eClick to send!'
-        msg: '&aI''m attacking {team}'
-        type: team
+        Msg: '&aI''m attacking {team}'
+        Type: Team
     lets-attack:
-        name: '&aLet''s attack!'
-        item: iron sword
-        slot: 23
-        lore:
+        Name: '&aLet''s attack!'
+        Item: iron sword
+        Slot: 23
+        Lore:
         - '&7You will be able to select'
         - '&7the Team'
         - '&eClick to send!'
-        msg: '&aLet''s attack {team}'
-        type: team
+        Msg: '&aLet''s attack {team}'
+        Type: Team
     collecting-resources:
-        name: '&aI''m collecting resources!'
-        item: diamond
-        slot: 15
-        lore:
+        Name: '&aI''m collecting resources!'
+        Item: diamond
+        Slot: 15
+        Lore:
         - '&7You will be able to select'
         - '&7the Resource'
         - '&eClick to send!'
-        msg: '&aI''m collecting {resource}'
-        type: resources
+        Msg: '&aI''m collecting {resource}'
+        Type: Resources
     have-resources:
-        name: '&aI have resources!'
-        item: chest
-        slot: 16
-        lore:
+        Name: '&aI have resources!'
+        Item: chest
+        Slot: 16
+        Lore:
         - '&7You will be able to select'
         - '&7the Resource'
         - '&eClick to send!'
-        msg: '&aI have {resource}'
-        type: resources
+        Msg: '&aI have {resource}'
+        Type: Resources
     need-resources:
-        name: '&aWe need resources!'
-        item: diamond
-        slot: 24
-        lore:
+        Name: '&aWe need resources!'
+        Item: diamond
+        Slot: 24
+        Lore:
         - '&7You will be able to select'
         - '&7the Resource'
         - '&eClick to send!'
-        msg: '&aWe need {resource}'
-        type: resources
-    Track-team:
-        name: '&cTrack Team {team}'
-        lore:
+        Msg: '&aWe need {resource}'
+        Type: Resources
+    Track-Team:
+        Name: '&cTrack Team {team}'
+        Lore:
         - '&7Purchase tracking upgrade'
         - '&7for your compass which will'
         - '&7track each player on a'
@@ -436,68 +493,68 @@ Comunications:
         - ''
         - '&7Cost: &22 Emeralds'
     Back:
-        name: '&aGo back'
-        lore:
+        Name: '&aGo back'
+        Lore:
         - '&7To Tracker & Comunication'
 
 Spectator-Settings:
-    GUI: '&8&l» &7&lSpectator Settings'
+    Menu: '&8» &7&lSpectator Settings'
     Speed:
         '0':
-            name: '&a&nNo Speed'
-            item: leather boots
-            slot: 11
-            lore:
+            Name: '&a&nNo Speed'
+            Item: leather boots
+            Slot: 11
+            Lore:
             - ''
         '1':
-            name: '&a&nSpeed I'
-            item: chain boots
-            slot: 12
-            lore:
+            Name: '&a&nSpeed I'
+            Item: chain boots
+            Slot: 12
+            Lore:
             - ''
         '2':
-            name: '&a&nSpeed II'
-            item: iron boots
-            slot: 13
-            lore:
+            Name: '&a&nSpeed II'
+            Item: iron boots
+            Slot: 13
+            Lore:
             - ''
         '3':
-            name: '&a&nSpeed III'
-            item: gold boots
-            slot: 14
-            lore:
+            Name: '&a&nSpeed III'
+            Item: gold boots
+            Slot: 14
+            Lore:
             - ''
         '4':
-            name: '&a&nSpeed IV'
-            item: diamond boots
-            slot: 15
-            lore:
+            Name: '&a&nSpeed IV'
+            Item: diamond boots
+            Slot: 15
+            Lore:
             - ''
     Night-Vision:
         'ON':
-            name: '&a&nEnable Night Vision'
-            item: eye of ender
-            slot: 22
-            lore:
+            Name: '&a&nEnable Night Vision'
+            Item: eye of ender
+            Slot: 22
+            Lore:
             - '&7Click to enable night vision!'
         'OFF':
-            name: '&c&nDisable Night Vision'
-            item: ender pearl
-            slot: 22
-            lore:
+            Name: '&c&nDisable Night Vision'
+            Item: ender pearl
+            Slot: 22
+            Lore:
             - '&7Click to disable night vision!'
 
-CONFIRM-LEAVE:
-    GUI: '&8&l» &7&nCONFIRM LEAVE'
-    ACCEPT:
-        name: '&8➥ &a&nAccept'
-        item: green clay
-        slot: 3
-        lore:
+Confirm-Leave:
+    Menu: '&8» &7&nCONFIRM LEAVE'
+    Accept:
+        Name: '&8➥ &a&nAccept'
+        Item: green clay
+        Slot: 3
+        Lore:
         - ''
-    DENY:
-        name: '&8➥ &c&nCancel'
-        item: red clay
-        slot: 5
-        lore:
+    Deny:
+        Name: '&8➥ &c&nCancel'
+        Item: red clay
+        Slot: 5
+        Lore:
         - ''
