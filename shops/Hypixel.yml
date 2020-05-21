@@ -230,6 +230,7 @@ Shop:
                     - ''
                     Currency: gold ingot
                     Cost: 4
+                    NoTag: true
                     Items:
                     - 16 Oak Planks
                 Iron Sword:
@@ -477,6 +478,7 @@ Shop:
                     - ''
                     Currency: iron ingot
                     Cost: 4
+                    NoTag: true
                     Items:
                     - 16 {team} wool block
                 Hardened Clay:
@@ -494,6 +496,7 @@ Shop:
                     - ''
                     Currency: iron ingot
                     Cost: 12
+                    NoTag: true
                     Items:
                     - 16 Hardened Clay
                 Glass:
@@ -511,6 +514,7 @@ Shop:
                     - ''
                     Currency: iron ingot
                     Cost: 12
+                    NoTag: true
                     Items:
                     - 4 {team} glass block
                 End Stone:
@@ -528,6 +532,7 @@ Shop:
                     - ''
                     Currency: iron ingot
                     Cost: 24
+                    NoTag: true
                     Items:
                     - 12 End Stone
                 Ladder:
@@ -545,6 +550,7 @@ Shop:
                     - ''
                     Currency: iron ingot
                     Cost: 4
+                    NoTag: true
                     Items:
                     - 16 Ladder
                 Oak Planks:
@@ -563,6 +569,7 @@ Shop:
                     - ''
                     Currency: gold ingot
                     Cost: 4
+                    NoTag: true
                     Items:
                     - 16 Oak Planks
                 Obsidian:
@@ -581,6 +588,7 @@ Shop:
                     - ''
                     Currency: emerald
                     Cost: 4
+                    NoTag: true
                     Items:
                     - 16 Obsidian
         Meele:
