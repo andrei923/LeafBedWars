@@ -418,7 +418,7 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 			if arg-1 is "createtopholo":
 				if arg-2 is "coins" or "level" or "xp" or "wins" or "kills" or "deaths" or "final-kills" or "broken-beds":
 					set {_size} to size of yaml nodes with keys "Holograms2" from "bw.data"
-					set yaml value "Holograms2.%{_size}%.type" from "bw.data" to arg-2			
+					set yaml value "Holograms2.%{_size}%.Type" from "bw.data" to arg-2			
 					set yaml value "Holograms2.%{_size}%.location" from "bw.data" to location of player
 					send "&6&lBW &8- &cSETUP &e&l» &7Created leaderboards hologram with id &a%{_size}%!"
 					save yaml "bw.data"
