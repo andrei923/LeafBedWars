@@ -125,10 +125,19 @@ Messages:
         Left: '&7{player} &ehas quit!'
         Invite: '&7{player} &eInvited you to his party.'
         Private: '&c&nThis party is private!'
+    Plugin:
+        Loading: '&c&nBedWars loading...'
+        Loaded:
+            Config: '&aConfig loaded!'
+            Plugin: '&aPlugin loaded!'
+        Reloading:
+            BedWars: '&aReloading Bedwars....'
+            Modules: '&aReloading Bedwars Modules....'
+    Loading Stats: '&aLoading your stats...'
 
 Scoreboard:
     LOBBY:
-        Title: '&e&lBEDWARS'
+        Title: '&7☁ &6BEDWARS &7☁'
         Lines:
         - '&7{time}'
         - ''
@@ -144,9 +153,9 @@ Scoreboard:
         - ''
         - '&6&l➩ &7ONLINE: &6{online}'
         - ''
-        - '&b&lMC-MARKET.ORG'
+        - '&7❒ &b&nMC-MARKET.ORG&r &7❒'
     WAITING:
-        Title: '&e&lBEDWARS'
+        Title: '&7☁ &6BEDWARS &7☁'
         MODE:
             SOLO: SOLO
             DOUBLES: DOUBLES
@@ -166,9 +175,9 @@ Scoreboard:
         - '&fMode: &a{mode}'
         - '&fArena: &a{arena}'
         - ''
-        - '&b&lMC-MARKET.ORG'
+        - '&7❒ &b&nMC-MARKET.ORG&r &7❒'
     GAME:
-        Title: '&e&lBEDWARS'
+        Title: '&7☁ &6BEDWARS &7☁'
         You: (&7You)
         Bed-Not-Broken-Symbol: '&a✔'
         Team-Eliminated-Symbol: '&c✘'
@@ -185,7 +194,7 @@ Scoreboard:
         - '&a▪ &fFinal Kills: &a{final-kills}'
         - '&a▪ &fBeds Broken: &a{broken-beds}'
         - ''
-        - '&b&lMC-MARKET.ORG'
+        - '&7❒ &b&nMC-MARKET.ORG&r &7❒'
         Teams-3:
         - '&7{time}'
         - ''
@@ -200,7 +209,7 @@ Scoreboard:
         - '&a▪ &fFinal Kills: &a{final-kills}'
         - '&a▪ &fBeds Broken: &a{broken-beds}'
         - ''
-        - '&b&lMC-MARKET.ORG'
+        - '&7❒ &b&nMC-MARKET.ORG&r &7❒'
         Teams-4:
         - '&7{time}'
         - ''
@@ -216,7 +225,7 @@ Scoreboard:
         - '&a▪ &fFinal Kills: &a{final-kills}'
         - '&a▪ &fBeds Broken: &a{broken-beds}'
         - ''
-        - '&b&lMC-MARKET.ORG'
+        - '&7❒ &b&nMC-MARKET.ORG&r &7❒'
         Teams-5:
         - '&7{time}'
         - ''
@@ -232,7 +241,7 @@ Scoreboard:
         - '&a▪ &fKills: &a{kills}'
         - '&a▪ &fFinal Kills: &a{final-kills}'
         - ''
-        - '&b&lMC-MARKET.ORG'
+        - '&7❒ &b&nMC-MARKET.ORG&r &7❒'
         Teams-6:
         - '&7{time}'
         - ''
@@ -248,7 +257,7 @@ Scoreboard:
         - ''
         - '&a▪ &fKills: &a{kills}'
         - ''
-        - '&b&lMC-MARKET.ORG'
+        - '&7❒ &b&nMC-MARKET.ORG&r &7❒'
         Teams-7:
         - '&7{time}'
         - ''
@@ -263,7 +272,7 @@ Scoreboard:
         - '{team-slot-6}'
         - '{team-slot-7}'
         - ''
-        - '&b&lMC-MARKET.ORG'
+        - '&7❒ &b&nMC-MARKET.ORG&r &7❒'
         Teams-8:
         - '&7{time}'
         - ''
@@ -279,7 +288,7 @@ Scoreboard:
         - '{team-slot-7}'
         - '{team-slot-8}'
         - ''
-        - '&b&lMC-MARKET.ORG'
+        - '&7❒ &b&nMC-MARKET.ORG&r &7❒'
 
 Titles:
     Join-Lobby:

@@ -254,24 +254,24 @@ Sounds:
         Pitch: 1.0
         Volume: 1.0
 
-Afk:
-    Enabled: false
-    Time: 45
-    Notify: true
-    Punishments:
-        No-Pickup: true
-        Send-To-Lobby: false
-        Command: ''
-
-PlayTime:
-    Time: 45
-    Xp: 25
-    Coins: 9
-
-Leaderboards:
-    EMPTY-PLACE-REPLACE: Loading...
-    Type: SKULLS
-    SMALL-ARMOR-STAND: true
+Settings:
+    Afk:
+        Enabled: false
+        Time: 45
+        Notify: true
+        Punishments:
+            No-Pickup: true
+            Send-To-Lobby: false
+            Command: ''
+    PlayTime:
+        Time: 45
+        Xp: 25
+        Coins: 9
+    Leaderboards:
+        Type: SKULLS
+        EMPTY-PLACE-REPLACE: Loading...
+        SMALL-ARMOR-STAND: true
+        DisableStatsNpcSkin: false
 
 Generator-Settings:
     EMERALD:
