@@ -276,9 +276,9 @@ Settings:
 Generator-Settings:
     EMERALD:
         Time:
-            Tier-I: 30
-            Tier-II: 23
-            Tier-III: 13
+            Tier-I: 60
+            Tier-II: 40
+            Tier-III: 20
         Amount:
             Tier-I: 1
             Tier-II: 1
