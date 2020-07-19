@@ -286,19 +286,17 @@ Generator-Settings:
         Max-Items: 30
     DIAMOND:
         Time:
-            Tier-I: 30
-            Tier-II: 23
-            Tier-III: 13
+            Tier-I: 60
+            Tier-II: 40
+            Tier-III: 20
         Amount:
             Tier-I: 1
             Tier-II: 1
             Tier-III: 1
         Max-Items: 30
-    Insland:
-        Time:
-            Default: 2
     Island:
         Time:
+            Default: 2
             Tier-1: 1.5
             Tier-2: 1.1
             Tier-3: 0.8
@@ -307,9 +305,9 @@ Generator-Settings:
             EMERALD: 10
             GOLD: 30
             IRON: 50
-    ISLAND:
-        AMOUNT:
+        Amount:
             GOLD: 1
             EMERALD: 1
             IRON: 1
+    ISLAND:
         SHORT-TIME-WITH-FOR-EVERY-TEAM-MEMBER: 0.1
