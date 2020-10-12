@@ -119,8 +119,10 @@ Shop:
                     - ''
                     - '&7Great for bridging across'
                     - '&7islands.Turns into your team''s color.'
+                    - ''                    
                     Currency: iron ingot
                     Cost: 4
+                    NoTag: true
                     Items:
                     - 16 {team} wool block
                 Stone Sword:
