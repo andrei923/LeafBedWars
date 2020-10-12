@@ -1,23 +1,11 @@
-on join:
-	if yaml value "MySQL.enabled" from "bw.config" is true:
-		bw_stats("check", player, "null", 0)	
 
 on papi placeholder request with the prefix "LeafBedWars":
-	bw_stats("check", player, "null", 0)
-	yaml "bw.player.data.%uuid of player%" is not loaded:
-		load yaml "plugins/LeafBedWars/playerdata/%uuid of player%.yml" as "bw.player.data.%uuid of player%"
-		set {_loaded} to true
-	loop "kills", "deaths", "broken-beds", "wins" and "final-kills":	
-		identifier is "%loop-value%"
-		set {_stats} to yaml value "STATS.TOTAL.%loop-value%" from "bw.player.data.%uuid of player%"
-		set the result to "%{_stats}%"	
-	loop "coins", "level", "xp-need" and "xp":	
-		identifier is "%loop-value%"
-		set {_stats} to yaml value "STATS.%loop-value%" from "bw.player.data.%uuid of player%"
-		set the result to "%{_stats}%"	
-	if {_loaded} is true:
-		{bw::player::%player%::state} is not set
-		unload yaml "bw.player.data.%uuid of player%"
+	loop "kills", "deaths", "broken-beds", "wins", "final-kills", "coins", "level", "xp-need" and "xp":	
+		identifier is "%loop-value-1%"
+		if {-bw::player::stats::%player%::%loop-value-1%} is set:
+			set the result to "%{-bw::player::stats::%player%::%loop-value-1%}%"
+		else:
+			set the result to "0"
 
 on load:
 	broadcast "%yaml value ""Messages.Prefix"" from ""bw.language""%&aPlaceholderAPI module loaded."
