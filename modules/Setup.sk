@@ -173,7 +173,7 @@ function bw_setup_menu(p: player, menu: text):
 					else:
 						set {_item} to {-bw::cache::bed::engine} named "&aSET BED FOR TEAM %{_display-name}% &8(&7STAY ON IT&8) &8- &8[&c✘&8] &cNot set."
 					make a gui slot {_bed-slot} of {_p} with {_item} to run:
-						delete yaml yaml value "TEAMS.%{_team}%.BED" from "bw.arena.%{_arena}%"
+						delete yaml value "TEAMS.%{_team}%.BED" from "bw.arena.%{_arena}%"
 						yaml value "Misc.Game Block" from "bw.config" contains "bed":
 							loop "HEAD" and "FOOT":
 								set yaml value "TEAMS.%{_team}%.BED.%loop-value-2%.location" from "bw.arena.%{_arena}%" to bw_setupGetBedData(location of {_p}, "%loop-value-2%")
@@ -381,9 +381,9 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 												bw_waiting_lobby("save", {_arena}, {_arena})	
 												add {_arena} to {-bw::arenas::*}
 											else:
-												send "{@prefix} &cYou not have enough teams!"													
+												send "{@prefix} &cYou have to set the number of players in a team!"													
 										else:
-											send "{@prefix} &cYou have to set the number of players in a team!"																							
+											send "{@prefix} &cYou not have enough teams!"											
 									else:
 										send "{@prefix} &cYou must set arena lobby!"												
 								else:
