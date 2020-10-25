@@ -178,6 +178,7 @@ Misc:
     Tracking Action-bar: '{team} {target} &7{distance}&7m'
     Game Block: bed
     Heal Pool Particles: true
+    Island Generator Particles: true
     Fireball:
         Speed: 1
         Damage: 4
@@ -269,8 +270,8 @@ Settings:
         Coins: 9
     Leaderboards:
         Type: SKULLS
-        EMPTY-PLACE-REPLACE: Loading...
-        SMALL-ARMOR-STAND: true
+        EmptyPlaceReplace: Loading...
+        SmallArmorStand: true
         DisableStatsNpcSkin: false
 
 Generator-Settings:
@@ -296,11 +297,11 @@ Generator-Settings:
         Max-Items: 30
     Island:
         Time:
-            Default: 2
-            Tier-1: 1.5
-            Tier-2: 1.1
-            Tier-3: 0.8
-            Tier-4: 0.7
+            Default: 3
+            Tier-1: 2
+            Tier-2: 1.5
+            Tier-3: 1
+            Tier-4: 0.8
         Max-Items:
             EMERALD: 10
             GOLD: 30
@@ -309,5 +310,3 @@ Generator-Settings:
             GOLD: 1
             EMERALD: 1
             IRON: 1
-    ISLAND:
-        SHORT-TIME-WITH-FOR-EVERY-TEAM-MEMBER: 0.1

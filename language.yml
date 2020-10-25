@@ -62,10 +62,10 @@ Messages:
     Arena Restarting: '&cThis arena is currently being restarted!'
     Only Placed By Players: '&7You can only break blocks placed by players.'
     Not Now: '&7You cannot do this right now.'
-    Forced Start: '&7{player} &7FORCED ARENA TO START&c!'
+    Forced Start: '&7{player} &7cForced arena to start with his almighty powers!'
     Purchased-Item: '&aYou purchased &6{item}'
     Cannot Place Blocks: '&cYou cannot place blocks here.'
-    All Beds Destroyed: '&c&lAll beds have been destroyed!'
+    All Beds Destroyed: '&cAll beds have been destroyed!'
     Not Enough Resources: '&cYou don''t have enough {item} &cNeed {amount} &cmore!'
     Shout Cooldown: '&cYou have to wait {cooldown} &cseconds to use this again.'
     Break Bed:
@@ -134,6 +134,14 @@ Messages:
             BedWars: '&aReloading Bedwars....'
             Modules: '&aReloading Bedwars Modules....'
     Loading Stats: '&aLoading your stats...'
+
+Misc:
+    ModeName:
+        SOLO: '&aSOLO'
+        DOUBLES: '&aDOUBLES'
+        TRIPLES: '&aTRIPLES'
+        QUADRUPLES: '&aQUADRUPLES'
+        MEGA: '&aMEGA'
 
 Scoreboard:
     LOBBY:
@@ -330,10 +338,6 @@ Titles:
     Death:
         Title: '&cYOU DIED!'
         Subtitle: '&eYou will respawn in &c{seconds} &eseconds!'
-    Invite-Player:
-        Duration: 30
-        FadeIn: 10
-        FadeOut: 10
 
 Teams:
     Name:
