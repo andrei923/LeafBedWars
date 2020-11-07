@@ -543,7 +543,7 @@ Shop:
                         Menu: '&8&l» {check} Ladder'
                         Msg: '&aLadder'
                     Slot: 23
-                    Display: 16 Ladder
+                    Display: 16 Ladder Item
                     Lore:
                     - ''
                     - '&7Cost: &f{cost} IRON'
@@ -554,7 +554,7 @@ Shop:
                     Cost: 4
                     NoTag: true
                     Items:
-                    - 16 Ladder
+                    - 16 Ladder Item
                 Oak Planks:
                     Type: Item
                     Name:
@@ -904,7 +904,6 @@ Shop:
                             Name:
                                 Menu: '&8&l» {check} Wooden Pickaxe (Efficiency I)'
                                 Msg: '&aWooden Pickaxe (Efficiency I)'
-                            Permanent: true
                             Slot: 20
                             Display: wood pickaxe
                             Lore:
@@ -930,7 +929,6 @@ Shop:
                             Name:
                                 Menu: '&8&l» {check} Iron Pickaxe (Efficiency II)'
                                 Msg: '&aIron Pickaxe (Efficiency II)'
-                            Permanent: true
                             Slot: 20
                             Display: iron pickaxe
                             Lore:
@@ -959,7 +957,6 @@ Shop:
                                 Menu: '&8&l» {check} Gold Pickaxe (Efficiency III,
                                     Sharpness II)'
                                 Msg: '&aGold Pickaxe (Efficiency III, Sharpness II)'
-                            Permanent: true
                             Slot: 20
                             Display: gold pickaxe
                             Lore:
@@ -988,7 +985,6 @@ Shop:
                             Name:
                                 Menu: '&8&l» {check} Diamond Pickaxe (Efficiency IV)'
                                 Msg: '&aDiamond Pickaxe (Efficiency IV)'
-                            Permanent: true
                             Slot: 20
                             Display: diamond pickaxe
                             Lore:
@@ -1018,7 +1014,6 @@ Shop:
                             Name:
                                 Menu: '&8&l» {check} Diamond Pickaxe &a(MAXED)'
                                 Msg: '&aDiamond Pickaxe &a(MAXED)'
-                            Permanent: true
                             Slot: 20
                             Display: diamond pickaxe
                             Lore:
@@ -1052,7 +1047,6 @@ Shop:
                             Name:
                                 Menu: '&8&l» {check} Wood Axe (Efficiency I)'
                                 Msg: '&aWood Axe (Efficiency I)'
-                            Permanent: true
                             Slot: 21
                             Display: wood axe
                             Lore:
@@ -1078,7 +1072,6 @@ Shop:
                             Name:
                                 Menu: '&8&l» {check} Stone Axe (Efficiency II)'
                                 Msg: '&aStone Axe (Efficiency II)'
-                            Permanent: true
                             Slot: 21
                             Display: stone axe
                             Lore:
@@ -1106,7 +1099,6 @@ Shop:
                             Name:
                                 Menu: '&8&l» {check} Iron Axe (Efficiency II)'
                                 Msg: '&aIron Axe (Efficiency II)'
-                            Permanent: true
                             Slot: 21
                             Display: iron axe
                             Lore:
@@ -1133,9 +1125,8 @@ Shop:
                         '4':
                             Type: Item
                             Name:
-                                Menu: '&8&l» {check} Diamond Axe (Efficiency II)'
-                                Msg: '&aDiamond Axe (Efficiency II)'
-                            Permanent: true
+                                Menu: '&8&l» {check} Diamond Axe (Efficiency II) &a(MAXED)'
+                                Msg: '&aDiamond Axe (Efficiency II) (MAXED)'
                             Slot: 21
                             Display: diamond axe
                             Lore:
@@ -1159,38 +1150,7 @@ Shop:
                             - stone axe of efficiency 1
                             - iron axe of efficiency 2
                             Prevent-Buy-If-Player-Has:  
-                            - diamond axe of efficiency 2                                                     
-                        '5':
-                            Type: Item
-                            Name:
-                                Menu: '&8&l» {check} Diamond Axe (Efficiency II) &a(MAXED)'
-                                Msg: '&aDiamond Axe (Efficiency II) (MAXED)'
-                            Permanent: true
-                            Slot: 21
-                            Display: diamond axe
-                            Lore:
-                            - ''
-                            - '&7Cost: &6{cost} GOLD'
-                            - ''
-                            - '&7Tier: &e&lV'
-                            - ''
-                            - '&7This is an Upgradable Item.'
-                            - '&7It will lose 1 tier upon death!'
-                            - ''
-                            - '&7You will Permanently'
-                            - '&7respawn with at least lowest tier'
-                            - ''
-                            Currency: gold ingot
-                            Cost: 6
-                            Items:
-                            - diamond axe of efficiency 2
-                            Remove-Items:
-                            - wood axe of efficiency 1
-                            - stone axe of efficiency 1
-                            - stone axe of efficiency 2
-                            - iron axe of efficiency 2
-                            Prevent-Buy-If-Player-Has: 
-                            - diamond axe of efficiency 2                                                      
+                            - diamond axe of efficiency 2                                                                                                         
         Armor:
             Type: Category
             Menu: '&8&l» &bARMOR'
