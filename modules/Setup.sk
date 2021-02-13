@@ -249,8 +249,7 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 			if arg-1 is "help":	
 				send "&8«&7&l&m-------&8[ {@prefix} &8]&7&l&m-------&r&8»"				
 				send "&7&l➜ &a/bwsetup setlobby"	
-				send "&7&l➜ &a/bwsetup setnpc &8(play, stats, shop, shopkeeper or trails&8)"					
-				send "&7&l➜ &a/bwsetup setplaynpc &8(&7mode&8)"							
+				send "&7&l➜ &a/bwsetup setnpc &8(play, stats, shop, shopkeeper or trails&8)"										
 				send "&7&l➜ &a/bwsetup createArena &8(&7arena_name&8) &8(&7map_name - &7optional&8)"
 				send "&7&l➜ &a/bwsetup deleteArena &8(&7arena_name&8)"			
 				send "&7&l➜ &a/bwsetup saveArena &8(&7arena_name&8)"			
