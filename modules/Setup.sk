@@ -249,7 +249,7 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 			if arg-1 is "help":	
 				send "&8«&7&l&m-------&8[ {@prefix} &8]&7&l&m-------&r&8»"				
 				send "&7&l➜ &a/bwsetup setlobby"	
-				send "&7&l➜ &a/bwsetup setnpc &8(play, stats, shop, shopkeeper or trails&8)"										
+				send "&7&l➜ &a/bwsetup setnpc &8(play, stats, shop, shopkeepers or arrowtrails&8)"										
 				send "&7&l➜ &a/bwsetup createArena &8(&7arena_name&8) &8(&7map_name - &7optional&8)"
 				send "&7&l➜ &a/bwsetup deleteArena &8(&7arena_name&8)"			
 				send "&7&l➜ &a/bwsetup saveArena &8(&7arena_name&8)"			
@@ -400,10 +400,11 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 				send "&6&lBW &8- &cSETUP &e&l» &7Setted the &aLobby &7to your current location!"
 				save yaml "bw.data"	
 			if arg-1 is "setnpc":
-				if arg-2 is "stats" or "shop" or "trails" or "shopkeeper":
+				if arg-2 is "stats" or "shop" or "arrowtrails" or "shopkeepers":
 					set yaml value "Npcs.Lobby.%arg-2 in upper case%.Location" from "bw.data" to location of player
 					send "&6&lBW &8- &cSETUP &e&l» &7Setted the &b%arg-2 in upper case% &aNpc &7to your current location!"
 					save yaml "bw.data"	
+					stop
 				if arg-2 is "play":	
 					if arg-3 is "SOLO" or "DOUBLES" or "TRIPLES" or "QUADRUPLES" or "MEGA":
 						set yaml value "Npcs.Lobby.%arg-3 in upper case%.Location" from "bw.data" to location of player
@@ -413,7 +414,7 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 					else:
 						send "&6&lBW &8- &cSETUP &e&l» &7Please specify mode: solo, doubles, triples, quadruples or mega."				
 				else:
-					send "&6&lBW &8- &cSETUP &e&l» &7Please specify type: play, stats, trails or shopkeeper!"														
+					send "&6&lBW &8- &cSETUP &e&l» &7Please specify type: play, stats, arrowtrails or shopkeepers!"														
 			if arg-1 is "createtopholo":
 				if arg-2 is "coins" or "level" or "xp" or "wins" or "kills" or "deaths" or "final-kills" or "broken-beds":
 					set {_size} to size of yaml nodes with keys "Holograms2" from "bw.data"
