@@ -36,20 +36,20 @@ function bw_setup_menu(p: player, menu: text):
 	if {_p} has permission "leafbw.setup":
 		set {_arena} to metadata value "BW-SETUP" of {_p}
 		{_menu} is "ARENA-SETTING":	
-			open chest inventory with 5 rows named "&8» &3ARENA SETTINGS" to {_p}
+			open chest inventory with 5 rows named "&8» &3Arena Settings" to {_p}
 			wait a tick
 			#MIN TEAMS CHECK	
 			if yaml value "MIN-TEAMS" from "bw.arena.%{_arena}%" is set:
 				set {_check} to "&8[&a✔&8] &aDone."
 			else:
 				set {_check} to "&8[&c✘&8] &cNot set."
-			make a gui slot 12 of {_p} with player head named {_check} with leaf lore "&3&l» &7&nClick to set minimum players to start arena." to run:	
+			make a gui slot 12 of {_p} with player head named {_check} with leaf lore "&3➥ &7&nClick to set minimum players to start arena." to run:	
 				set {_slot} to -1
-				open chest inventory with 1 rows named "&8» &7SET MIN" to {_p}
+				open chest inventory with 1 rows named "&8» &7Set Minimum Teams." to {_p}
 				wait a tick
 				loop 8 times:
 					set {_int} to loop-value-1
-					make a gui slot {_slot} of {_p} with loop-number of player head named "&3&l» &7&nClick to set minimum teams to &c- &8(&b%{_int}%&8)" to run:
+					make a gui slot {_slot} of {_p} with loop-number of player head named "&3➥ &7&nClick to set minimum teams to &c- &8(&b%{_int}%&8)" to run:
 						set yaml value "MIN-TEAMS" from "bw.arena.%{_arena}%" to {_int}
 						send "{@prefix} &7Setted the &aminimun teams &7to &a%{_int}%&7!" to {_p}
 						bw_setup_menu(player, "ARENA-SETTING")
@@ -58,13 +58,13 @@ function bw_setup_menu(p: player, menu: text):
 				set {_check} to "&8[&a✔&8] &aDone."
 			else:
 				set {_check} to "&8[&c✘&8] &cNot set."			
-			make a gui slot 14 of {_p} with player head named {_check} with leaf lore "&3&l» &7&nClick to set the number of players in team &8(&aSET 1 FOR SOLO MODE&8)." to run:		
+			make a gui slot 14 of {_p} with player head named {_check} with leaf lore "&3➥ &7&nClick to set the number of players in team &8(&aSET 1 FOR SOLO MODE&8)." to run:		
 				set {_slot} to 0	
-				open chest inventory with 6 rows named "&8» &7Players per team" to {_p}
+				open chest inventory with 6 rows named "&8» &7Set Number of Players In a Team" to {_p}
 				wait 2 ticks
 				loop 54 times:
 					set {_int} to loop-value-1
-					make a gui slot {_slot} of {_p} with loop-number of player head named "&3&l» &7&nClick to set the number of players in team to &c- &8(&b%{_int}%&8)" to run:
+					make a gui slot {_slot} of {_p} with loop-number of player head named "&3➥ &7&nClick to set the number of players in team to &c- &8(&b%{_int}%&8)" to run:
 						set yaml value "PLAYERS-PER-TEAM" from "bw.arena.%{_arena}%" to {_int}
 						send "{@prefix} &7Setted the &aplayers in team &7to &a%{_int}%&7!" to {_p}
 						bw_setup_menu(player, "ARENA-SETTING")
@@ -75,7 +75,7 @@ function bw_setup_menu(p: player, menu: text):
 				set {_check} to "&8[&a✔&8] &aDone."
 			else:
 				set {_check} to "&8[&c✘&8] &cNot set."					
-			make a gui slot 29 of {_p} with compass named {_check} with leaf lore "&3&l» &7&nClick to set arena center." to run:
+			make a gui slot 29 of {_p} with compass named {_check} with leaf lore "&3➥ &7&nClick to set arena center." to run:
 				set yaml value "LOCATION.CENTER" from "bw.arena.%{_arena}%" to location of {_p}	
 				send "{@prefix} &7Setted the &aArena Center &7to your current location!" to {_p}		
 				close {_p}'s inventory
@@ -84,7 +84,7 @@ function bw_setup_menu(p: player, menu: text):
 				set {_check} to "&8[&a✔&8] &aDone."
 			else:
 				set {_check} to "&8[&c✘&8] &cNot set."					
-			make a gui slot 33 of {_p} with pumpkin named {_check} with leaf lore "&3&l» &7Click to set arena lobby." to run:
+			make a gui slot 33 of {_p} with pumpkin named {_check} with leaf lore "&3➥ &7Click to set arena lobby." to run:
 				set yaml value "LOCATION.LOBBY" from "bw.arena.%{_arena}%" to location of {_p}	
 				send "{@prefix} &7Setted the &aArena lobby &7to your location&7!" to {_p}
 				close {_p}'s inventory			
@@ -93,33 +93,58 @@ function bw_setup_menu(p: player, menu: text):
 				set {_check} to "&8[&a✔&8] &aDone."
 			else:
 				set {_check} to "&8[&c✘&8] &cNot set."			
-			make a gui slot 0 of {_p} with nether star named {_check} with leaf lore "&3&l» &7&nCLICK TO SET LOBBY POSITION-1 &8(&aOPTIONAL&8)" to run:		
+			make a gui slot 0 of {_p} with nether star named {_check} with leaf lore "&3➥ &7&nClick to set Lobby Position 1 &8(&aOPTIONAL&8)" to run:		
 				set yaml value "LOCATION.LOBBY-POS-1" from "bw.arena.%{_arena}%" to location of {_p}
-				send "{@prefix} &7LOBBY POSITION-1 for arena &a%{_arena}% &7has been set at &8[&3%location of {_p}%&8]" to {_p}
+				send "{@prefix} &7Lobby Position 1 for arena &a%{_arena}% &7has been set at &8[&3%location of {_p}%&8]" to {_p}
 				close {_p}'s inventory	
 			#LOBBY POS 2 CHECK	
 			if yaml value "LOCATION.LOBBY-POS-2" from "bw.arena.%{_arena}%" is set:
 				set {_check} to "&8[&a✔&8] &aDone."
 			else:
 				set {_check} to "&8[&c✘&8] &cNot set."			
-			make a gui slot 8 of {_p} with nether star named {_check} with leaf lore "&3&l» &7&nCLICK TO SET LOBBY POSITION-2 &8(&aOPTIONAL&8)" to run:		
+			make a gui slot 8 of {_p} with 2 of nether star named {_check} with leaf lore "&3➥ &7&nClick to set Lobby Position 2 &8(&aOPTIONAL&8)" to run:		
 				set yaml value "LOCATION.LOBBY-POS-2" from "bw.arena.%{_arena}%" to location of {_p}
-				send "{@prefix} &7LOBBY POSITION-2 for arena &a%{_arena}% &7has been set at &8[&3%location of {_p}%&8]" to {_p}
+				send "{@prefix} &7Lobby Position 2 for arena &a%{_arena}% &7has been set at &8[&3%location of {_p}%&8]" to {_p}
 				close {_p}'s inventory					
 			if yaml value "MAX-BUILD-HEIGHT" from "bw.arena.%{_arena}%" is set:
 				set {_check} to "&8[&a✔&8] &aDone."
 			else:
-				set {_check} to "&8[&c✘&8] &cNot set."					
-			make a gui slot 22 of {_p} with snowball named {_check} with leaf lore "&3&l» &7&nSET MAX HEIGHT &8(&aOPTIONAL&8)" to run:
+				set {_check} to "&8[&c✘&8] &cNot set."		
+
+
+			#Arena POS 1 CHECK	
+			if yaml value "LOCATION.ARENA-POS-1" from "bw.arena.%{_arena}%" is set:
+				set {_check} to "&8[&a✔&8] &aDone."
+			else:
+				set {_check} to "&8[&c✘&8] &cNot set."			
+			make a gui slot 27 of {_p} with nether star named {_check} with leaf lore "&3➥ &7&nClick to set Arena Position 1 &8(&aOPTIONAL&8)" and "&3➥ &7Needed if you don't want players to build outside it." to run:		
+				set yaml value "LOCATION.ARENA-POS-1" from "bw.arena.%{_arena}%" to location of {_p}
+				send "{@prefix} &7Arena Position 1 for arena &a%{_arena}% &7has been set at &8[&3%location of {_p}%&8]" to {_p}
+				close {_p}'s inventory	
+			#Arena POS 2 CHECK	
+			if yaml value "LOCATION.ARENA-POS-2" from "bw.arena.%{_arena}%" is set:
+				set {_check} to "&8[&a✔&8] &aDone."
+			else:
+				set {_check} to "&8[&c✘&8] &cNot set."			
+			make a gui slot 35 of {_p} with 2 of nether star named {_check} with leaf lore "&3➥ &7&nClick to set Arena Position 2 &8(&aOPTIONAL&8)" and "&3➥ &7Needed if you don't want players to build outside it." to run:		
+				set yaml value "LOCATION.ARENA-POS-2" from "bw.arena.%{_arena}%" to location of {_p}
+				send "{@prefix} &7Arena Position 2 for arena &a%{_arena}% &7has been set at &8[&3%location of {_p}%&8]" to {_p}
+				close {_p}'s inventory					
+			if yaml value "MAX-BUILD-HEIGHT" from "bw.arena.%{_arena}%" is set:
+				set {_check} to "&8[&a✔&8] &aDone."
+			else:
+				set {_check} to "&8[&c✘&8] &cNot set."	
+
+			make a gui slot 22 of {_p} with snowball named {_check} with leaf lore "&3➥ &7&nSet Max Height &8(&aOPTIONAL&8)" to run:
 				set yaml value "MAX-BUILD-HEIGHT" from "bw.arena.%{_arena}%" to y-coords of {_p}
 				send "{@prefix} &e&l» &7Setted the &3&lMax height &7to your current location!" to {_p}
 				close {_p}'s inventory	
 			#OTHER
-			make a gui slot 44 of {_p} with chest named "&3&l» &7&nClick to save arena." to run:
+			make a gui slot 44 of {_p} with chest named "&3➥ &7&nClick to save arena." to run:
 				make {_p} execute command "bwsetup saveArena %{_arena}%"
 				close {_p}'s inventory	
 				
-			make a gui slot 36 of {_p} with lava bucket named "&3&l» &c&nClick to delete arena &8(&c!&8)" to run:
+			make a gui slot 36 of {_p} with lava bucket named "&3➥ &c&nClick to delete arena &8(&c!&8)" to run:
 				make {_p} execute command "bwsetup deleteArena %{_arena}%"
 				close {_p}'s inventory	
 		#TEAMS
