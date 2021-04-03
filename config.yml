@@ -1,174 +1,169 @@
-Bungeecord:
-    Enabled: false
-    Fallback-server: lobby
-
-GAME-SHOP: Hypixel
-
-MySQL:
-    Enabled: false
-    Host: localhost
-    Port: 3306
-    Username: root
-    Password: test
-    Database: mysql
-    Tablename: bedwars_stats
-    Use_ssl: false
-
-Chat:
-    Main-Lobby: '&7[&e{level}&7✫] &7{player} &8» &7{message}'
-    Waiting-Lobby: '&7{player} &8» &7{message}'
-    In-Game: '&7[&e{level}&7✫] &8&l[{team}&8&l] &7{player} &8» &7{message}'
-    Comunication: '&aTeam &8» &7{player} &8» &7{message}'
-    Spectator: '&cSpectator &9» &7{player} &8» &7{message}'
-    Party Format: '&3Party &8» &7{player} &8» &7{message}'
-    Party Symbol: '@'
-    Shout Format: '&6&lSHOUT &8&l✈ &7{player} &8» &7{message}'
-    Shout Symbol: '!'
-
-Commands:
-    Block-Commands: true
-    Allowed-Commands:
-    - bw
-    - hub
-    - lobby
-    - msg
-    - tell
-    - w
-    - tp
-    - list
-    - stafflist
-    - report
-    Win:
-    - mysterydust add {player} 50 msg=false
-    Kill:
-    - mysterydust add {killer} 3 msg=false
-
-Name-Tags:
-    Lobby:
-        Main:
+Settings:
+    Bungeecord:
+        Enabled: false
+        Fallback-server: lobby
+    GameShop: Hypixel
+    MySQL:
+        Enabled: false
+        Host: localhost
+        Port: 3306
+        Username: root
+        Password: test
+        Database: mysql
+        Tablename: bedwars_stats
+        Use_ssl: false
+    Chat:
+        Main-Lobby: '&7[&e{level}&7✫] &7{player} &8» &7{message}'
+        Waiting-Lobby: '&7{player} &8» &7{message}'
+        In-Game: '&7[&e{level}&7✫] &8&l[{team}&8&l] &7{player} &8» &7{message}'
+        Comunication: '&aTeam &8» &7{player} &8» &7{message}'
+        Spectator: '&cSpectator &9» &7{player} &8» &7{message}'
+        Party Format: '&3Party &8» &7{player} &8» &7{message}'
+        Party Symbol: '@'
+        Shout Format: '&6&lSHOUT &8&l✈ &7{player} &8» &7{message}'
+        Shout Symbol: '!'
+    Commands:
+        Block:
             Enabled: true
-            Prefix: '&7[&e{level}&7] &7'
-            Suffix: '&7'
-        Waiting:
+            Whitelist:
+            - bw
+            - hub
+            - lobby
+            - msg
+            - tell
+            - w
+            - tp
+            - list
+            - stafflist
+            - report
+        Win:
+        - mysterydust add {player} 50 msg=false
+        Kill:
+        - mysterydust add {killer} 3 msg=false
+    Name-Tags:
+        Lobby:
+            Main:
+                Enabled: true
+                Prefix: '&7[&e{level}&7] &7'
+                Suffix: '&7'
+            Waiting:
+                Enabled: true
+                Prefix: '&7'
+                Suffix: '&7'
+        Game:
             Enabled: true
-            Prefix: '&7'
-            Suffix: '&7'
-    Game:
-        Enabled: true
-        RED:
-            Prefix: '&cR &7'
-        BLUE:
-            Prefix: '&1B &7'
-        GREEN:
-            Prefix: '&aG &7'
-        YELLOW:
-            Prefix: '&eY &7'
-        CYAN:
-            Prefix: '&bA &7'
-        WHITE:
-            Prefix: '&fW &7'
-        PINK:
-            Prefix: '&dP &7'
-        GRAY:
-            Prefix: '&8S &7'
-
-Items:
-    JOIN-ARENAS:
-        Name: '&3Play &7(Right Click)'
-        Item: diamond axe
-        Slot: 0
-        Lore:
-        - ''
-    REJOIN:
-        Name: '&8» &aRejoin &7(Right Click)'
-        Item: barrier
-        Slot: 1
-        Lore:
-        - ''
-    PARTY:
-        Name: '&aParty &7(Right Click)'
-        Item: crafting table
-        Slot: 4
-        Lore:
-        - ''
-    STATS:
-        Name: '&3Stats &7(Right Click)'
-        Item: book
-        Slot: 2
-        Lore:
-        - ''
-    SHOP:
-        Name: '&3Shop &7(Right Click)'
-        Item: anvil
-        Slot: 6
-        Lore:
-        - ''
-    LOBBY-LEAVE:
-        Name: '&6Leave lobby &7(Right Click)'
-        Item: bed item
-        Slot: 8
-        Lore:
-        - ''
-    TELEPORTER:
-        Name: '&aPlayer Teleporter &7(Right Click)'
-        Item: compass
-        Slot: 0
-        Lore:
-        - ''
-    PLAY-AGAIN:
-        Name: '&aPlay Again &7(Right Click)'
-        Item: paper
-        Slot: 7
-        Lore:
-        - ''
-    LEAVE:
-        Name: '&6Leave the game &7(Right Click)'
-        Item: bed item
-        Slot: 8
-        Lore:
-        - ''
-    TEAM-SELECTOR:
-        Name: '&6Team Selector &7(Right Click)'
-        Item: chest
-        Slot: 0
-        Lore:
-        - ''
-    GAME-MENU:
-        Name: '&8» &aCompass &7(Right Click)'
-        Item: compass
-        Slot: 8
-        Lore:
-        - ''
-    SPECTATOR-SETTINGS:
-        Name: '&8» &bSpectator Settings &7(Right Click)'
-        Item: redstone comparator item
-        Slot: 4
-        Lore:
-        - ''
-    CUSTOM-ITEM:
-        Name: '&8» &7EXAMPLE ITEM, MAIN LOBBY'
-        Item: air
-        Slot: 9
-        Lore:
-        - ''
-        command: example command
-
-Timers:
-    Waiting: 25
-
-Rewards:
-    Kill:
-        Xp: 50
-        Coins: 25
-    Final Kill:
-        Xp: 30
-        Coins: 10
-    Win:
-        Xp: 300
-        Coins: 200
-    Break Bed:
-        Xp: 100
-        Coins: 50
+    Items:
+        Play:
+            Name: '&3Play &7(Right Click)'
+            Item: diamond axe
+            Slot: 0
+            Lore:
+            - ''
+        Rejoin:
+            Name: '&8» &aRejoin &7(Right Click)'
+            Item: barrier
+            Slot: 1
+            Lore:
+            - ''
+        Party:
+            Name: '&aParty &7(Right Click)'
+            Item: crafting table
+            Slot: 4
+            Lore:
+            - ''
+        Stats:
+            Name: '&3Stats &7(Right Click)'
+            Item: book
+            Slot: 2
+            Lore:
+            - ''
+        Shop:
+            Name: '&3Shop &7(Right Click)'
+            Item: anvil
+            Slot: 6
+            Lore:
+            - ''
+        LobbyLeave:
+            Name: '&6Leave lobby &7(Right Click)'
+            Item: bed item
+            Slot: 8
+            Lore:
+            - ''
+        Teleporter:
+            Name: '&aPlayer Teleporter &7(Right Click)'
+            Item: compass
+            Slot: 0
+            Lore:
+            - ''
+        PlayAgain:
+            Name: '&aPlay Again &7(Right Click)'
+            Item: paper
+            Slot: 7
+            Lore:
+            - ''
+        Leave:
+            Name: '&6Leave the game &7(Right Click)'
+            Item: bed item
+            Slot: 8
+            Lore:
+            - ''
+        TeamSelector:
+            Name: '&6Team Selector &7(Right Click)'
+            Item: chest
+            Slot: 0
+            Lore:
+            - ''
+        GameMenu:
+            Name: '&8» &aCompass &7(Right Click)'
+            Item: compass
+            Slot: 8
+            Lore:
+            - ''
+        Spectator-Settings:
+            Name: '&8» &bSpectator Settings &7(Right Click)'
+            Item: redstone comparator item
+            Slot: 4
+            Lore:
+            - ''
+        CustomItem:
+            Name: '&8» &7EXAMPLE ITEM, MAIN LOBBY'
+            Item: air
+            Slot: 9
+            Lore:
+            - ''
+            command: example command
+    Timers:
+        Waiting: 25
+    Rewards:
+        Kill:
+            Xp: 50
+            Coins: 25
+        Final Kill:
+            Xp: 30
+            Coins: 10
+        Win:
+            Xp: 300
+            Coins: 200
+        Break Bed:
+            Xp: 100
+            Coins: 50
+    Afk:
+        Enabled: false
+        Time: 120
+        Notify: true
+        Punishments:
+            No-Pickup: true
+            Send-To-Lobby: false
+            Command: ''
+    PlayTime:
+        Time: 200
+        Xp: 25
+        Coins: 9
+    Leaderboards:
+        Type: SKULLS
+        EmptyPlaceReplace: Loading...
+        SmallArmorStand: true
+        DisableStatsNpcSkin: false
 
 Misc:
     No Place Radius: 5
@@ -178,101 +173,85 @@ Misc:
     Tracking Action-bar: '{team} {target} &7{distance}&7m'
     Game Block: bed
     Heal Pool Particles: true
+    Remove Waiting Lobby: true
+    Generators Animation: true
     Island Generator Particles: true
     Fireball:
         Speed: 1
         Damage: 4
         Radius: 5
         KnockBack: 3
-        Small: false
     TnT:
         Damage: 4
         Radius: 5
+        Time: 40
         KnockBack: 3
-    Party-Max-Slots: 28
+    DefaultShopKeeper: ShopKeeper Name From shop.yml
+    AllowDropWhileNotOnGround: false
     Update-Leaderboards-Interval: 10 minutes
     Send-Reset-Arena-Msg-To-Console: true
 
 Sounds:
-    KILL:
+    Kill:
         Sound: ORB_PICKUP
         Pitch: 1.0
         Volume: 1.0
-    FINAL-KILL:
+    FinalKill:
         Sound: LEVEL_UP
         Pitch: 1.0
         Volume: 1.0
-    JOIN-ARENA:
+    JoinArena:
         Sound: NOTE_STICKS
         Pitch: 1.0
         Volume: 1.0
-    START-GAME:
+    ArenaStart:
         Sound: LEVEL_UP
         Pitch: 1.0
         Volume: 1.0
-    STARTING-ARENA:
+    StartingArena:
         Sound: LEVEL_UP
         Pitch: 1.0
         Volume: 1.0
-    NOT-ENOUGHT-PLAYERS:
+    NeedMorePlayers:
         Sound: ANVIL_BREAK
         Pitch: 1.0
         Volume: 1.0
-    AFK-WARNING:
+    AFK-Warning:
         Sound: ANVIL_BREAK
         Pitch: 1.0
         Volume: 1.0
-    GENERATOR-UPGRADE:
+    Generator-Upgrade:
         Sound: LEVEL_UP
         Pitch: 1.0
         Volume: 1.0
-    BED-DESTROY:
+    Bed-Destroy:
         Sound: ENDERDRAGON_GROWL
         Pitch: 1.0
         Volume: 1.0
-    ITEM-PICKUP:
+    Item-Pickup:
         Sound: CHICKEN_EGG_POP
         Pitch: 1.0
         Volume: 1.0
-    ITEM-PURCHASE:
+    Item-Purchase:
         Sound: NOTE_STICKS
         Pitch: 1.0
         Volume: 1.0
-    UPGRADE-PURCHASE:
+    Upgrade-Purchase:
         Sound: LEVEL_UP
         Pitch: 1.0
         Volume: 1.0
-    OPEN-MENU:
+    OpenMenu:
         Sound: ORB_PICKUP
         Pitch: 1.0
         Volume: 1.0
-    ALARM-TRAP:
+    Alarm-Trap:
         Sound: ENDERDRAGON_GROWL
         Pitch: 1.0
         Volume: 1.0
-    BED-DESTRUCTION-EVENT:
+    BedDestructionEvent:
         Sound: ENDERDRAGON_GROWL
         Pitch: 1.0
         Volume: 1.0
-
-Settings:
-    Afk:
-        Enabled: false
-        Time: 45
-        Notify: true
-        Punishments:
-            No-Pickup: true
-            Send-To-Lobby: false
-            Command: ''
-    PlayTime:
-        Time: 45
-        Xp: 25
-        Coins: 9
-    Leaderboards:
-        Type: SKULLS
-        EmptyPlaceReplace: Loading...
-        SmallArmorStand: true
-        DisableStatsNpcSkin: false
 
 Generator-Settings:
     EMERALD:
@@ -284,7 +263,7 @@ Generator-Settings:
             Tier-I: 1
             Tier-II: 1
             Tier-III: 1
-        Max-Items: 30
+        Max-Items: 10
     DIAMOND:
         Time:
             Tier-I: 60
@@ -294,10 +273,10 @@ Generator-Settings:
             Tier-I: 1
             Tier-II: 1
             Tier-III: 1
-        Max-Items: 30
+        Max-Items: 10
     Island:
         Time:
-            Default: 3
+            Tier-0: 3
             Tier-1: 2
             Tier-2: 1.5
             Tier-3: 1

@@ -17,7 +17,7 @@ Upgrades:
             Display: Sharpened Swords
             Cost: 8
             Currency: diamond
-            Action: UPGRADE-SHARPENENED-SWORDS
+            Action: SHARPENENED-SWORDS
         purchased:
             Name: '&8» &aSharpened Swords'
             Item: iron sword
@@ -46,7 +46,7 @@ Upgrades:
             Display: Reinforced Armor I
             Cost: 2
             Currency: diamond
-            Action: UPGRADE-REINFORCED-ARMOR
+            Action: REINFORCED-ARMOR
         '1':
             Name: '&8» {check} Reinforced Armor II'
             Item: iron chestplate
@@ -63,7 +63,7 @@ Upgrades:
             Display: Reinforced Armor II
             Cost: 4
             Currency: diamond
-            Action: UPGRADE-REINFORCED-ARMOR
+            Action: REINFORCED-ARMOR
         '2':
             Name: '&8» {check} Reinforced Armor III'
             Item: iron chestplate
@@ -80,7 +80,7 @@ Upgrades:
             Display: Reinforced Armor III
             Cost: 8
             Currency: diamond
-            Action: UPGRADE-REINFORCED-ARMOR
+            Action: REINFORCED-ARMOR
         '3':
             Name: '&8» {check} Reinforced Armor IV'
             Item: iron chestplate
@@ -97,7 +97,7 @@ Upgrades:
             Display: Reinforced Armor IV
             Cost: 16
             Currency: diamond
-            Action: UPGRADE-REINFORCED-ARMOR
+            Action: REINFORCED-ARMOR
         '4':
             Name: '&8» &aReinforced Armor'
             Item: iron chestplate
@@ -129,7 +129,7 @@ Upgrades:
             Display: Maniac Miner I
             Cost: 4
             Currency: diamond
-            Action: UPGRADE-MANIAC-MINER
+            Action: MANIAC-MINER
         '1':
             Name: '&8» {check} Maniac Miner II'
             Item: gold pickaxe
@@ -144,7 +144,7 @@ Upgrades:
             Display: Maniac Miner II
             Cost: 6
             Currency: diamond
-            Action: UPGRADE-MANIAC-MINER
+            Action: MANIAC-MINER
         '2':
             Name: '&8» &aManiac Miner'
             Item: gold pickaxe
@@ -176,7 +176,7 @@ Upgrades:
             Display: Iron Forge
             Cost: 2
             Currency: diamond
-            Action: UPGRADE-FORGE
+            Action: FORGE
         '1':
             Name: '&8» {check} Gold Forge'
             Item: unlit furnace
@@ -193,7 +193,7 @@ Upgrades:
             Display: Gold Forge
             Cost: 4
             Currency: diamond
-            Action: UPGRADE-FORGE
+            Action: FORGE
         '2':
             Name: '&8» {check} Emerald Forge'
             Item: unlit furnace
@@ -210,7 +210,7 @@ Upgrades:
             Display: Emerald Forge
             Cost: 6
             Currency: diamond
-            Action: UPGRADE-FORGE
+            Action: FORGE
         '3':
             Name: '&8» {check} Molten Forge'
             Item: unlit furnace
@@ -227,7 +227,7 @@ Upgrades:
             Display: Molten Forge
             Cost: 8
             Currency: diamond
-            Action: UPGRADE-FORGE
+            Action: FORGE
         '4':
             Name: '&8» &aMolten Forge'
             Item: unlit furnace
@@ -256,7 +256,7 @@ Upgrades:
             Display: Heal Pool
             Cost: 1
             Currency: diamond
-            Action: UPGRADE-HEAL-POOL
+            Action: HEAL-POOL
         purchased:
             Name: '&8» &aHeal Pool'
             Item: beacon
