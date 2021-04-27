@@ -161,7 +161,7 @@ function bw_setup_menu(p: player, menu: text):
 			loop "RED", "BLUE", "GREEN", "YELLOW", "CYAN", "WHITE", "PINK" and "GRAY":
 				set {_team} to loop-value-1
 				set {_display-item} to "%{_team}% clay" parsed as material
-				set {_display-name} to yaml value "Teams.Name.%{_team}%" from "bw.language"		
+				set {_display-name} to yaml value "Teams.%{_team}%.Name" from "bw.language"		
 				if yaml value "TEAMS.%{_team}%" from "bw.arena.%{_arena}%" is set:
 					set {_check} to "&8[&a✔&8] &aDone."
 				else:
