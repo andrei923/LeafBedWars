@@ -197,8 +197,7 @@ function bw_setup_menu(p: player, menu: text):
 						set {_item} to {-bw::cache::bed::engine} named "&aSET BED FOR TEAM %{_display-name}% &8(&7STAY ON IT&8) &8- &8[&a✔&8] &aDone."
 					else:
 						set {_item} to {-bw::cache::bed::engine} named "&aSET BED FOR TEAM %{_display-name}% &8(&7STAY ON IT&8) &8- &8[&c✘&8] &cNot set."
-					make a gui slot {_bed-slot} of {_p} with {_item} to run:
-						delete yaml value "TEAMS.%{_team}%.BED" from "bw.arena.%{_arena}%"
+					make a gui slot {_bed-slot} of {_p} with {_item} to run: 
 						yaml value "Misc.Game Block" from "bw.config" contains "bed":
 							loop "HEAD" and "FOOT":
 								set yaml value "TEAMS.%{_team}%.BED.%loop-value-2%.location" from "bw.arena.%{_arena}%" to bw_setupGetBedData(location of {_p}, "%loop-value-2%")
@@ -209,6 +208,8 @@ function bw_setup_menu(p: player, menu: text):
 								"%type of loop-block%" contains yaml value "Misc.Game Block" from "bw.config"	
 								set yaml value "TEAMS.%{_team}%.BED.HEAD.location" from "bw.arena.%{_arena}%" to location of loop-block
 								set yaml value "TEAMS.%{_team}%.BED.FOOT.location" from "bw.arena.%{_arena}%" to location of loop-block
+								set yaml value "TEAMS.%{_team}%.BED.HEAD.facing" from "bw.arena.%{_arena}%" to "%facing of loop-block%"
+								set yaml value "TEAMS.%{_team}%.BED.FOOT.facing" from "bw.arena.%{_arena}%" to "%facing of loop-block%"
 						if yaml value "TEAMS.%{_team}%.BED.HEAD.location" from "bw.arena.%{_arena}%" and yaml value "TEAMS.%{_team}%.BED.FOOT.location" from "bw.arena.%{_arena}%" is set:
 							send "{@prefix} &aBED for team %{_display-name}% &ahas been set!" to {_p}	
 							bw_setup_menu(player, "ARENA-TEAMS")
@@ -316,8 +317,9 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 						set yaml value "STATE" from "bw.arena.%arg-2%" to "SETUP" 
 						send "{@prefix} &7You are now editing arena &a%arg-2%. &7!"	
 						loop yaml nodes with keys "TEAMS" from "bw.arena.%arg-2%":
-							bw_spawn_team_bed(arg-2, loop-value-1)						
-						bw_setup_arena(player,"enter", arg-2)																										
+							if yaml value "TEAMS.%loop-value-1%.BED.HEAD.location" from "bw.arena.%arg-2%" is set:
+								bw_spawn_team_bed(arg-2, loop-value-1)						
+						bw_setup_arena(player, "enter", arg-2)																										
 					else:
 						send "{@prefix} &cThis arena not exists!"
 				else:
@@ -367,20 +369,20 @@ command /bwsetup [<text = help>] [<text>] [<text>] [<world>]:
 										if yaml value "PLAYERS-PER-TEAM" from "bw.arena.%{_arena}%" is set:
 											if size of yaml nodes with keys "TEAMS" from "bw.arena.%{_arena}%" >= 2:
 												loop yaml nodes with keys "TEAMS" from "bw.arena.%{_arena}%":
-													if yaml value "TEAMS.%loop-value%.SPAWN" from "bw.arena.%{_arena}%" is not set:
-														send "{@prefix} &cSpawn for team &9%loop-value% &cis not set!"
+													if yaml value "TEAMS.%loop-value-1%.SPAWN" from "bw.arena.%{_arena}%" is not set:
+														send "{@prefix} &cSpawn for team &9%loop-value-1% &cis not set!"
 														stop
-													if yaml value "TEAMS.%loop-value%.SHOP" from "bw.arena.%{_arena}%" is not set:	
-														send "{@prefix} &cShop for team &9%loop-value% &cis not set!"
+													if yaml value "TEAMS.%loop-value-1%.SHOP" from "bw.arena.%{_arena}%" is not set:	
+														send "{@prefix} &cShop for team &9%loop-value-1% &cis not set!"
 														stop														
-													if yaml value "TEAMS.%loop-value%.GENERATOR" from "bw.arena.%{_arena}%" is not set:
-														send "{@prefix} &cGenerator for team &9%loop-value% &cis not set!"
+													if yaml value "TEAMS.%loop-value-1%.GENERATOR" from "bw.arena.%{_arena}%" is not set:
+														send "{@prefix} &cGenerator for team &9%loop-value-1% &cis not set!"
 														stop		
-													if yaml value "TEAMS.%loop-value%.BED.FOOT" from "bw.arena.%{_arena}%" and yaml value "TEAMS.%loop-value%.BED.HEAD" from "bw.arena.%{_arena}%" is not set:
-														send "{@prefix} &cBed for team &9%loop-value% &cis not set!"
+													if yaml value "TEAMS.%loop-value-1%.BED.FOOT" from "bw.arena.%{_arena}%" and yaml value "TEAMS.%loop-value-1%.BED.HEAD" from "bw.arena.%{_arena}%" is not set:
+														send "{@prefix} &cBed for team &9%loop-value-1% &cis not set!"
 														stop	
-													if yaml value "TEAMS.%loop-value%.UPGRADE" from "bw.arena.%{_arena}%" is not set:
-														send "{@prefix} &cUpgrade Location for team &9%loop-value% &cis not set!"
+													if yaml value "TEAMS.%loop-value-1%.UPGRADE" from "bw.arena.%{_arena}%" is not set:
+														send "{@prefix} &cUpgrade Location for team &9%loop-value-1% &cis not set!"
 														stop															
 												if yaml value "PLAYERS-PER-TEAM" from "bw.arena.%{_arena}%" = 1:
 													set yaml value "TYPE" from "bw.arena.%{_arena}%" to "SOLO"
