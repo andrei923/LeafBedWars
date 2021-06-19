@@ -106,11 +106,6 @@ function bw_setup_menu(p: player, menu: text):
 				set yaml value "LOCATION.LOBBY-POS-2" from "bw.arena.%{_arena}%" to location of {_p}
 				send "{@prefix} &7Lobby Position 2 for arena &a%{_arena}% &7has been set at &8[&3%location of {_p}%&8]" to {_p}
 				close {_p}'s inventory					
-			if yaml value "MAX-BUILD-HEIGHT" from "bw.arena.%{_arena}%" is set:
-				set {_check} to "&8[&a✔&8] &aDone."
-			else:
-				set {_check} to "&8[&c✘&8] &cNot set."		
-
 
 			#Arena POS 1 CHECK	
 			if yaml value "LOCATION.ARENA-POS-1" from "bw.arena.%{_arena}%" is set:
@@ -129,7 +124,8 @@ function bw_setup_menu(p: player, menu: text):
 			make a gui slot 35 of {_p} with 2 of nether star named {_check} with lore "&3➥ &7&nClick to set Arena Position 2 &8(&aOPTIONAL&8)" and "&3➥ &7Needed if you don't want players to build outside it." to run:		
 				set yaml value "LOCATION.ARENA-POS-2" from "bw.arena.%{_arena}%" to location of {_p}
 				send "{@prefix} &7Arena Position 2 for arena &a%{_arena}% &7has been set at &8[&3%location of {_p}%&8]" to {_p}
-				close {_p}'s inventory					
+				close {_p}'s inventory		
+			#Arena Height Check.				
 			if yaml value "MAX-BUILD-HEIGHT" from "bw.arena.%{_arena}%" is set:
 				set {_check} to "&8[&a✔&8] &aDone."
 			else:
@@ -176,27 +172,27 @@ function bw_setup_menu(p: player, menu: text):
 					bw_setup_menu(player, "ARENA-TEAMS")
 				if yaml value "TEAMS.%{_team}%" from "bw.arena.%{_arena}%" is set:
 					if yaml value "TEAMS.%{_team}%.SPAWN" from "bw.arena.%{_arena}%" is set:	
-						set {_item} to beacon named "&aSPAWN FOR TEAM %{_display-name}% &8- &8[&a✔&8] &aDone."
+						set {_item} to beacon named "&aSpawn for team %{_display-name}% &8- &8[&a✔&8] &aDone."
 					else:
-						set {_item} to beacon named "&aSPAWN FOR TEAM %{_display-name}% &8- &8[&c✘&8] &cNot set."
+						set {_item} to beacon named "&aSpawn for team %{_display-name}% &8- &8[&c✘&8] &cNot set."
 					make a gui slot {_spawn-slot} of {_p} with {_item} to run:
 						set yaml value "TEAMS.%{_team}%.SPAWN" from "bw.arena.%{_arena}%" to location of {_p}
 						send "{@prefix} &aSpawn for team %{_display-name}% &ahas been set!"  to {_p}
 						bw_setup_menu(player, "ARENA-TEAMS")
 					#
 					if yaml value "TEAMS.%{_team}%.GENERATOR" from "bw.arena.%{_arena}%" is set:	
-						set {_item} to hopper named "&aGENERATOR FOR TEAM %{_display-name}% &8- &8[&a✔&8] &aDone."
+						set {_item} to hopper named "&aGenerator for team %{_display-name}% &8- &8[&a✔&8] &aDone."
 					else:
-						set {_item} to hopper named "&aGENERATOR FOR TEAM %{_display-name}% &8- &8[&c✘&8] &cNot set."
-					make a gui slot {_gen-slot} of {_p} with hopper named "&aGENERATOR FOR TEAM %{_display-name}% &8- %{_check}%" to run:
+						set {_item} to hopper named "&aGenerator for team %{_display-name}% &8- &8[&c✘&8] &cNot set."
+					make a gui slot {_gen-slot} of {_p} with {_item} to run:
 						set yaml value "TEAMS.%{_team}%.GENERATOR" from "bw.arena.%{_arena}%" to location of {_p}
 						send "{@prefix} &aGenerator for team %{_display-name}% &ahas been set!"  to {_p}
 						bw_setup_menu(player, "ARENA-TEAMS")
 					#
 					if yaml value "TEAMS.%{_team}%.BED.HEAD.location" from "bw.arena.%{_arena}%" and yaml value "TEAMS.%{_team}%.BED.FOOT.location" from "bw.arena.%{_arena}%" is set:
-						set {_item} to {-bw::cache::bed::engine} named "&aSET BED FOR TEAM %{_display-name}% &8(&7STAY ON IT&8) &8- &8[&a✔&8] &aDone."
+						set {_item} to {-bw::cache::bed::engine} named "&aSet Bed for team %{_display-name}% &8(&7STAY ON IT&8) &8- &8[&a✔&8] &aDone."
 					else:
-						set {_item} to {-bw::cache::bed::engine} named "&aSET BED FOR TEAM %{_display-name}% &8(&7STAY ON IT&8) &8- &8[&c✘&8] &cNot set."
+						set {_item} to {-bw::cache::bed::engine} named "&aSet Bed for team %{_display-name}% &8(&7STAY ON IT&8) &8- &8[&c✘&8] &cNot set."
 					make a gui slot {_bed-slot} of {_p} with {_item} to run: 
 						yaml value "Misc.Game Block" from "bw.config" contains "bed":
 							loop "HEAD" and "FOOT":
@@ -217,9 +213,9 @@ function bw_setup_menu(p: player, menu: text):
 							send "{@prefix} &aNo bed found!" to {_p}
 					#		
 					if yaml value "TEAMS.%{_team}%.SHOP" from "bw.arena.%{_arena}%" is set:
-						set {_item} to player head named "&aSHOP FOR TEAM: %{_display-name}% &8- &8[&a✔&8] &aDone."
+						set {_item} to player head named "&aShop for team %{_display-name}% &8- &8[&a✔&8] &aDone."
 					else:
-						set {_item} to player head named "&aSHOP FOR TEAM: %{_display-name}% &8- &8[&c✘&8] &cNot set."
+						set {_item} to player head named "&aShop for team %{_display-name}% &8- &8[&c✘&8] &cNot set."
 					make a gui slot {_shop-slot} of {_p} with {_item} to run:
 						set {_loc} to location of player
 						set pitch of {_loc} to 0
@@ -227,9 +223,9 @@ function bw_setup_menu(p: player, menu: text):
 						send "{@prefix} &aShop for team %{_display-name}% &ahas been set!" to {_p}
 						bw_setup_menu(player, "ARENA-TEAMS")				
 					if yaml value "TEAMS.%{_team}%.UPGRADE" from "bw.arena.%{_arena}%" is set:
-						set {_item} to anvil named "&aUPGRADE FOR TEAM: %{_display-name}% &8- &8[&a✔&8] &aDone."
+						set {_item} to anvil named "&aUpgrade for Team: %{_display-name}% &8- &8[&a✔&8] &aDone."
 					else:
-						set {_item} to anvil named "&aUPGRADE FOR TEAM: %{_display-name}% &8- &8[&c✘&8] &cNot set."
+						set {_item} to anvil named "&aUpgrade for Team: %{_display-name}% &8- &8[&c✘&8] &cNot set."
 					#
 					make a gui slot {_upgrade-slot} of {_p} with {_item} to run:
 						set {_loc} to location of player
